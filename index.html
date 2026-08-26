@@ -1,1 +1,707 @@
-index.html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Justine & Yvan — 04.09.2027</title>
+
+<style>
+
+@font-face {
+    font-family: "Acumin";
+    src: local("Acumin Variable Concept"),
+         local("AcuminVariableConcept");
+}
+
+:root {
+    --green: #4f6647;
+    --khaki: #a09f85;
+    --yellow: #ffcd07;
+    --cream: #faf9e5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--green);
+    font-family: "Acumin", Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 24px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(250, 249, 229, 0.92);
+    backdrop-filter: blur(8px);
+}
+
+.logo {
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: var(--green);
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.nav-links a:hover {
+    opacity: 0.6;
+}
+
+/* =========================
+   ACCUEIL
+========================= */
+
+.hero {
+    min-height: 100vh;
+    padding: 120px 6vw 80px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7vw;
+    align-items: center;
+}
+
+/* Illustration / photo */
+
+.hero-visual {
+    position: relative;
+    height: 78vh;
+    min-height: 560px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-shape {
+    position: absolute;
+    width: 78%;
+    height: 88%;
+
+    background: var(--khaki);
+
+    border-radius: 48% 52% 45% 55% / 50% 44% 56% 50%;
+
+    transform: rotate(-4deg);
+}
+
+/*
+    REMPLACE PLUS TARD LE BLOC .photo-placeholder
+    PAR VOTRE PHOTO.
+*/
+
+.photo-placeholder {
+    position: relative;
+    z-index: 2;
+
+    width: 70%;
+    height: 82%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: var(--cream);
+    border: 1px solid rgba(250,249,229,0.6);
+}
+
+.photo-placeholder span {
+    max-width: 180px;
+    font-size: 15px;
+    line-height: 1.4;
+    letter-spacing: 1px;
+}
+
+/* Petit texte décoratif */
+
+.hero-circle-text {
+    position: absolute;
+    z-index: 3;
+
+    top: 8%;
+    left: 10%;
+
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--cream);
+    font-size: 13px;
+    text-align: center;
+    transform: rotate(-12deg);
+}
+
+/* =========================
+   TEXTE
+========================= */
+
+.hero-content {
+    max-width: 650px;
+}
+
+.kicker {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.names {
+    font-size: clamp(55px, 7vw, 105px);
+    line-height: 0.85;
+    font-weight: 500;
+    letter-spacing: -4px;
+
+    margin: 0;
+}
+
+.date {
+    margin-top: 30px;
+
+    font-size: clamp(28px, 4vw, 52px);
+    letter-spacing: 3px;
+}
+
+.intro {
+    margin-top: 45px;
+
+    max-width: 550px;
+
+    font-size: 18px;
+    line-height: 1.65;
+}
+
+/* =========================
+   COMPTE À REBOURS
+========================= */
+
+.countdown {
+    margin-top: 55px;
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.countdown-item {
+    text-align: center;
+    min-width: 75px;
+}
+
+.number {
+    font-size: 38px;
+    line-height: 1;
+    font-weight: 500;
+}
+
+.label {
+    margin-top: 9px;
+
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.separator {
+    font-size: 28px;
+    margin-top: -15px;
+}
+
+/* =========================
+   BOUTON
+========================= */
+
+.discover {
+    display: inline-block;
+
+    margin-top: 45px;
+    padding: 15px 24px;
+
+    background: var(--yellow);
+    color: var(--green);
+
+    text-decoration: none;
+
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    border-radius: 100px;
+
+    transition: transform 0.2s ease;
+}
+
+.discover:hover {
+    transform: translateY(-3px);
+}
+
+/* =========================
+   SECTION INTRO
+========================= */
+
+.intro-section {
+    min-height: 70vh;
+
+    padding: 150px 10vw;
+
+    background: var(--green);
+    color: var(--cream);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.intro-section-inner {
+    max-width: 850px;
+}
+
+.section-number {
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.intro-section h2 {
+    margin: 0;
+
+    font-size: clamp(38px, 6vw, 80px);
+    line-height: 0.95;
+    font-weight: 400;
+}
+
+.intro-section p {
+    margin: 40px auto 0;
+
+    max-width: 650px;
+
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    nav {
+        padding: 18px 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        min-height: auto;
+
+        padding: 110px 25px 80px;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 60px;
+    }
+
+    .hero-visual {
+        width: 100%;
+        height: 520px;
+        min-height: 0;
+    }
+
+    .hero-shape {
+        width: 78%;
+        height: 90%;
+    }
+
+    .photo-placeholder {
+        width: 70%;
+        height: 83%;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .names {
+        font-size: 65px;
+        letter-spacing: -3px;
+    }
+
+    .date {
+        font-size: 30px;
+    }
+
+    .intro {
+        font-size: 16px;
+    }
+
+    .countdown {
+        justify-content: center;
+        gap: 7px;
+    }
+
+    .countdown-item {
+        min-width: 58px;
+    }
+
+    .number {
+        font-size: 27px;
+    }
+
+    .label {
+        font-size: 7px;
+        letter-spacing: 1.3px;
+    }
+
+    .separator {
+        font-size: 20px;
+    }
+
+    .discover {
+        margin-top: 35px;
+    }
+
+    .intro-section {
+        padding: 100px 30px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+    <div class="logo">
+        J & Y
+    </div>
+
+    <div class="nav-links">
+
+        <a href="#accueil">Accueil</a>
+
+        <a href="#informations">Informations</a>
+
+        <a href="#hebergement">Où dormir</a>
+
+        <a href="#rsvp">RSVP</a>
+
+        <a href="#photos">Photos</a>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================
+     ACCUEIL
+========================= -->
+
+<section class="hero" id="accueil">
+
+
+    <div class="hero-visual">
+
+        <div class="hero-shape"></div>
+
+        <div class="hero-circle-text">
+            On s'est<br>
+            dit oui
+        </div>
+
+        <div class="photo-placeholder">
+
+            <span>
+                VOTRE PHOTO<br>
+                JUSTINE & YVAN
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-content">
+
+        <div class="kicker">
+            On s'est dit oui
+        </div>
+
+
+        <h1 class="names">
+            Justine<br>
+            & Yvan
+        </h1>
+
+
+        <div class="date">
+            04.09.2027
+        </div>
+
+
+        <p class="intro">
+
+            Voilà maintenant 10 ans que notre histoire a commencé.
+            10 années à grandir ensemble, à rire, voyager, partager,
+            construire et rêver à deux.
+
+            Des milliers de souvenirs plus tard, nous avons décidé
+            d’en créer un nouveau, et certainement l’un des plus beaux :
+            notre mariage.
+
+        </p>
+
+
+        <!-- COMPTE A REBOURS -->
+
+        <div class="countdown">
+
+            <div class="countdown-item">
+
+                <div class="number" id="days">
+                    000
+                </div>
+
+                <div class="label">
+                    Jours
+                </div>
+
+            </div>
+
+
+            <div class="separator">
+                :
+            </div>
+
+
+            <div class="countdown-item">
+
+                <div class="number" id="hours">
+                    00
+                </div>
+
+                <div class="label">
+                    Heures
+                </div>
+
+            </div>
+
+
+            <div class="separator">
+                :
+            </div>
+
+
+            <div class="countdown-item">
+
+                <div class="number" id="minutes">
+                    00
+                </div>
+
+                <div class="label">
+                    Minutes
+                </div>
+
+            </div>
+
+
+            <div class="separator">
+                :
+            </div>
+
+
+            <div class="countdown-item">
+
+                <div class="number" id="seconds">
+                    00
+                </div>
+
+                <div class="label">
+                    Secondes
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <a class="discover" href="#informations">
+            Découvrir le jour J ↓
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     APERÇU INFORMATIONS
+========================= -->
+
+<section class="intro-section" id="informations">
+
+    <div class="intro-section-inner">
+
+        <div class="section-number">
+            02 — Informations
+        </div>
+
+        <h2>
+            Le jour où<br>
+            tout commence
+        </h2>
+
+        <p>
+            Cérémonie, cocktail, dîner et soirée :
+            retrouvez toutes les informations pratiques
+            pour profiter pleinement de cette belle journée.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SECTIONS À VENIR
+========================= -->
+
+<section id="hebergement"></section>
+
+<section id="rsvp"></section>
+
+<section id="photos"></section>
+
+
+<!-- =========================
+     COMPTE À REBOURS
+========================= -->
+
+<script>
+
+const weddingDate =
+    new Date("2027-09-04T14:30:00").getTime();
+
+
+function updateCountdown() {
+
+    const now = new Date().getTime();
+
+    const distance = weddingDate - now;
+
+
+    if (distance <= 0) {
+
+        document.getElementById("days").textContent = "000";
+        document.getElementById("hours").textContent = "00";
+        document.getElementById("minutes").textContent = "00";
+        document.getElementById("seconds").textContent = "00";
+
+        return;
+
+    }
+
+
+    const days =
+        Math.floor(
+            distance / (1000 * 60 * 60 * 24)
+        );
+
+
+    const hours =
+        Math.floor(
+            (distance / (1000 * 60 * 60)) % 24
+        );
+
+
+    const minutes =
+        Math.floor(
+            (distance / (1000 * 60)) % 60
+        );
+
+
+    const seconds =
+        Math.floor(
+            (distance / 1000) % 60
+        );
+
+
+    document.getElementById("days").textContent =
+        String(days).padStart(3, "0");
+
+
+    document.getElementById("hours").textContent =
+        String(hours).padStart(2, "0");
+
+
+    document.getElementById("minutes").textContent =
+        String(minutes).padStart(2, "0");
+
+
+    document.getElementById("seconds").textContent =
+        String(seconds).padStart(2, "0");
+
+}
+
+
+updateCountdown();
+
+setInterval(updateCountdown, 1000);
+
+</script>
+
+
+</body>
+</html>
