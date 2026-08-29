@@ -2448,17 +2448,18 @@ nav {
    FOOTER
 ========================================================= */
 
-footer {
+/* =========================================================
+   FOOTER
+========================================================= */
 
-    background:
-        var(--green);
+.site-footer {
 
-    color:
-        var(--cream);
+    background: var(--green);
+
+    color: var(--cream);
 
     padding:
-
-        64px
+        70px
         6vw
         28px;
 
@@ -2467,172 +2468,450 @@ footer {
 
 .footer-main {
 
-    max-width:
-        1200px;
+    width: 100%;
 
-    margin:
-        auto;
+    max-width: 1200px;
 
-    display:
-        grid;
+    margin: 0 auto;
+
+    display: grid;
 
     grid-template-columns:
+        1.1fr
+        1.2fr
+        0.8fr;
 
-        1.4fr
-        1fr
-        1fr;
+    gap: 70px;
 
-    gap:
-        58px;
-
-}
-
-
-.footer-logo {
-
-    width:
-        72px;
-
-    margin-bottom:
-        18px;
+    align-items: center;
 
 }
 
 
-.footer-title {
+/* =========================================================
+   DESSIN
+========================================================= */
 
-    font-size:
-        28px;
+.footer-visual {
 
-    margin:
+    display: flex;
 
-        0
-        0
-        8px;
+    justify-content: center;
 
-    font-weight:
-        400;
+    align-items: center;
 
 }
 
 
-.footer-date {
+.footer-couple {
 
-    color:
-        var(--yellow);
+    width: 100%;
 
-    letter-spacing:
-        2px;
+    max-width: 300px;
+
+    height: auto;
+
+    object-fit: contain;
 
 }
 
+
+/* =========================================================
+   TITRES
+========================================================= */
 
 .footer-heading {
 
-    color:
-        var(--yellow);
+    color: var(--yellow);
 
-    font-size:
-        11px;
+    font-size: 11px;
 
-    letter-spacing:
-        3px;
+    letter-spacing: 3px;
 
-    text-transform:
-        uppercase;
+    text-transform: uppercase;
 
-    margin-bottom:
-        20px;
+    margin-bottom: 22px;
 
 }
 
 
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.footer-contact {
+
+    font-size: 15px;
+
+    line-height: 1.75;
+
+}
+
+
+.footer-address {
+
+    margin:
+        0
+        0
+        24px;
+
+}
+
+
+.footer-contact-links {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+}
+
+
+.footer-contact-links a {
+
+    color: var(--cream);
+
+    text-decoration: none;
+
+    transition:
+        opacity 0.2s ease;
+
+}
+
+
+.footer-contact-links a:hover {
+
+    opacity: 0.7;
+
+}
+
+
+.footer-contact-name {
+
+    display: inline-block;
+
+    min-width: 62px;
+
+    color: var(--yellow);
+
+}
+
+
+.footer-email {
+
+    margin-top: 6px;
+
+    overflow-wrap: anywhere;
+
+    word-break: break-word;
+
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
 .footer-links {
 
-    display:
-        flex;
+    display: flex;
 
-    flex-direction:
-        column;
+    flex-direction: column;
 
-    gap:
-        11px;
+    align-items: flex-start;
+
+    gap: 11px;
 
 }
 
 
 .footer-links a {
 
-    color:
-        var(--cream);
+    color: var(--cream);
 
-    text-decoration:
-        none;
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition:
+        opacity 0.2s ease;
 
 }
 
 
 .footer-links a:hover {
 
-    opacity:
-        0.7;
+    opacity: 0.65;
 
 }
 
 
-.footer-contact {
-
-    line-height:
-        1.75;
-
-    font-size:
-        14px;
-
-}
-
+/* =========================================================
+   BAS DU FOOTER
+========================================================= */
 
 .footer-bottom {
 
-    max-width:
-        1200px;
+    max-width: 1200px;
 
     margin:
-
-        48px
+        55px
         auto
         0;
 
-    padding-top:
-        20px;
+    padding-top: 22px;
 
     border-top:
-
         1px solid
+        rgba(250, 249, 229, 0.22);
 
-        rgba(
-            250,
-            249,
-            229,
-            0.24
-        );
+    display: flex;
 
-    display:
-        flex;
+    justify-content: space-between;
 
-    justify-content:
-        space-between;
+    align-items: center;
 
-    gap:
-        20px;
+    gap: 20px;
 
-    font-size:
-        11px;
+    font-size: 11px;
 
-    opacity:
-        0.72;
+    line-height: 1.5;
+
+    opacity: 0.7;
 
 }
 
+
+/* =========================================================
+   TABLETTE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .footer-main {
+
+        grid-template-columns:
+            1fr
+            1fr;
+
+        gap: 50px;
+
+    }
+
+
+    .footer-visual {
+
+        align-self: start;
+
+    }
+
+
+    .footer-navigation {
+
+        grid-column: 1 / -1;
+
+    }
+
+
+    .footer-navigation
+    .footer-links {
+
+        flex-direction: row;
+
+        flex-wrap: wrap;
+
+        gap:
+            12px
+            24px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .site-footer {
+
+        padding:
+            50px
+            22px
+            24px;
+
+    }
+
+
+    .footer-main {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 42px;
+
+        text-align: center;
+
+    }
+
+
+    .footer-visual {
+
+        width: 100%;
+
+    }
+
+
+    .footer-couple {
+
+        width: 82%;
+
+        max-width: 280px;
+
+        margin: 0 auto;
+
+    }
+
+
+    .footer-contact-block {
+
+        width: 100%;
+
+    }
+
+
+    .footer-contact {
+
+        width: 100%;
+
+    }
+
+
+    .footer-address {
+
+        font-size: 15px;
+
+        line-height: 1.65;
+
+    }
+
+
+    .footer-contact-links {
+
+        width: 100%;
+
+        align-items: stretch;
+
+        gap: 8px;
+
+    }
+
+
+    .footer-contact-links a {
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        flex-wrap: wrap;
+
+        gap: 6px;
+
+        min-height: 44px;
+
+        padding:
+            8px
+            10px;
+
+        border-bottom:
+            1px solid
+            rgba(250, 249, 229, 0.14);
+
+        font-size: 15px;
+
+    }
+
+
+    .footer-contact-name {
+
+        min-width: auto;
+
+    }
+
+
+    .footer-email {
+
+        display: block !important;
+
+        width: 100%;
+
+        overflow-wrap: anywhere;
+
+        word-break: break-word;
+
+    }
+
+
+    .footer-navigation {
+
+        width: 100%;
+
+    }
+
+
+    .footer-navigation
+    .footer-links {
+
+        display: flex;
+
+        flex-direction: row;
+
+        justify-content: center;
+
+        align-items: center;
+
+        flex-wrap: wrap;
+
+        gap:
+            11px
+            20px;
+
+    }
+
+
+    .footer-links a {
+
+        font-size: 13px;
+
+    }
+
+
+    .footer-bottom {
+
+        margin-top: 42px;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        text-align: center;
+
+        gap: 7px;
+
+    }
+
+}
 
 /* =========================================================
    TABLETTES
