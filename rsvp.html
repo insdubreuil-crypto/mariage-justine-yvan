@@ -773,462 +773,324 @@
 
 <script>
 
-
-const form =
-    document.getElementById(
-        "rsvpForm"
-    );
-
-
-const questionsPresence =
-    document.getElementById(
-        "questionsPresence"
-    );
-
-
-const guestNumber =
-    document.getElementById(
-        "guestNumber"
-    );
-
-
-const guestNames =
-    document.getElementById(
-        "guestNames"
-    );
-
-
-const allergyNo =
-    document.getElementById(
-        "allergyNo"
-    );
-
-
-const allergyYes =
-    document.getElementById(
-        "allergyYes"
-    );
-
-
-const allergyDetails =
-    document.getElementById(
-        "allergyDetails"
-    );
-
-
-const allergyText =
-    document.getElementById(
-        "allergyText"
-    );
-
-
-const message =
-    document.getElementById(
-        "message"
-    );
-
-
-const submitButton =
-    document.getElementById(
-        "rsvpSubmit"
-    );
-
-
-const success =
-    document.getElementById(
-        "rsvpSuccess"
-    );
-
-
-const hiddenIframe =
-    document.getElementById(
-        "hidden_iframe"
-    );
-
-
-let submitted =
-    false;
-
-
-
 /* =========================================================
-   ÉTAT INITIAL
+   RSVP — VERSION SIMPLE ET ROBUSTE
 ========================================================= */
+
+const form = document.getElementById("rsvpForm");
+const questionsPresence = document.getElementById("questionsPresence");
+const success = document.getElementById("rsvpSuccess");
+const iframe = document.getElementById("hidden_iframe");
+const submitButton = document.getElementById("rsvpSubmit");
+
+const allergyDetails = document.getElementById("allergyDetails");
+const allergyText = document.getElementById("allergyText");
+
+let envoiEnCours = false;
+
+
+/* ---------------------------------------------------------
+   OUI / NON
+--------------------------------------------------------- */
+
+function mettreAJourPresence() {
+
+    const choix =
+        document.querySelector(
+            'input[name="presence"]:checked'
+        );
+
+    if (!choix) {
+        return;
+    }
+
+
+    /* =========================
+       SI LA RÉPONSE EST NON
+    ========================= */
+
+    if (choix.value === "Non") {
+
+        /*
+            On cache FORCÉMENT tout le bloc
+            questions 3 + 4 + 5.
+        */
+
+        questionsPresence.style.setProperty(
+            "display",
+            "none",
+            "important"
+        );
+
+
+        /*
+            On désactive tous les champs cachés
+            pour qu'ils ne bloquent pas l'envoi.
+        */
+
+        questionsPresence
+            .querySelectorAll(
+                "input, select, textarea"
+            )
+            .forEach(function(champ) {
+
+                champ.disabled = true;
+
+                champ.required = false;
+
+            });
+
+    }
+
+
+    /* =========================
+       SI LA RÉPONSE EST OUI
+    ========================= */
+
+    else {
+
+        /*
+            On réaffiche tout le bloc.
+        */
+
+        questionsPresence.style.removeProperty(
+            "display"
+        );
+
+
+        /*
+            On réactive les champs.
+        */
+
+        questionsPresence
+            .querySelectorAll(
+                "input, select, textarea"
+            )
+            .forEach(function(champ) {
+
+                champ.disabled = false;
+
+            });
+
+
+        /*
+            Champs obligatoires si présent.
+        */
+
+        document.getElementById(
+            "guestNumber"
+        ).required = true;
+
+
+        document.getElementById(
+            "guestNames"
+        ).required = true;
+
+
+        document.getElementById(
+            "allergyNo"
+        ).required = true;
+
+
+        /*
+            Le détail des allergies reste
+            désactivé tant que "Oui"
+            n'est pas choisi.
+        */
+
+        const allergieOui =
+            document.querySelector(
+                'input[name="allergies"][value="Oui"]:checked'
+            );
+
+        if (!allergieOui) {
+
+            allergyText.disabled = true;
+
+            allergyText.required = false;
+
+        }
+
+    }
+
+}
+
+
+/*
+    Dès qu'on clique Oui ou Non.
+*/
+
+document
+    .querySelectorAll(
+        'input[name="presence"]'
+    )
+    .forEach(function(bouton) {
+
+        bouton.addEventListener(
+            "change",
+            mettreAJourPresence
+        );
+
+    });
+
+
+
+/* ---------------------------------------------------------
+   ALLERGIES
+--------------------------------------------------------- */
+
+document
+    .querySelectorAll(
+        'input[name="allergies"]'
+    )
+    .forEach(function(bouton) {
+
+        bouton.addEventListener(
+            "change",
+            function() {
+
+                if (this.value === "Oui") {
+
+                    allergyDetails.style.display =
+                        "block";
+
+                    allergyText.disabled =
+                        false;
+
+                    allergyText.required =
+                        true;
+
+                }
+
+                else {
+
+                    allergyDetails.style.display =
+                        "none";
+
+                    allergyText.value =
+                        "";
+
+                    allergyText.disabled =
+                        true;
+
+                    allergyText.required =
+                        false;
+
+                }
+
+            }
+        );
+
+    });
+
+
+/*
+    Au chargement :
+    le détail allergie est caché.
+*/
+
+allergyDetails.style.display =
+    "none";
 
 allergyText.disabled =
     true;
 
 
 
-/* =========================================================
-   SI PRÉSENT
-========================================================= */
-
-function present() {
-
-
-    questionsPresence.style.display =
-        "block";
-
-
-    guestNumber.disabled =
-        false;
-
-
-    guestNames.disabled =
-        false;
-
-
-    allergyNo.disabled =
-        false;
-
-
-    allergyYes.disabled =
-        false;
-
-
-    message.disabled =
-        false;
-
-
-    guestNumber.required =
-        true;
-
-
-    guestNames.required =
-        true;
-
-
-    allergyNo.required =
-        true;
-
-
-}
-
-
-
-/* =========================================================
-   SI ABSENT
-========================================================= */
-
-function absent() {
-
-
-    /*
-        IMPORTANT :
-        tout le bloc questions 3 + 4 + 5 disparaît.
-    */
-
-    questionsPresence.style.display =
-        "none";
-
-
-    /*
-        On enlève tous les champs obligatoires.
-    */
-
-    guestNumber.required =
-        false;
-
-
-    guestNames.required =
-        false;
-
-
-    allergyNo.required =
-        false;
-
-
-    allergyText.required =
-        false;
-
-
-    /*
-        On vide les réponses éventuelles.
-    */
-
-    guestNumber.value =
-        "";
-
-
-    guestNames.value =
-        "";
-
-
-    allergyNo.checked =
-        false;
-
-
-    allergyYes.checked =
-        false;
-
-
-    allergyText.value =
-        "";
-
-
-    message.value =
-        "";
-
-
-    /*
-        On désactive les champs masqués.
-    */
-
-    guestNumber.disabled =
-        true;
-
-
-    guestNames.disabled =
-        true;
-
-
-    allergyNo.disabled =
-        true;
-
-
-    allergyYes.disabled =
-        true;
-
-
-    allergyText.disabled =
-        true;
-
-
-    message.disabled =
-        true;
-
-
-    allergyDetails.classList.remove(
-        "visible"
-    );
-
-
-}
-
-
-
-/* =========================================================
-   ÉCOUTE OUI / NON
-========================================================= */
-
-document
-    .querySelectorAll(
-        'input[name="presence"]'
-    )
-    .forEach(
-        function(choice) {
-
-
-            choice.addEventListener(
-                "change",
-                function() {
-
-
-                    if (
-                        this.value === "Non"
-                    ) {
-
-                        absent();
-
-                    }
-
-                    else {
-
-                        present();
-
-                    }
-
-
-                }
-            );
-
-
-        }
-    );
-
-
-
-/* =========================================================
-   ALLERGIES
-========================================================= */
-
-document
-    .querySelectorAll(
-        'input[name="allergies"]'
-    )
-    .forEach(
-        function(choice) {
-
-
-            choice.addEventListener(
-                "change",
-                function() {
-
-
-                    if (
-                        this.value === "Oui"
-                    ) {
-
-
-                        allergyDetails
-                            .classList
-                            .add(
-                                "visible"
-                            );
-
-
-                        allergyText.disabled =
-                            false;
-
-
-                        allergyText.required =
-                            true;
-
-
-                    }
-
-                    else {
-
-
-                        allergyDetails
-                            .classList
-                            .remove(
-                                "visible"
-                            );
-
-
-                        allergyText.required =
-                            false;
-
-
-                        allergyText.disabled =
-                            true;
-
-
-                        allergyText.value =
-                            "";
-
-
-                    }
-
-
-                }
-            );
-
-
-        }
-    );
-
-
-
-/* =========================================================
-   ENVOI DU FORMULAIRE
-========================================================= */
+/* ---------------------------------------------------------
+   ENVOI
+--------------------------------------------------------- */
 
 form.addEventListener(
     "submit",
     function() {
 
-
-        submitted =
-            true;
-
+        envoiEnCours = true;
 
         submitButton.disabled =
             true;
 
-
         submitButton.textContent =
             "Envoi en cours...";
-
 
     }
 );
 
 
 
-/* =========================================================
-   QUAND APPS SCRIPT A TERMINÉ
-========================================================= */
+/* ---------------------------------------------------------
+   APRÈS ENVOI
+--------------------------------------------------------- */
 
-hiddenIframe.addEventListener(
+iframe.addEventListener(
     "load",
     function() {
 
-
-        if (
-            !submitted
-        ) {
-
+        if (!envoiEnCours) {
             return;
-
         }
 
 
+        envoiEnCours =
+            false;
+
+
         /*
-            On mémorise la position actuelle du formulaire.
+            On mémorise la position exacte
+            du début du formulaire.
         */
 
-        const formTop =
-            form.getBoundingClientRect().top
-            +
-            window.scrollY;
+        const position =
+            document
+                .querySelector(
+                    ".rsvp-form-section"
+                )
+                .offsetTop;
 
 
         /*
-            On cache COMPLÈTEMENT le formulaire.
+            Le formulaire disparaît
+            COMPLÈTEMENT.
         */
 
-        form.style.display =
-            "none";
+        form.style.setProperty(
+            "display",
+            "none",
+            "important"
+        );
 
 
         /*
-            Puis on affiche le message Merci
-            exactement dans le même conteneur.
+            Le message Merci apparaît
+            exactement à sa place.
         */
 
-        success.style.display =
-            "block";
+        success.style.setProperty(
+            "display",
+            "block",
+            "important"
+        );
 
 
         /*
-            On repositionne la page au début
-            de l'ancien formulaire.
-
-            Donc le message Merci apparaît
-            à la place du formulaire,
-            et pas tout en bas.
+            On revient au début de la zone RSVP
+            pour voir immédiatement le Merci.
         */
 
         window.scrollTo({
 
             top:
-                formTop - 110,
+                position - 90,
 
             behavior:
                 "smooth"
 
         });
 
-
-        /*
-            Le formulaire reste caché.
-            Il reviendra uniquement
-            après rechargement de la page.
-        */
-
-        submitted =
-            false;
-
-
     }
 );
 
-
 </script>
-
 
 </body>
 
