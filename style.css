@@ -2452,119 +2452,37 @@ nav {
    FOOTER
 ========================================================= */
 
-/* =========================================================
-   FOOTER — VERSION FINALE
-========================================================= */
-
 .site-footer {
 
     background: var(--green);
 
     color: var(--cream);
 
-    padding: 48px 7vw 22px;
+    padding: 45px 22px;
 
 }
 
 
-.footer-main {
+.footer-simple {
 
     width: 100%;
 
-    max-width: 1180px;
+    max-width: 600px;
 
     margin: 0 auto;
-
-    display: grid;
-
-    grid-template-columns:
-        260px
-        minmax(260px, 1fr)
-        190px;
-
-    gap: 70px;
-
-    align-items: center;
-
-}
-
-
-/* =========================================================
-   DESSIN
-========================================================= */
-
-.footer-visual {
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    justify-content: center;
 
     text-align: center;
 
 }
 
 
-.footer-couple {
-
-    display: block;
-
-    width: 220px;
-
-    max-width: 100%;
-
-    height: auto;
-
-    margin: 0 auto 18px;
-
-}
-
-
-.footer-wedding {
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 5px;
-
-}
-
-
-.footer-wedding strong {
-
-    font-size: 21px;
-
-    font-weight: 400;
-
-}
-
-
-.footer-wedding span {
-
-    color: var(--yellow);
-
-    font-size: 12px;
-
-    letter-spacing: 2px;
-
-}
-
-
-/* =========================================================
-   TITRES
-========================================================= */
-
 .footer-heading {
 
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 
     color: var(--yellow);
 
-    font-size: 10px;
+    font-size: 11px;
 
     letter-spacing: 3px;
 
@@ -2573,202 +2491,57 @@ nav {
 }
 
 
-/* =========================================================
-   ADRESSE
-========================================================= */
-
-.footer-address {
-
-    margin: 0 0 22px;
-
-    font-size: 15px;
-
-    line-height: 1.65;
-
-}
-
-
-/* =========================================================
-   CONTACTS
-========================================================= */
-
-.footer-contact-links {
+.footer-contacts {
 
     display: flex;
 
     flex-direction: column;
-
-    gap: 9px;
-
-}
-
-
-.footer-contact-links a {
-
-    color: var(--cream);
-
-    text-decoration: none;
-
-}
-
-
-.footer-contact-links a:not(.footer-email) {
-
-    display: grid;
-
-    grid-template-columns: 65px 1fr;
 
     align-items: center;
 
-    gap: 10px;
+    gap: 12px;
 
 }
 
 
-.footer-contact-links a span {
-
-    color: var(--yellow);
-
-}
-
-
-.footer-contact-links a strong {
-
-    font-weight: 400;
-
-}
-
-
-.footer-contact-links a:hover {
-
-    opacity: 0.7;
-
-}
-
-
-.footer-email {
-
-    display: inline-block;
-
-    margin-top: 5px;
-
-    overflow-wrap: anywhere;
-
-}
-
-
-/* =========================================================
-   NAVIGATION
-========================================================= */
-
-.footer-links {
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 9px;
-
-}
-
-
-.footer-links a {
+.footer-contacts a {
 
     color: var(--cream);
 
     text-decoration: none;
 
-    font-size: 14px;
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    transition: opacity 0.2s ease;
 
 }
 
 
-.footer-links a:hover {
+.footer-contacts a:hover {
 
     opacity: 0.65;
 
 }
 
 
-/* =========================================================
-   BAS DU FOOTER
-========================================================= */
+.footer-contacts a span {
 
-.footer-bottom {
+    margin-right: 8px;
 
-    width: 100%;
-
-    max-width: 1180px;
-
-    margin: 38px auto 0;
-
-    padding-top: 18px;
-
-    border-top:
-        1px solid
-        rgba(250, 249, 229, 0.2);
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    gap: 20px;
-
-    font-size: 10px;
-
-    line-height: 1.5;
-
-    opacity: 0.7;
+    color: var(--yellow);
 
 }
 
 
-/* =========================================================
-   TABLETTE
-========================================================= */
+.footer-email {
 
-@media (max-width: 900px) {
+    margin-top: 5px;
 
-    .footer-main {
+    overflow-wrap: anywhere;
 
-        grid-template-columns:
-            200px
-            1fr;
-
-        gap: 45px;
-
-    }
-
-
-    .footer-couple {
-
-        width: 180px;
-
-    }
-
-
-    .footer-navigation {
-
-        grid-column: 1 / -1;
-
-        text-align: center;
-
-    }
-
-
-    .footer-navigation .footer-links {
-
-        flex-direction: row;
-
-        justify-content: center;
-
-        flex-wrap: wrap;
-
-        gap: 10px 22px;
-
-    }
+    word-break: break-word;
 
 }
 
@@ -2782,86 +2555,29 @@ nav {
     .site-footer {
 
         padding:
-            42px
-            20px
-            22px;
-
-    }
-
-
-    .footer-main {
-
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: center;
-
-        gap: 38px;
-
-        text-align: center;
-
-    }
-
-
-    .footer-visual {
-
-        width: 100%;
-
-    }
-
-
-    .footer-couple {
-
-        width: 175px;
-
-        max-width: 75vw;
-
-        margin-bottom: 14px;
-
-    }
-
-
-    .footer-wedding strong {
-
-        font-size: 22px;
-
-    }
-
-
-    .footer-contact-block {
-
-        width: 100%;
-
-        max-width: 360px;
+            38px
+            20px;
 
     }
 
 
     .footer-heading {
 
-        margin-bottom: 17px;
+        margin-bottom: 18px;
 
     }
 
 
-    .footer-address {
-
-        font-size: 15px;
-
-    }
-
-
-    .footer-contact-links {
+    .footer-contacts {
 
         width: 100%;
 
-        gap: 4px;
+        gap: 0;
 
     }
 
 
-    .footer-contact-links a:not(.footer-email) {
+    .footer-contacts a {
 
         display: flex;
 
@@ -2869,85 +2585,35 @@ nav {
 
         align-items: center;
 
-        gap: 10px;
+        flex-wrap: wrap;
 
-        min-height: 44px;
+        gap: 6px;
 
-        padding: 6px 0;
+        width: 100%;
 
-        border-bottom:
-            1px solid
-            rgba(250, 249, 229, 0.12);
+        min-height: 48px;
+
+        padding: 9px 5px;
+
+        font-size: 15px;
 
     }
 
 
-    .footer-contact-links a span {
+    .footer-contacts a span {
 
-        min-width: auto;
+        margin-right: 0;
 
     }
 
 
     .footer-email {
 
-        display: block;
-
-        width: 100%;
-
-        min-height: 44px;
-
-        padding-top: 12px;
-
         font-size: 14px;
 
         overflow-wrap: anywhere;
 
-    }
-
-
-    .footer-navigation {
-
-        width: 100%;
-
-    }
-
-
-    .footer-navigation .footer-links {
-
-        display: flex;
-
-        flex-direction: row;
-
-        justify-content: center;
-
-        flex-wrap: wrap;
-
-        gap: 12px 20px;
-
-    }
-
-
-    .footer-links a {
-
-        font-size: 13px;
-
-    }
-
-
-    .footer-bottom {
-
-        margin-top: 36px;
-
-        padding-top: 18px;
-
-        flex-direction: column;
-
-        justify-content: center;
-
-        gap: 5px;
-
-        text-align: center;
+        word-break: break-word;
 
     }
 
