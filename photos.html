@@ -10,184 +10,45 @@
 <title>Photos — Justine & Yvan</title>
 
 <link
+    rel="icon"
+    type="image/png"
+    href="./citron-logo.png"
+>
+
+<meta
+    name="description"
+    content="Partagez et retrouvez les photos du mariage de Justine & Yvan."
+>
+
+<meta
+    property="og:title"
+    content="Photos — Justine & Yvan"
+>
+
+<meta
+    property="og:description"
+    content="Ajoutez vos photos du mariage et retrouvez les souvenirs partagés par les invités."
+>
+
+<meta
+    property="og:image"
+    content="https://mariage-justine-yvan.fr/photo-mariage.jpg"
+>
+
+<meta
+    property="og:type"
+    content="website"
+>
+
+<meta
+    name="theme-color"
+    content="#4f6647"
+>
+
+<link
     rel="stylesheet"
     href="./style.css"
 >
-
-<style>
-
-/* =========================================================
-   PAGE PHOTOS
-========================================================= */
-
-.photos-page {
-    padding-top: 120px;
-}
-
-.photos-hero {
-    padding: 90px 8vw 70px;
-
-    text-align: center;
-}
-
-.photos-content {
-    padding: 0 8vw 120px;
-}
-
-.photos-container {
-    max-width: 950px;
-
-    margin: 0 auto;
-}
-
-.photos-card {
-    padding: 70px 50px;
-
-    background: var(--green);
-
-    color: var(--cream);
-
-    text-align: center;
-}
-
-.photos-icon {
-    font-size: 42px;
-
-    margin-bottom: 25px;
-}
-
-.photos-card h2 {
-    margin: 0;
-
-    font-size: clamp(36px, 5vw, 58px);
-
-    font-weight: 400;
-
-    line-height: 1.05;
-}
-
-.photos-card p {
-    max-width: 650px;
-
-    margin: 30px auto 0;
-
-    font-size: 17px;
-
-    line-height: 1.7;
-
-    opacity: 0.92;
-}
-
-.photos-actions {
-    margin-top: 45px;
-
-    display: flex;
-
-    justify-content: center;
-
-    flex-wrap: wrap;
-
-    gap: 18px;
-}
-
-.photos-button {
-    display: inline-block;
-
-    padding: 16px 28px;
-
-    border-radius: 100px;
-
-    text-decoration: none;
-
-    font-size: 12px;
-
-    letter-spacing: 1.5px;
-
-    text-transform: uppercase;
-
-    transition:
-        transform 0.2s ease,
-        opacity 0.2s ease;
-}
-
-.photos-button.primary {
-    background: var(--yellow);
-
-    color: var(--green);
-}
-
-.photos-button.secondary {
-    border: 1px solid var(--cream);
-
-    color: var(--cream);
-}
-
-.photos-button:hover {
-    transform: translateY(-3px);
-
-    opacity: 0.9;
-}
-
-
-/* PETIT BLOC INFO */
-
-.photos-note {
-    margin-top: 45px;
-
-    padding: 30px;
-
-    background:
-        rgba(160, 159, 133, 0.15);
-
-    color: var(--green);
-
-    text-align: center;
-
-    font-size: 15px;
-
-    line-height: 1.7;
-}
-
-
-/* MOBILE */
-
-@media (max-width: 650px) {
-
-    .photos-page {
-        padding-top: 90px;
-    }
-
-    .photos-hero {
-        padding:
-            75px
-            24px
-            55px;
-    }
-
-    .photos-content {
-        padding:
-            0
-            24px
-            90px;
-    }
-
-    .photos-card {
-        padding:
-            50px
-            24px;
-    }
-
-    .photos-actions {
-        flex-direction: column;
-    }
-
-    .photos-button {
-        width: 100%;
-    }
-
-}
-
-</style>
 
 </head>
 
@@ -209,7 +70,7 @@
 
         <img
             src="./citron-logo.png"
-            alt="Justine et Yvan"
+            alt="Logo Justine et Yvan"
             class="logo-img"
         >
 
@@ -230,12 +91,19 @@
             RSVP
         </a>
 
-        <a href="./photos.html">
+        <a
+            href="./photos.html"
+            aria-current="page"
+        >
             Photos
         </a>
 
         <a href="./faq.html">
             FAQ
+        </a>
+
+        <a href="./liste.html">
+            Liste de mariage
         </a>
 
     </div>
@@ -244,131 +112,409 @@
 
 
 <!-- =========================================================
-     PHOTOS
+     CONTENU
 ========================================================= -->
 
-<main class="photos-page">
+<main>
 
 
-    <section class="photos-hero">
+<!-- =========================================================
+     INTRO
+========================================================= -->
+
+<section class="page-hero">
 
 
-        <div class="page-eyebrow">
+    <div class="page-eyebrow">
 
-            Les souvenirs du jour J
+        Les souvenirs du jour J
+
+    </div>
+
+
+    <h1 class="page-title">
+
+        Photos
+
+    </h1>
+
+
+    <p class="page-intro">
+
+        Nous aimerions découvrir cette journée
+        à travers vos yeux.
+
+        <br><br>
+
+        Le jour du mariage,
+        vous pourrez ajouter vos photos et vidéos
+        dans notre album partagé,
+        mais aussi retrouver les souvenirs
+        déposés par les autres invités.
+
+    </p>
+
+
+</section>
+
+
+<!-- =========================================================
+     CARTE PRINCIPALE
+========================================================= -->
+
+<section class="photos-content">
+
+
+    <div class="photos-container">
+
+
+        <div class="photos-card">
+
+
+            <div class="photos-icon">
+
+                📸
+
+            </div>
+
+
+            <h2>
+
+                Partagez vos souvenirs
+
+            </h2>
+
+
+            <p>
+
+                Un sourire pris sur le vif,
+                une photo de groupe,
+                un moment drôle,
+                une vidéo de la soirée…
+
+                <br><br>
+
+                N’hésitez pas à tout partager 🤍
+
+            </p>
+
+
+            <!-- =================================================
+                 BOUTONS ALBUM
+            ================================================== -->
+
+            <div class="photos-actions">
+
+
+                <a
+                    href="#"
+                    class="btn btn-yellow"
+                    id="uploadPhotos"
+                >
+
+                    Ajouter mes photos
+
+                </a>
+
+
+                <a
+                    href="#"
+                    class="btn btn-cream"
+                    id="viewPhotos"
+                >
+
+                    Voir l’album
+
+                </a>
+
+
+            </div>
+
+
+            <!-- =================================================
+                 QR CODE
+            ================================================== -->
+
+            <div class="qr-wrap">
+
+
+                <!--
+                    PLUS TARD :
+
+                    Quand nous aurons créé le QR code,
+                    nous remplacerons le texte ci-dessous par :
+
+                    <img
+                        src="./qr-photos.png"
+                        alt="QR code vers l'album photos du mariage"
+                    >
+
+                -->
+
+
+                <span>
+
+                    QR code de l’album
+
+                    <br><br>
+
+                    à ajouter lorsque
+                    le lien sera prêt
+
+                </span>
+
+
+            </div>
+
 
         </div>
 
 
-        <h1 class="page-title">
+        <!-- =================================================
+             MESSAGE D'INFORMATION
+        ================================================== -->
 
-            Photos
+        <div
+            class="note"
+            style="margin-top: 38px;"
+        >
 
-        </h1>
+            <strong>
 
+                L’album sera activé
+                à l’approche du mariage 🤍
 
-        <p class="page-intro">
-
-            Parce qu’il y aura sûrement des moments
-            que nous n’aurons pas vus…
+            </strong>
 
             <br><br>
 
-            Partagez avec nous vos photos et vidéos
-            afin que nous puissions revivre cette journée
-            à travers vos yeux.
+            Le lien et le QR code seront disponibles ici
+            pour que chacun puisse participer facilement,
+            directement depuis son téléphone.
 
-        </p>
-
-
-    </section>
+        </div>
 
 
-
-    <section class="photos-content">
-
-
-        <div class="photos-container">
+    </div>
 
 
-            <div class="photos-card">
+</section>
 
 
-                <div class="photos-icon">
+<!-- =========================================================
+     COMMENT ÇA MARCHE
+========================================================= -->
 
-                    📸
+<section
+    style="
+        padding: 0 8vw 110px;
+    "
+>
+
+
+    <div
+        style="
+            max-width: 950px;
+            margin: 0 auto;
+        "
+    >
+
+
+        <div
+            class="page-eyebrow"
+            style="
+                text-align: center;
+            "
+        >
+
+            Le jour du mariage
+
+        </div>
+
+
+        <h2
+            style="
+                margin: 0 0 55px;
+                text-align: center;
+                font-size: clamp(38px, 5vw, 62px);
+                font-weight: 400;
+            "
+        >
+
+            Comment ça marche ?
+
+        </h2>
+
+
+        <div
+            style="
+                display: grid;
+                grid-template-columns: repeat(
+                    auto-fit,
+                    minmax(210px, 1fr)
+                );
+                gap: 20px;
+            "
+        >
+
+
+            <!-- ÉTAPE 1 -->
+
+            <div
+                style="
+                    padding: 35px 28px;
+                    background: rgba(160, 159, 133, 0.14);
+                    text-align: center;
+                "
+            >
+
+
+                <div
+                    style="
+                        font-size: 34px;
+                        margin-bottom: 18px;
+                    "
+                >
+
+                    01
 
                 </div>
 
 
-                <h2>
+                <h3
+                    style="
+                        margin: 0 0 14px;
+                        font-weight: 400;
+                        font-size: 22px;
+                    "
+                >
 
-                    Partagez vos souvenirs
+                    Scannez
 
-                </h2>
+                </h3>
 
 
-                <p>
+                <p
+                    style="
+                        margin: 0;
+                        line-height: 1.7;
+                    "
+                >
 
-                    Le jour du mariage,
-                    vous pourrez ajouter vos photos et vidéos
-                    dans notre album partagé.
-
-                    <br><br>
-
-                    Vous pourrez également consulter
-                    et récupérer les souvenirs partagés
-                    par les autres invités.
+                    Scannez le QR code
+                    affiché sur le site
+                    ou directement sur place.
 
                 </p>
 
 
-                <div class="photos-actions">
+            </div>
 
 
-                    <!--
-                        REMPLACE LE # PAR TON LIEN GOOGLE PHOTOS
-                    -->
 
-                    <a
-                        href="#"
-                        class="photos-button primary"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+            <!-- ÉTAPE 2 -->
 
-                        Ajouter mes photos
-
-                    </a>
+            <div
+                style="
+                    padding: 35px 28px;
+                    background: rgba(160, 159, 133, 0.14);
+                    text-align: center;
+                "
+            >
 
 
-                    <a
-                        href="#"
-                        class="photos-button secondary"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                <div
+                    style="
+                        font-size: 34px;
+                        margin-bottom: 18px;
+                    "
+                >
 
-                        Voir l’album
-
-                    </a>
-
+                    02
 
                 </div>
+
+
+                <h3
+                    style="
+                        margin: 0 0 14px;
+                        font-weight: 400;
+                        font-size: 22px;
+                    "
+                >
+
+                    Ajoutez
+
+                </h3>
+
+
+                <p
+                    style="
+                        margin: 0;
+                        line-height: 1.7;
+                    "
+                >
+
+                    Ajoutez les photos
+                    et vidéos prises
+                    pendant la journée et la soirée.
+
+                </p>
 
 
             </div>
 
 
 
-            <div class="photos-note">
+            <!-- ÉTAPE 3 -->
 
-                L’album sera activé à l’approche du mariage 🤍
+            <div
+                style="
+                    padding: 35px 28px;
+                    background: rgba(160, 159, 133, 0.14);
+                    text-align: center;
+                "
+            >
 
-                <br>
 
-                Pensez à revenir sur cette page le jour J
-                pour déposer vos plus beaux souvenirs.
+                <div
+                    style="
+                        font-size: 34px;
+                        margin-bottom: 18px;
+                    "
+                >
+
+                    03
+
+                </div>
+
+
+                <h3
+                    style="
+                        margin: 0 0 14px;
+                        font-weight: 400;
+                        font-size: 22px;
+                    "
+                >
+
+                    Profitez
+
+                </h3>
+
+
+                <p
+                    style="
+                        margin: 0;
+                        line-height: 1.7;
+                    "
+                >
+
+                    Consultez ensuite l’album
+                    et profitez des souvenirs
+                    partagés par tout le monde.
+
+                </p>
+
 
             </div>
 
@@ -376,7 +522,10 @@
         </div>
 
 
-    </section>
+    </div>
+
+
+</section>
 
 
 </main>
@@ -397,21 +546,28 @@
 
             <img
                 src="./citron-logo.png"
-                alt="Justine et Yvan"
+                alt=""
                 class="footer-logo"
             >
 
 
-            <h3>
+            <h3 class="footer-title">
 
                 Justine & Yvan
 
             </h3>
 
 
-            <p>
+            <div class="footer-date">
 
                 04.09.2027
+
+            </div>
+
+
+            <p>
+
+                On a hâte de vous retrouver 🤍
 
             </p>
 
@@ -434,37 +590,32 @@
 
 
                 <a href="./index.html">
-
                     Accueil
-
                 </a>
 
 
                 <a href="./dormir.html">
-
                     Où dormir
-
                 </a>
 
 
                 <a href="./rsvp.html">
-
                     RSVP
-
                 </a>
 
 
                 <a href="./photos.html">
-
                     Photos
-
                 </a>
 
 
                 <a href="./faq.html">
-
                     FAQ
+                </a>
 
+
+                <a href="./liste.html">
+                    Liste de mariage
                 </a>
 
 
@@ -480,20 +631,34 @@
 
             <div class="footer-heading">
 
-                Informations
+                Contact & informations
 
             </div>
 
 
-            <p>
+            <div class="footer-contact">
 
-                Saint-Martin-Lestra<br>
+                Une question sur l'organisation ?
 
-                Salt-en-Donzy<br>
+                <br>
+
+                Contact jour J :
+
+                <strong>
+
+                    à compléter
+
+                </strong>
+
+                <br><br>
+
+                Saint-Martin-Lestra & Salt-en-Donzy
+
+                <br>
 
                 Loire — 42
 
-            </p>
+            </div>
 
 
         </div>
@@ -502,9 +667,23 @@
     </div>
 
 
+
     <div class="footer-bottom">
 
-        © Justine & Yvan — 2027
+
+        <span>
+
+            © Justine & Yvan — 2027
+
+        </span>
+
+
+        <span>
+
+            mariage-justine-yvan.fr
+
+        </span>
+
 
     </div>
 
