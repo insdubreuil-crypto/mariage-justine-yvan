@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -11,171 +10,45 @@
 <title>Où dormir — Justine & Yvan</title>
 
 <link
+    rel="icon"
+    type="image/png"
+    href="./citron-logo.png"
+>
+
+<meta
+    name="description"
+    content="Découvrez notre sélection d'hébergements à proximité du mariage de Justine & Yvan."
+>
+
+<meta
+    property="og:title"
+    content="Où dormir — Justine & Yvan"
+>
+
+<meta
+    property="og:description"
+    content="Notre sélection d'hébergements à proximité du Domaine Le Gardien du Chai."
+>
+
+<meta
+    property="og:image"
+    content="https://mariage-justine-yvan.fr/photo-mariage.jpg"
+>
+
+<meta
+    property="og:type"
+    content="website"
+>
+
+<meta
+    name="theme-color"
+    content="#4f6647"
+>
+
+<link
     rel="stylesheet"
     href="./style.css"
 >
-
-<style>
-
-/* =========================================================
-   PAGE OÙ DORMIR
-========================================================= */
-
-.lodging-page {
-    padding-top: 120px;
-}
-
-.lodging-hero {
-    padding: 90px 8vw 70px;
-    text-align: center;
-}
-
-.lodging-hero .page-intro {
-    max-width: 680px;
-}
-
-.lodging-grid {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 8vw 120px;
-
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 30px;
-}
-
-.lodging-card {
-    display: block;
-
-    background: var(--green);
-    color: var(--cream);
-
-    text-decoration: none;
-
-    overflow: hidden;
-
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-}
-
-.lodging-card:hover {
-    transform: translateY(-6px);
-
-    box-shadow:
-        0 14px 35px
-        rgba(79, 102, 71, 0.18);
-}
-
-.lodging-image {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-    display: block;
-}
-
-.lodging-image-placeholder {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: var(--khaki);
-    color: var(--cream);
-
-    font-size: 13px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-.lodging-content {
-    padding: 25px;
-}
-
-.lodging-number {
-    color: var(--yellow);
-
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-
-    margin-bottom: 12px;
-}
-
-.lodging-content h2 {
-    margin: 0 0 18px;
-
-    font-size: 26px;
-    font-weight: 400;
-    line-height: 1.1;
-}
-
-.lodging-meta {
-    display: flex;
-    flex-direction: column;
-
-    gap: 9px;
-
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-.lodging-link {
-    margin-top: 24px;
-
-    display: inline-block;
-
-    color: var(--yellow);
-
-    font-size: 12px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-}
-
-.lodging-note {
-    max-width: 950px;
-    margin: -50px auto 100px;
-    padding: 0 8vw;
-
-    text-align: center;
-
-    font-size: 15px;
-    line-height: 1.7;
-}
-
-@media (max-width: 900px) {
-
-    .lodging-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-}
-
-@media (max-width: 650px) {
-
-    .lodging-grid {
-        grid-template-columns: 1fr;
-        padding: 0 24px 90px;
-    }
-
-    .lodging-hero {
-        padding: 75px 24px 55px;
-    }
-
-    .lodging-page {
-        padding-top: 90px;
-    }
-
-    .lodging-note {
-        margin-top: -35px;
-        padding: 0 24px;
-    }
-
-}
-
-</style>
 
 </head>
 
@@ -197,7 +70,7 @@
 
         <img
             src="./citron-logo.png"
-            alt="Justine et Yvan"
+            alt="Logo Justine et Yvan"
             class="logo-img"
         >
 
@@ -210,7 +83,10 @@
             Accueil
         </a>
 
-        <a href="./dormir.html">
+        <a
+            href="./dormir.html"
+            aria-current="page"
+        >
             Où dormir
         </a>
 
@@ -226,539 +102,598 @@
             FAQ
         </a>
 
+        <a href="./liste.html">
+            Liste de mariage
+        </a>
+
     </div>
 
 </nav>
 
 
 <!-- =========================================================
-     PAGE OÙ DORMIR
+     CONTENU
 ========================================================= -->
 
-<main class="lodging-page">
+<main>
 
 
-    <section class="lodging-hero">
+<!-- =========================================================
+     INTRODUCTION
+========================================================= -->
+
+<section class="page-hero">
 
 
-        <div class="page-eyebrow">
+    <div class="page-eyebrow">
 
-            Hébergements
+        Hébergements
+
+    </div>
+
+
+    <h1 class="page-title">
+
+        Où dormir ?
+
+    </h1>
+
+
+    <p class="page-intro">
+
+        Pour profiter pleinement de la soirée
+        sans vous soucier du trajet retour,
+        nous avons sélectionné quelques hébergements
+        situés à proximité du domaine.
+
+        <br><br>
+
+        Cliquez directement sur le logement
+        qui vous intéresse pour découvrir
+        toutes les informations et réserver.
+
+    </p>
+
+
+</section>
+
+
+<!-- =========================================================
+     PETIT CONSEIL
+========================================================= -->
+
+<div class="note">
+
+    <strong>
+        Petit conseil 🤍
+    </strong>
+
+    <br><br>
+
+    Pensez à réserver suffisamment tôt :
+    les hébergements à proximité peuvent être
+    rapidement complets pendant les week-ends de mariage.
+
+</div>
+
+
+<!-- =========================================================
+     LES 6 LOGEMENTS
+========================================================= -->
+
+<section class="lodging-grid">
+
+
+    <!-- =====================================================
+         LOGEMENT 01
+    ====================================================== -->
+
+    <a
+        class="lodging-card"
+        href="#"
+        aria-label="Logement 1 — informations à venir"
+    >
+
+
+        <div class="lodging-image-placeholder">
+
+            Photo du logement
 
         </div>
 
 
-        <h1 class="page-title">
-
-            Où dormir ?
-
-        </h1>
+        <div class="lodging-content">
 
 
-        <p class="page-intro">
+            <div class="lodging-number">
 
-            Pour profiter pleinement de la soirée,
-            nous vous proposons quelques logements
-            situés à proximité du Domaine Le Gardien du Chai.
-
-            <br><br>
-
-            Cliquez directement sur le logement de votre choix
-            pour accéder à sa page de réservation.
-
-        </p>
-
-
-    </section>
-
-
-
-    <section class="lodging-grid">
-
-
-        <!-- =================================================
-             LOGEMENT 01
-        ================================================== -->
-
-        <a
-            class="lodging-card"
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-
-
-            <div class="lodging-image-placeholder">
-
-                Photo du logement
+                Logement 01
 
             </div>
 
 
-            <div class="lodging-content">
+            <h2>
+
+                Nom du logement
+
+            </h2>
 
 
-                <div class="lodging-number">
-
-                    Logement 01
-
-                </div>
+            <div class="lodging-meta">
 
 
-                <h2>
+                <div>
 
-                    Nom du logement
-
-                </h2>
-
-
-                <div class="lodging-meta">
-
-
-                    <div>
-
-                        📍 Lieu à compléter
-
-                    </div>
-
-
-                    <div>
-
-                        🚗 Distance du domaine :
-                        à compléter
-
-                    </div>
-
-
-                    <div>
-
-                        🛏 Capacité :
-                        à compléter
-
-                    </div>
-
+                    📍 Lieu à compléter
 
                 </div>
 
 
-                <span class="lodging-link">
+                <div>
 
-                    Voir le logement ↗
+                    🚗 Distance du domaine :
+                    à compléter
 
-                </span>
+                </div>
+
+
+                <div>
+
+                    🛏 Capacité :
+                    à compléter
+
+                </div>
 
 
             </div>
 
 
-        </a>
+            <span class="lodging-link">
+
+                Voir le logement ↗
+
+            </span>
+
+
+        </div>
+
+
+    </a>
 
 
 
-        <!-- =================================================
-             LOGEMENT 02
-        ================================================== -->
+    <!-- =====================================================
+         LOGEMENT 02
+    ====================================================== -->
 
-        <a
-            class="lodging-card"
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-
-
-            <div class="lodging-image-placeholder">
-
-                Photo du logement
-
-            </div>
+    <a
+        class="lodging-card"
+        href="#"
+        aria-label="Logement 2 — informations à venir"
+    >
 
 
-            <div class="lodging-content">
+        <div class="lodging-image-placeholder">
+
+            Photo du logement
+
+        </div>
 
 
-                <div class="lodging-number">
-
-                    Logement 02
-
-                </div>
+        <div class="lodging-content">
 
 
-                <h2>
+            <div class="lodging-number">
 
-                    Nom du logement
-
-                </h2>
-
-
-                <div class="lodging-meta">
-
-
-                    <div>
-
-                        📍 Lieu à compléter
-
-                    </div>
-
-
-                    <div>
-
-                        🚗 Distance du domaine :
-                        à compléter
-
-                    </div>
-
-
-                    <div>
-
-                        🛏 Capacité :
-                        à compléter
-
-                    </div>
-
-
-                </div>
-
-
-                <span class="lodging-link">
-
-                    Voir le logement ↗
-
-                </span>
-
+                Logement 02
 
             </div>
 
 
-        </a>
+            <h2>
+
+                Nom du logement
+
+            </h2>
 
 
-
-        <!-- =================================================
-             LOGEMENT 03
-        ================================================== -->
-
-        <a
-            class="lodging-card"
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
+            <div class="lodging-meta">
 
 
-            <div class="lodging-image-placeholder">
+                <div>
 
-                Photo du logement
-
-            </div>
-
-
-            <div class="lodging-content">
-
-
-                <div class="lodging-number">
-
-                    Logement 03
+                    📍 Lieu à compléter
 
                 </div>
 
 
-                <h2>
+                <div>
 
-                    Nom du logement
-
-                </h2>
-
-
-                <div class="lodging-meta">
-
-
-                    <div>
-
-                        📍 Lieu à compléter
-
-                    </div>
-
-
-                    <div>
-
-                        🚗 Distance du domaine :
-                        à compléter
-
-                    </div>
-
-
-                    <div>
-
-                        🛏 Capacité :
-                        à compléter
-
-                    </div>
-
+                    🚗 Distance du domaine :
+                    à compléter
 
                 </div>
 
 
-                <span class="lodging-link">
+                <div>
 
-                    Voir le logement ↗
+                    🛏 Capacité :
+                    à compléter
 
-                </span>
+                </div>
 
 
             </div>
 
 
-        </a>
+            <span class="lodging-link">
+
+                Voir le logement ↗
+
+            </span>
+
+
+        </div>
+
+
+    </a>
 
 
 
-        <!-- =================================================
-             LOGEMENT 04
-        ================================================== -->
+    <!-- =====================================================
+         LOGEMENT 03
+    ====================================================== -->
 
-        <a
-            class="lodging-card"
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-
-
-            <div class="lodging-image-placeholder">
-
-                Photo du logement
-
-            </div>
+    <a
+        class="lodging-card"
+        href="#"
+        aria-label="Logement 3 — informations à venir"
+    >
 
 
-            <div class="lodging-content">
+        <div class="lodging-image-placeholder">
+
+            Photo du logement
+
+        </div>
 
 
-                <div class="lodging-number">
-
-                    Logement 04
-
-                </div>
+        <div class="lodging-content">
 
 
-                <h2>
+            <div class="lodging-number">
 
-                    Nom du logement
-
-                </h2>
-
-
-                <div class="lodging-meta">
-
-
-                    <div>
-
-                        📍 Lieu à compléter
-
-                    </div>
-
-
-                    <div>
-
-                        🚗 Distance du domaine :
-                        à compléter
-
-                    </div>
-
-
-                    <div>
-
-                        🛏 Capacité :
-                        à compléter
-
-                    </div>
-
-
-                </div>
-
-
-                <span class="lodging-link">
-
-                    Voir le logement ↗
-
-                </span>
-
+                Logement 03
 
             </div>
 
 
-        </a>
+            <h2>
+
+                Nom du logement
+
+            </h2>
 
 
-
-        <!-- =================================================
-             LOGEMENT 05
-        ================================================== -->
-
-        <a
-            class="lodging-card"
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
+            <div class="lodging-meta">
 
 
-            <div class="lodging-image-placeholder">
+                <div>
 
-                Photo du logement
-
-            </div>
-
-
-            <div class="lodging-content">
-
-
-                <div class="lodging-number">
-
-                    Logement 05
+                    📍 Lieu à compléter
 
                 </div>
 
 
-                <h2>
+                <div>
 
-                    Nom du logement
-
-                </h2>
-
-
-                <div class="lodging-meta">
-
-
-                    <div>
-
-                        📍 Lieu à compléter
-
-                    </div>
-
-
-                    <div>
-
-                        🚗 Distance du domaine :
-                        à compléter
-
-                    </div>
-
-
-                    <div>
-
-                        🛏 Capacité :
-                        à compléter
-
-                    </div>
-
+                    🚗 Distance du domaine :
+                    à compléter
 
                 </div>
 
 
-                <span class="lodging-link">
+                <div>
 
-                    Voir le logement ↗
+                    🛏 Capacité :
+                    à compléter
 
-                </span>
+                </div>
 
 
             </div>
 
 
-        </a>
+            <span class="lodging-link">
+
+                Voir le logement ↗
+
+            </span>
+
+
+        </div>
+
+
+    </a>
 
 
 
-        <!-- =================================================
-             LOGEMENT 06
-        ================================================== -->
+    <!-- =====================================================
+         LOGEMENT 04
+    ====================================================== -->
 
-        <a
-            class="lodging-card"
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-
-
-            <div class="lodging-image-placeholder">
-
-                Photo du logement
-
-            </div>
+    <a
+        class="lodging-card"
+        href="#"
+        aria-label="Logement 4 — informations à venir"
+    >
 
 
-            <div class="lodging-content">
+        <div class="lodging-image-placeholder">
+
+            Photo du logement
+
+        </div>
 
 
-                <div class="lodging-number">
-
-                    Logement 06
-
-                </div>
+        <div class="lodging-content">
 
 
-                <h2>
+            <div class="lodging-number">
 
-                    Nom du logement
-
-                </h2>
-
-
-                <div class="lodging-meta">
-
-
-                    <div>
-
-                        📍 Lieu à compléter
-
-                    </div>
-
-
-                    <div>
-
-                        🚗 Distance du domaine :
-                        à compléter
-
-                    </div>
-
-
-                    <div>
-
-                        🛏 Capacité :
-                        à compléter
-
-                    </div>
-
-
-                </div>
-
-
-                <span class="lodging-link">
-
-                    Voir le logement ↗
-
-                </span>
-
+                Logement 04
 
             </div>
 
 
-        </a>
+            <h2>
+
+                Nom du logement
+
+            </h2>
 
 
-    </section>
+            <div class="lodging-meta">
+
+
+                <div>
+
+                    📍 Lieu à compléter
+
+                </div>
+
+
+                <div>
+
+                    🚗 Distance du domaine :
+                    à compléter
+
+                </div>
+
+
+                <div>
+
+                    🛏 Capacité :
+                    à compléter
+
+                </div>
+
+
+            </div>
+
+
+            <span class="lodging-link">
+
+                Voir le logement ↗
+
+            </span>
+
+
+        </div>
+
+
+    </a>
 
 
 
-    <div class="lodging-note">
+    <!-- =====================================================
+         LOGEMENT 05
+    ====================================================== -->
 
-        Pensez à réserver votre hébergement suffisamment tôt
-        afin d'avoir le plus de choix possible à proximité du domaine.
+    <a
+        class="lodging-card"
+        href="#"
+        aria-label="Logement 5 — informations à venir"
+    >
 
-    </div>
+
+        <div class="lodging-image-placeholder">
+
+            Photo du logement
+
+        </div>
+
+
+        <div class="lodging-content">
+
+
+            <div class="lodging-number">
+
+                Logement 05
+
+            </div>
+
+
+            <h2>
+
+                Nom du logement
+
+            </h2>
+
+
+            <div class="lodging-meta">
+
+
+                <div>
+
+                    📍 Lieu à compléter
+
+                </div>
+
+
+                <div>
+
+                    🚗 Distance du domaine :
+                    à compléter
+
+                </div>
+
+
+                <div>
+
+                    🛏 Capacité :
+                    à compléter
+
+                </div>
+
+
+            </div>
+
+
+            <span class="lodging-link">
+
+                Voir le logement ↗
+
+            </span>
+
+
+        </div>
+
+
+    </a>
+
+
+
+    <!-- =====================================================
+         LOGEMENT 06
+    ====================================================== -->
+
+    <a
+        class="lodging-card"
+        href="#"
+        aria-label="Logement 6 — informations à venir"
+    >
+
+
+        <div class="lodging-image-placeholder">
+
+            Photo du logement
+
+        </div>
+
+
+        <div class="lodging-content">
+
+
+            <div class="lodging-number">
+
+                Logement 06
+
+            </div>
+
+
+            <h2>
+
+                Nom du logement
+
+            </h2>
+
+
+            <div class="lodging-meta">
+
+
+                <div>
+
+                    📍 Lieu à compléter
+
+                </div>
+
+
+                <div>
+
+                    🚗 Distance du domaine :
+                    à compléter
+
+                </div>
+
+
+                <div>
+
+                    🛏 Capacité :
+                    à compléter
+
+                </div>
+
+
+            </div>
+
+
+            <span class="lodging-link">
+
+                Voir le logement ↗
+
+            </span>
+
+
+        </div>
+
+
+    </a>
+
+
+</section>
+
+
+<!-- =========================================================
+     RETOUR DOMAINE
+========================================================= -->
+
+<section
+    style="
+        padding: 0 8vw 110px;
+        text-align: center;
+    "
+>
+
+
+    <p
+        style="
+            max-width: 650px;
+            margin: 0 auto 25px;
+            line-height: 1.7;
+        "
+    >
+
+        Tous les hébergements présentés ici
+        seront sélectionnés en fonction de leur proximité
+        avec le Domaine Le Gardien du Chai.
+
+    </p>
+
+
+    <a
+        class="btn btn-outline"
+        href="https://www.google.com/maps/search/?api=1&query=543+chemin+de+la+Varenne+42110+Salt-en-Donzy"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        Voir le domaine sur Google Maps
+
+    </a>
+
+
+</section>
 
 
 </main>
@@ -779,26 +714,34 @@
 
             <img
                 src="./citron-logo.png"
-                alt="Justine et Yvan"
+                alt=""
                 class="footer-logo"
             >
 
 
-            <h3>
+            <h3 class="footer-title">
 
                 Justine & Yvan
 
             </h3>
 
 
-            <p>
+            <div class="footer-date">
 
                 04.09.2027
+
+            </div>
+
+
+            <p>
+
+                On a hâte de vous retrouver 🤍
 
             </p>
 
 
         </div>
+
 
 
         <div>
@@ -815,37 +758,32 @@
 
 
                 <a href="./index.html">
-
                     Accueil
-
                 </a>
 
 
                 <a href="./dormir.html">
-
                     Où dormir
-
                 </a>
 
 
                 <a href="./rsvp.html">
-
                     RSVP
-
                 </a>
 
 
                 <a href="./photos.html">
-
                     Photos
-
                 </a>
 
 
                 <a href="./faq.html">
-
                     FAQ
+                </a>
 
+
+                <a href="./liste.html">
+                    Liste de mariage
                 </a>
 
 
@@ -855,25 +793,37 @@
         </div>
 
 
+
         <div>
 
 
             <div class="footer-heading">
 
-                Informations
+                Contact & informations
 
             </div>
 
 
-            <p>
+            <div class="footer-contact">
 
-                Saint-Martin-Lestra<br>
+                Une question sur l'organisation ?
 
-                Salt-en-Donzy<br>
+                <br>
+
+                Contact jour J :
+                <strong>
+                    à compléter
+                </strong>
+
+                <br><br>
+
+                Saint-Martin-Lestra & Salt-en-Donzy
+
+                <br>
 
                 Loire — 42
 
-            </p>
+            </div>
 
 
         </div>
@@ -882,9 +832,23 @@
     </div>
 
 
+
     <div class="footer-bottom">
 
-        © Justine & Yvan — 2027
+
+        <span>
+
+            © Justine & Yvan — 2027
+
+        </span>
+
+
+        <span>
+
+            mariage-justine-yvan.fr
+
+        </span>
+
 
     </div>
 
