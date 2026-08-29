@@ -1,0 +1,1680 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RSVP — Justine & Yvan</title>
+
+<link
+    rel="stylesheet"
+    href="./style.css"
+>
+
+<style>
+
+/* =========================================================
+   PAGE RSVP
+========================================================= */
+
+.rsvp-page {
+    padding-top: 120px;
+}
+
+.rsvp-hero {
+    padding: 90px 8vw 70px;
+    text-align: center;
+}
+
+.rsvp-form-section {
+    padding: 0 8vw 120px;
+}
+
+.rsvp-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.rsvp-form {
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+}
+
+.form-group {
+    padding-bottom: 50px;
+
+    border-bottom:
+        1px solid rgba(79, 102, 71, 0.22);
+
+    transition:
+        opacity 0.3s ease;
+}
+
+
+/* NUMÉRO DES QUESTIONS */
+
+.question-number {
+    width: 42px;
+    height: 42px;
+
+    margin-bottom: 22px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--yellow);
+    color: var(--green);
+
+    font-size: 13px;
+}
+
+
+/* QUESTION */
+
+.question {
+    display: block;
+
+    margin-bottom: 20px;
+
+    font-size: 24px;
+    line-height: 1.35;
+
+    color: var(--green);
+}
+
+.helper-text {
+    margin: -5px 0 25px;
+
+    font-size: 15px;
+    line-height: 1.6;
+
+    color:
+        rgba(79, 102, 71, 0.72);
+}
+
+
+/* INPUTS */
+
+.text-input,
+.textarea-input {
+    width: 100%;
+
+    padding: 15px 5px;
+
+    border: none;
+
+    border-bottom:
+        1px solid var(--green);
+
+    background: transparent;
+
+    color: var(--green);
+
+    font-family:
+        "Acumin",
+        Arial,
+        sans-serif;
+
+    font-size: 18px;
+
+    outline: none;
+
+    border-radius: 0;
+}
+
+.text-input::placeholder,
+.textarea-input::placeholder {
+    color:
+        rgba(79, 102, 71, 0.45);
+}
+
+.text-input:focus,
+.textarea-input:focus {
+    border-bottom:
+        2px solid var(--green);
+}
+
+.textarea-input {
+    min-height: 110px;
+
+    resize: vertical;
+}
+
+
+/* SELECT NOMBRE DE PERSONNES */
+
+.select-wrapper {
+    position: relative;
+
+    max-width: 320px;
+
+    margin-top: 12px;
+}
+
+.select-input {
+    width: 100%;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    padding:
+        16px
+        45px
+        16px
+        16px;
+
+    border:
+        1px solid var(--green);
+
+    background:
+        var(--cream);
+
+    color:
+        var(--green);
+
+    font-family:
+        "Acumin",
+        Arial,
+        sans-serif;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    outline: none;
+}
+
+.select-wrapper::after {
+    content: "↓";
+
+    position: absolute;
+
+    right: 18px;
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    pointer-events: none;
+}
+
+
+/* CHOIX RADIO */
+
+.choice-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 17px;
+}
+
+.choice {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+    line-height: 1.4;
+}
+
+.choice input {
+    position: absolute;
+
+    opacity: 0;
+}
+
+.custom-radio {
+    width: 23px;
+    height: 23px;
+
+    flex-shrink: 0;
+
+    border:
+        1px solid var(--green);
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.choice input:checked
++ .custom-radio::after {
+
+    content: "";
+
+    width: 13px;
+    height: 13px;
+
+    border-radius: 50%;
+
+    background:
+        var(--green);
+}
+
+
+/* ALLERGIES */
+
+.conditional-section {
+    display: none;
+
+    margin-top: 30px;
+
+    padding: 30px;
+
+    background:
+        rgba(160, 159, 133, 0.15);
+}
+
+.conditional-section.visible {
+    display: block;
+}
+
+.conditional-section label {
+    display: block;
+
+    margin-bottom: 18px;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+}
+
+
+/* DATE LIMITE */
+
+.rsvp-deadline {
+    padding: 42px 30px;
+
+    background:
+        var(--green);
+
+    color:
+        var(--cream);
+
+    text-align: center;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+.rsvp-deadline strong {
+    color:
+        var(--yellow);
+}
+
+
+/* BOUTON ENVOYER */
+
+.submit-area {
+    text-align: center;
+}
+
+.rsvp-submit {
+    padding: 19px 40px;
+
+    border: none;
+
+    border-radius: 100px;
+
+    background:
+        var(--yellow);
+
+    color:
+        var(--green);
+
+    font-family:
+        "Acumin",
+        Arial,
+        sans-serif;
+
+    font-size: 13px;
+
+    letter-spacing: 1.8px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.rsvp-submit:hover {
+    transform:
+        translateY(-3px);
+
+    opacity: 0.9;
+}
+
+.rsvp-submit:disabled {
+    opacity: 0.55;
+
+    cursor: wait;
+}
+
+
+/* CONFIRMATION */
+
+.rsvp-success {
+    display: none;
+
+    margin-top: 35px;
+
+    padding: 35px;
+
+    background:
+        rgba(79, 102, 71, 0.10);
+
+    color:
+        var(--green);
+
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+.rsvp-success.visible {
+    display: block;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    .rsvp-page {
+        padding-top: 90px;
+    }
+
+    .rsvp-hero {
+        padding:
+            75px
+            24px
+            55px;
+    }
+
+    .rsvp-form-section {
+        padding:
+            0
+            24px
+            90px;
+    }
+
+    .question {
+        font-size: 20px;
+    }
+
+    .form-group {
+        padding-bottom: 38px;
+    }
+
+    .select-wrapper {
+        max-width: 100%;
+    }
+
+    .rsvp-deadline {
+        padding:
+            32px
+            20px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<nav>
+
+    <a
+        href="./index.html"
+        class="logo-link"
+        aria-label="Retour à l'accueil"
+    >
+
+        <img
+            src="./citron-logo.png"
+            alt="Justine et Yvan"
+            class="logo-img"
+        >
+
+    </a>
+
+
+    <div class="nav-links">
+
+        <a href="./index.html">
+            Accueil
+        </a>
+
+        <a href="./dormir.html">
+            Où dormir
+        </a>
+
+        <a href="./rsvp.html">
+            RSVP
+        </a>
+
+        <a href="./photos.html">
+            Photos
+        </a>
+
+        <a href="./faq.html">
+            FAQ
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================================================
+     RSVP
+========================================================= -->
+
+<main class="rsvp-page">
+
+
+    <section class="rsvp-hero">
+
+
+        <div class="page-eyebrow">
+
+            Serez-vous des nôtres ?
+
+        </div>
+
+
+        <h1 class="page-title">
+
+            Confirmez<br>
+            votre présence
+
+        </h1>
+
+
+        <p class="page-intro">
+
+            Nous avons hâte de partager cette journée avec vous.
+
+            <br><br>
+
+            Merci de prendre quelques instants
+            pour nous confirmer votre présence.
+
+        </p>
+
+
+    </section>
+
+
+
+    <section class="rsvp-form-section">
+
+
+        <div class="rsvp-container">
+
+
+            <!--
+                Le formulaire est envoyé directement
+                vers Google Apps Script.
+
+                Le visiteur reste sur le site.
+            -->
+
+            <form
+
+                class="rsvp-form"
+
+                id="rsvpForm"
+
+                action="https://script.google.com/macros/s/AKfycbwuFAbOggqDw7k_s4vhme73gucFdAVW7ThsEzATW2UOhbID32yaaETkdJIfXLk28JKtaQ/exec"
+
+                method="POST"
+
+                target="hidden_iframe"
+
+            >
+
+
+                <!-- =================================================
+                     QUESTION 01
+                ================================================== -->
+
+                <div class="form-group">
+
+
+                    <div class="question-number">
+
+                        01
+
+                    </div>
+
+
+                    <label
+                        class="question"
+                        for="fullName"
+                    >
+
+                        Nom et prénom
+
+                    </label>
+
+
+                    <p class="helper-text">
+
+                        Nom et prénom de la personne
+                        qui remplit le formulaire.
+
+                    </p>
+
+
+                    <input
+
+                        type="text"
+
+                        id="fullName"
+
+                        name="nom"
+
+                        class="text-input"
+
+                        placeholder="Votre nom et prénom"
+
+                        autocomplete="name"
+
+                        required
+
+                    >
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     QUESTION 02
+                ================================================== -->
+
+                <div class="form-group">
+
+
+                    <div class="question-number">
+
+                        02
+
+                    </div>
+
+
+                    <div class="question">
+
+                        Serez-vous parmi nous pour célébrer
+                        notre mariage ? 🥂
+
+                    </div>
+
+
+                    <div class="choice-list">
+
+
+                        <label class="choice">
+
+
+                            <input
+
+                                type="radio"
+
+                                name="presence"
+
+                                value="Oui"
+
+                                required
+
+                            >
+
+
+                            <span class="custom-radio"></span>
+
+
+                            <span>
+
+                                Oui, avec grand plaisir !
+
+                            </span>
+
+
+                        </label>
+
+
+
+                        <label class="choice">
+
+
+                            <input
+
+                                type="radio"
+
+                                name="presence"
+
+                                value="Non"
+
+                            >
+
+
+                            <span class="custom-radio"></span>
+
+
+                            <span>
+
+                                Malheureusement,
+                                je ne pourrai pas être présent(e)
+
+                            </span>
+
+
+                        </label>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     QUESTION 03
+                ================================================== -->
+
+                <div
+
+                    class="form-group"
+
+                    id="guestsGroup"
+
+                >
+
+
+                    <div class="question-number">
+
+                        03
+
+                    </div>
+
+
+                    <div class="question">
+
+                        Combien de personnes seront présentes ?
+
+                    </div>
+
+
+                    <p class="helper-text">
+
+                        Merci d’indiquer le nom et le prénom
+                        de chaque personne présente,
+                        vous compris.
+
+                    </p>
+
+
+                    <label for="guestNumber">
+
+                        Nombre de personnes
+
+                    </label>
+
+
+                    <div class="select-wrapper">
+
+
+                        <select
+
+                            id="guestNumber"
+
+                            name="nombre"
+
+                            class="select-input"
+
+                        >
+
+
+                            <option value="">
+
+                                Sélectionnez
+
+                            </option>
+
+
+                            <option value="1">
+
+                                1 personne
+
+                            </option>
+
+
+                            <option value="2">
+
+                                2 personnes
+
+                            </option>
+
+
+                            <option value="3">
+
+                                3 personnes
+
+                            </option>
+
+
+                            <option value="4">
+
+                                4 personnes
+
+                            </option>
+
+
+                            <option value="5">
+
+                                5 personnes
+
+                            </option>
+
+
+                            <option value="6">
+
+                                6 personnes
+
+                            </option>
+
+
+                            <option value="7">
+
+                                7 personnes
+
+                            </option>
+
+
+                            <option value="8">
+
+                                8 personnes
+
+                            </option>
+
+
+                            <option value="9">
+
+                                9 personnes
+
+                            </option>
+
+
+                            <option value="10">
+
+                                10 personnes
+
+                            </option>
+
+
+                        </select>
+
+
+                    </div>
+
+
+                    <div style="height:45px;"></div>
+
+
+                    <label for="guestNames">
+
+                        Noms et prénoms
+                        des personnes présentes
+
+                    </label>
+
+
+                    <textarea
+
+                        id="guestNames"
+
+                        name="personnes"
+
+                        class="textarea-input"
+
+                        placeholder="Ex. Justine Dupont, Yvan Martin..."
+
+                    ></textarea>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     QUESTION 04
+                ================================================== -->
+
+                <div class="form-group">
+
+
+                    <div class="question-number">
+
+                        04
+
+                    </div>
+
+
+                    <div class="question">
+
+                        Avez-vous des allergies
+                        ou intolérances alimentaires ?
+
+                    </div>
+
+
+                    <div class="choice-list">
+
+
+                        <label class="choice">
+
+
+                            <input
+
+                                type="radio"
+
+                                name="allergies"
+
+                                value="Non"
+
+                                required
+
+                            >
+
+
+                            <span class="custom-radio"></span>
+
+
+                            <span>
+
+                                Non
+
+                            </span>
+
+
+                        </label>
+
+
+
+                        <label class="choice">
+
+
+                            <input
+
+                                type="radio"
+
+                                name="allergies"
+
+                                value="Oui"
+
+                            >
+
+
+                            <span class="custom-radio"></span>
+
+
+                            <span>
+
+                                Oui
+
+                            </span>
+
+
+                        </label>
+
+
+                    </div>
+
+
+
+                    <div
+
+                        class="conditional-section"
+
+                        id="allergyDetails"
+
+                    >
+
+
+                        <label for="allergyText">
+
+                            Merci de préciser la personne concernée
+                            ainsi que son allergie
+                            ou son intolérance.
+
+                        </label>
+
+
+                        <textarea
+
+                            id="allergyText"
+
+                            name="detailAllergies"
+
+                            class="textarea-input"
+
+                            placeholder="Ex. Yvan Martin — allergie aux fruits à coque"
+
+                        ></textarea>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     QUESTION 05
+                ================================================== -->
+
+                <div class="form-group">
+
+
+                    <div class="question-number">
+
+                        05
+
+                    </div>
+
+
+                    <label
+
+                        class="question"
+
+                        for="message"
+
+                    >
+
+                        Souhaitez-vous nous faire part
+                        d’autre chose ?
+
+                    </label>
+
+
+                    <textarea
+
+                        id="message"
+
+                        name="message"
+
+                        class="textarea-input"
+
+                        placeholder="Un petit mot, une information particulière..."
+
+                    ></textarea>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     DATE LIMITE
+                ================================================== -->
+
+                <div class="rsvp-deadline">
+
+
+                    Merci de confirmer votre présence avant le
+
+
+                    <strong>
+
+                        30 novembre 2026
+
+                    </strong>
+
+
+                    ❤️
+
+
+                    <br><br>
+
+
+                    Nous avons hâte de célébrer
+                    cette journée avec vous !
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     ENVOYER
+                ================================================== -->
+
+                <div class="submit-area">
+
+
+                    <button
+
+                        type="submit"
+
+                        class="rsvp-submit"
+
+                        id="rsvpSubmit"
+
+                    >
+
+                        Envoyer ma réponse
+
+                    </button>
+
+
+
+                    <div
+
+                        class="rsvp-success"
+
+                        id="rsvpSuccess"
+
+                    >
+
+
+                        <strong>
+
+                            Merci 🤍
+
+                        </strong>
+
+
+                        <br><br>
+
+
+                        Votre réponse a bien été enregistrée.
+
+
+                        <br>
+
+
+                        Nous avons hâte de célébrer cette journée
+                        avec vous !
+
+
+                    </div>
+
+
+                </div>
+
+
+            </form>
+
+
+
+            <!--
+                L'envoi Apps Script s'effectue ici
+                sans faire quitter le site à l'invité.
+            -->
+
+            <iframe
+
+                name="hidden_iframe"
+
+                id="hidden_iframe"
+
+                style="display:none;"
+
+                title="Envoi de votre réponse"
+
+            ></iframe>
+
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+
+    <div class="footer-main">
+
+
+        <div>
+
+
+            <img
+
+                src="./citron-logo.png"
+
+                alt="Justine et Yvan"
+
+                class="footer-logo"
+
+            >
+
+
+            <h3>
+
+                Justine & Yvan
+
+            </h3>
+
+
+            <p>
+
+                04.09.2027
+
+            </p>
+
+
+        </div>
+
+
+
+        <div>
+
+
+            <div class="footer-heading">
+
+                Navigation
+
+            </div>
+
+
+            <div class="footer-links">
+
+
+                <a href="./index.html">
+
+                    Accueil
+
+                </a>
+
+
+                <a href="./dormir.html">
+
+                    Où dormir
+
+                </a>
+
+
+                <a href="./rsvp.html">
+
+                    RSVP
+
+                </a>
+
+
+                <a href="./photos.html">
+
+                    Photos
+
+                </a>
+
+
+                <a href="./faq.html">
+
+                    FAQ
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div>
+
+
+            <div class="footer-heading">
+
+                Informations
+
+            </div>
+
+
+            <p>
+
+                Saint-Martin-Lestra<br>
+
+                Salt-en-Donzy<br>
+
+                Loire — 42
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="footer-bottom">
+
+        © Justine & Yvan — 2027
+
+    </div>
+
+
+</footer>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT RSVP
+========================================================= -->
+
+<script>
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+const rsvpForm =
+    document.getElementById(
+        "rsvpForm"
+    );
+
+
+const guestsGroup =
+    document.getElementById(
+        "guestsGroup"
+    );
+
+
+const guestNumber =
+    document.getElementById(
+        "guestNumber"
+    );
+
+
+const guestNames =
+    document.getElementById(
+        "guestNames"
+    );
+
+
+const allergyDetails =
+    document.getElementById(
+        "allergyDetails"
+    );
+
+
+const allergyText =
+    document.getElementById(
+        "allergyText"
+    );
+
+
+const submitButton =
+    document.getElementById(
+        "rsvpSubmit"
+    );
+
+
+const successMessage =
+    document.getElementById(
+        "rsvpSuccess"
+    );
+
+
+const hiddenIframe =
+    document.getElementById(
+        "hidden_iframe"
+    );
+
+
+let formHasBeenSubmitted =
+    false;
+
+
+
+/* =========================================================
+   PRÉSENCE
+========================================================= */
+
+document
+    .querySelectorAll(
+        'input[name="presence"]'
+    )
+    .forEach(function(choice) {
+
+
+        choice.addEventListener(
+            "change",
+            function() {
+
+
+                if (
+                    this.value === "Non"
+                ) {
+
+
+                    guestsGroup.style.opacity =
+                        "0.3";
+
+
+                    guestsGroup.style.pointerEvents =
+                        "none";
+
+
+                    guestNumber.required =
+                        false;
+
+
+                    guestNames.required =
+                        false;
+
+
+                    guestNumber.disabled =
+                        true;
+
+
+                    guestNames.disabled =
+                        true;
+
+
+                    guestNumber.value =
+                        "";
+
+
+                    guestNames.value =
+                        "";
+
+
+                }
+
+
+                else {
+
+
+                    guestsGroup.style.opacity =
+                        "1";
+
+
+                    guestsGroup.style.pointerEvents =
+                        "auto";
+
+
+                    guestNumber.disabled =
+                        false;
+
+
+                    guestNames.disabled =
+                        false;
+
+
+                    guestNumber.required =
+                        true;
+
+
+                    guestNames.required =
+                        true;
+
+
+                }
+
+
+            }
+        );
+
+
+    });
+
+
+
+/* =========================================================
+   ALLERGIES
+========================================================= */
+
+document
+    .querySelectorAll(
+        'input[name="allergies"]'
+    )
+    .forEach(function(choice) {
+
+
+        choice.addEventListener(
+            "change",
+            function() {
+
+
+                if (
+                    this.value === "Oui"
+                ) {
+
+
+                    allergyDetails
+                        .classList
+                        .add(
+                            "visible"
+                        );
+
+
+                    allergyText.disabled =
+                        false;
+
+
+                    allergyText.required =
+                        true;
+
+
+                }
+
+
+                else {
+
+
+                    allergyDetails
+                        .classList
+                        .remove(
+                            "visible"
+                        );
+
+
+                    allergyText.required =
+                        false;
+
+
+                    allergyText.disabled =
+                        true;
+
+
+                    allergyText.value =
+                        "";
+
+
+                }
+
+
+            }
+        );
+
+
+    });
+
+
+
+/* =========================================================
+   ENVOI
+========================================================= */
+
+rsvpForm.addEventListener(
+    "submit",
+    function() {
+
+
+        formHasBeenSubmitted =
+            true;
+
+
+        submitButton.disabled =
+            true;
+
+
+        submitButton.textContent =
+            "Envoi en cours...";
+
+
+        submitButton.style.opacity =
+            "0.55";
+
+
+    }
+);
+
+
+
+/* =========================================================
+   CONFIRMATION APRÈS ENVOI
+========================================================= */
+
+hiddenIframe.addEventListener(
+    "load",
+    function() {
+
+
+        if (
+            !formHasBeenSubmitted
+        ) {
+
+            return;
+
+        }
+
+
+        successMessage
+            .classList
+            .add(
+                "visible"
+            );
+
+
+        rsvpForm.reset();
+
+
+        guestsGroup.style.opacity =
+            "1";
+
+
+        guestsGroup.style.pointerEvents =
+            "auto";
+
+
+        guestNumber.disabled =
+            false;
+
+
+        guestNames.disabled =
+            false;
+
+
+        guestNumber.required =
+            false;
+
+
+        guestNames.required =
+            false;
+
+
+        allergyDetails
+            .classList
+            .remove(
+                "visible"
+            );
+
+
+        allergyText.disabled =
+            true;
+
+
+        allergyText.required =
+            false;
+
+
+        submitButton.disabled =
+            false;
+
+
+        submitButton.textContent =
+            "Envoyer ma réponse";
+
+
+        submitButton.style.opacity =
+            "1";
+
+
+        formHasBeenSubmitted =
+            false;
+
+
+        successMessage.scrollIntoView({
+
+            behavior:
+                "smooth",
+
+            block:
+                "center"
+
+        });
+
+
+    }
+);
+
+
+/* On désactive le détail allergie
+   au chargement de la page */
+
+allergyText.disabled =
+    true;
+
+
+</script>
+
+
+</body>
+
+</html>
