@@ -1,0 +1,530 @@
+@font-face {
+    font-family: "Acumin";
+    src: local("Acumin Variable Concept"),
+         local("AcuminVariableConcept");
+}
+
+:root {
+    --green: #4f6647;
+    --khaki: #a09f85;
+    --yellow: #ffcd07;
+    --cream: #faf9e5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--green);
+    font-family: "Acumin", Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+}
+
+section {
+    scroll-margin-top: 90px;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 16px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(250, 249, 229, 0.96);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img {
+    width: 62px;
+    height: auto;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.logo-link:hover .logo-img {
+    transform: rotate(-5deg) scale(1.05);
+    opacity: 0.85;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: opacity 0.2s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.55;
+}
+
+/* =========================
+   TITRES COMMUNS
+========================= */
+
+.page-hero {
+    padding: 150px 8vw 90px;
+    text-align: center;
+}
+
+.page-eyebrow {
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.page-title {
+    margin: 0;
+    font-size: clamp(48px, 7vw, 90px);
+    line-height: 0.95;
+    font-weight: 400;
+    letter-spacing: -3px;
+}
+
+.page-intro {
+    max-width: 650px;
+    margin: 30px auto 0;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* =========================
+   ACCUEIL
+========================= */
+
+.hero {
+    min-height: 100vh;
+    padding: 130px 6vw 80px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 7vw;
+    align-items: center;
+}
+
+.hero-visual {
+    display: flex;
+    justify-content: center;
+}
+
+.photo-wrapper {
+    width: 82%;
+    max-width: 580px;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.names {
+    margin: 0;
+    font-size: clamp(55px, 7vw, 105px);
+    line-height: 0.88;
+    font-weight: 500;
+    letter-spacing: -4px;
+}
+
+.date {
+    margin-top: 35px;
+    font-size: clamp(28px, 4vw, 52px);
+    letter-spacing: 3px;
+}
+
+.intro {
+    margin-top: 45px;
+    max-width: 570px;
+    font-size: 18px;
+    line-height: 1.65;
+}
+
+/* =========================
+   COMPTE À REBOURS
+========================= */
+
+.countdown {
+    margin-top: 55px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.countdown-item {
+    min-width: 75px;
+    text-align: center;
+}
+
+.number {
+    font-size: 38px;
+    line-height: 1;
+    font-weight: 500;
+}
+
+.label {
+    margin-top: 9px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.separator {
+    margin-top: -15px;
+    font-size: 28px;
+}
+
+/* =========================
+   PROGRAMME
+========================= */
+
+.program-section {
+    background: var(--green);
+    color: var(--cream);
+    padding: 130px 8vw;
+}
+
+.program-container {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.program-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.program-title {
+    margin: 0;
+    font-size: clamp(46px, 6vw, 80px);
+    font-weight: 400;
+}
+
+.timeline {
+    max-width: 760px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 28px;
+    top: 20px;
+    bottom: 20px;
+    width: 2px;
+    background: var(--cream);
+    opacity: 0.8;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 0 0 55px 90px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 18px;
+    top: 6px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--yellow);
+    border: 3px solid var(--green);
+}
+
+.timeline-time {
+    color: var(--yellow);
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.timeline-item h3 {
+    margin: 0 0 10px;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.timeline-item p {
+    margin: 0;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+.maps-button {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 12px 20px;
+    border: 1px solid var(--cream);
+    border-radius: 100px;
+    color: var(--cream);
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.maps-button:hover {
+    background: var(--cream);
+    color: var(--green);
+}
+
+.travel-time {
+    margin: 10px 0 55px 90px;
+    color: var(--yellow);
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* =========================
+   LOGEMENTS
+========================= */
+
+.lodging-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 8vw 120px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.lodging-card {
+    display: block;
+    text-decoration: none;
+    background: var(--green);
+    color: var(--cream);
+    transition: transform 0.25s ease;
+}
+
+.lodging-card:hover {
+    transform: translateY(-6px);
+}
+
+.lodging-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.lodging-content {
+    padding: 25px;
+}
+
+.lodging-content h3 {
+    margin: 0 0 15px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.lodging-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* =========================
+   FAQ
+========================= */
+
+.faq-list {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 8vw 120px;
+}
+
+.faq-item {
+    border-bottom: 1px solid rgba(79, 102, 71, 0.25);
+}
+
+.faq-question {
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: var(--green);
+    padding: 25px 0;
+    text-align: left;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    font-family: inherit;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.faq-answer {
+    display: none;
+    padding: 0 0 25px;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.faq-item.open .faq-answer {
+    display: block;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: var(--green);
+    color: var(--cream);
+    padding: 65px 6vw 30px;
+}
+
+.footer-main {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 60px;
+}
+
+.footer-logo {
+    width: 75px;
+    margin-bottom: 20px;
+}
+
+.footer-heading {
+    color: var(--yellow);
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links a {
+    color: var(--cream);
+    text-decoration: none;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 50px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(250,249,229,0.25);
+    font-size: 12px;
+    opacity: 0.75;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    nav {
+        padding: 14px 18px;
+    }
+
+    .logo-img {
+        width: 48px;
+    }
+
+    .nav-links {
+        gap: 12px;
+        overflow-x: auto;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 110px 24px 80px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .photo-wrapper {
+        width: 100%;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .names {
+        font-size: 64px;
+        letter-spacing: -3px;
+    }
+
+    .countdown {
+        justify-content: center;
+        gap: 6px;
+    }
+
+    .number {
+        font-size: 27px;
+    }
+
+    .timeline-item {
+        padding-left: 70px;
+    }
+
+    .travel-time {
+        margin-left: 70px;
+    }
+
+    .lodging-grid {
+        grid-template-columns: 1fr;
+        padding: 0 24px 90px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+    }
+}
