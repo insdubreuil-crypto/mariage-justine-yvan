@@ -4,12 +4,15 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Justine & Yvan — 04.09.2027</title>
 
 <style>
+
+/* =========================================================
+   TYPOGRAPHIE
+========================================================= */
 
 @font-face {
     font-family: "Acumin";
@@ -17,12 +20,22 @@
          local("AcuminVariableConcept");
 }
 
+
+/* =========================================================
+   COULEURS
+========================================================= */
+
 :root {
     --green: #4f6647;
     --khaki: #a09f85;
     --yellow: #ffcd07;
     --cream: #faf9e5;
 }
+
+
+/* =========================================================
+   BASE
+========================================================= */
 
 * {
     box-sizing: border-box;
@@ -34,16 +47,23 @@ html {
 
 body {
     margin: 0;
+
     background: var(--cream);
     color: var(--green);
+
     font-family: "Acumin", Arial, sans-serif;
+
     overflow-x: hidden;
 }
 
+section {
+    scroll-margin-top: 90px;
+}
 
-/* =========================
+
+/* =========================================================
    NAVIGATION
-========================= */
+========================================================= */
 
 nav {
     position: fixed;
@@ -53,17 +73,18 @@ nav {
 
     width: 100%;
 
-    z-index: 100;
+    z-index: 1000;
 
-    padding: 18px 40px;
+    padding: 16px 40px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    background: rgba(250, 249, 229, 0.94);
+    background: rgba(250, 249, 229, 0.95);
 
     backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 
@@ -71,43 +92,36 @@ nav {
 
 .logo-link {
     display: flex;
-
     align-items: center;
 
     text-decoration: none;
 }
 
-
 .logo-img {
-    display: block;
-
-    width: 58px;
-
+    width: 60px;
     height: auto;
+
+    display: block;
 
     transition:
         transform 0.25s ease,
         opacity 0.25s ease;
 }
 
-
 .logo-link:hover .logo-img {
     transform: rotate(-5deg) scale(1.05);
-
     opacity: 0.85;
 }
 
 
-/* LIENS NAVIGATION */
+/* MENU */
 
 .nav-links {
     display: flex;
-
     align-items: center;
 
     gap: 28px;
 }
-
 
 .nav-links a {
     color: var(--green);
@@ -123,15 +137,14 @@ nav {
     transition: opacity 0.2s ease;
 }
 
-
 .nav-links a:hover {
-    opacity: 0.6;
+    opacity: 0.55;
 }
 
 
-/* =========================
+/* =========================================================
    ACCUEIL
-========================= */
+========================================================= */
 
 .hero {
     min-height: 100vh;
@@ -140,7 +153,7 @@ nav {
 
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 
     gap: 7vw;
 
@@ -148,33 +161,26 @@ nav {
 }
 
 
-/* =========================
-   PHOTO
-========================= */
+/* PHOTO */
 
 .hero-visual {
     width: 100%;
 
     display: flex;
-
     justify-content: center;
-
     align-items: center;
 }
 
-
 .photo-wrapper {
-    width: 78%;
+    width: 82%;
 
-    max-width: 560px;
+    max-width: 580px;
 
     overflow: hidden;
 }
 
-
 .photo-wrapper img {
     width: 100%;
-
     height: auto;
 
     display: block;
@@ -183,14 +189,13 @@ nav {
 }
 
 
-/* =========================
-   TEXTE ACCUEIL
-========================= */
+/* TEXTE */
 
 .hero-content {
+    width: 100%;
+
     max-width: 650px;
 }
-
 
 .names {
     margin: 0;
@@ -204,7 +209,6 @@ nav {
     letter-spacing: -4px;
 }
 
-
 .date {
     margin-top: 35px;
 
@@ -213,11 +217,10 @@ nav {
     letter-spacing: 3px;
 }
 
-
 .intro {
     margin-top: 45px;
 
-    max-width: 550px;
+    max-width: 570px;
 
     font-size: 18px;
 
@@ -225,27 +228,24 @@ nav {
 }
 
 
-/* =========================
+/* =========================================================
    COMPTE À REBOURS
-========================= */
+========================================================= */
 
 .countdown {
     margin-top: 55px;
 
     display: flex;
-
     align-items: center;
 
     gap: 18px;
 }
-
 
 .countdown-item {
     min-width: 75px;
 
     text-align: center;
 }
-
 
 .number {
     font-size: 38px;
@@ -254,7 +254,6 @@ nav {
 
     font-weight: 500;
 }
-
 
 .label {
     margin-top: 9px;
@@ -266,7 +265,6 @@ nav {
     text-transform: uppercase;
 }
 
-
 .separator {
     margin-top: -15px;
 
@@ -274,16 +272,21 @@ nav {
 }
 
 
-/* =========================
-   BOUTON
-========================= */
+/* =========================================================
+   BOUTONS
+========================================================= */
 
-.discover {
+.discover,
+.main-button {
     display: inline-block;
 
     margin-top: 45px;
 
-    padding: 15px 24px;
+    padding: 16px 26px;
+
+    border: none;
+
+    border-radius: 100px;
 
     background: var(--yellow);
 
@@ -291,30 +294,32 @@ nav {
 
     text-decoration: none;
 
+    font-family: "Acumin", Arial, sans-serif;
+
     font-size: 12px;
 
     letter-spacing: 1.5px;
 
     text-transform: uppercase;
 
-    border-radius: 100px;
+    cursor: pointer;
 
     transition:
         transform 0.2s ease,
         opacity 0.2s ease;
 }
 
-
-.discover:hover {
+.discover:hover,
+.main-button:hover {
     transform: translateY(-3px);
 
     opacity: 0.9;
 }
 
 
-/* =========================
-   SECTION INFORMATIONS
-========================= */
+/* =========================================================
+   INFORMATIONS
+========================================================= */
 
 .intro-section {
     min-height: 70vh;
@@ -326,19 +331,15 @@ nav {
     color: var(--cream);
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     text-align: center;
 }
 
-
 .intro-section-inner {
     max-width: 850px;
 }
-
 
 .section-number {
     margin-bottom: 30px;
@@ -350,7 +351,6 @@ nav {
     text-transform: uppercase;
 }
 
-
 .intro-section h2 {
     margin: 0;
 
@@ -361,7 +361,6 @@ nav {
     font-weight: 400;
 }
 
-
 .intro-section p {
     margin: 40px auto 0;
 
@@ -371,91 +370,183 @@ nav {
 
     line-height: 1.7;
 }
-/* =========================
+
+
+/* =========================================================
+   SECTIONS EN CONSTRUCTION
+========================================================= */
+
+.coming-section {
+    min-height: 55vh;
+
+    padding: 120px 8vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background: var(--cream);
+
+    color: var(--green);
+
+    border-bottom: 1px solid rgba(79, 102, 71, 0.15);
+}
+
+.coming-inner {
+    max-width: 750px;
+}
+
+.coming-section h2 {
+    margin: 0;
+
+    font-size: clamp(42px, 6vw, 75px);
+
+    font-weight: 400;
+
+    line-height: 1;
+}
+
+.coming-section p {
+    margin: 30px auto 0;
+
+    max-width: 570px;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
    RSVP
-========================= */
+========================================================= */
 
 .rsvp-section {
-    background: var(--cream);
-    color: var(--green);
     padding: 140px 8vw;
+
+    background: var(--cream);
+
+    color: var(--green);
 }
 
 .rsvp-container {
     max-width: 900px;
+
     margin: 0 auto;
 }
 
+
+/* TITRE */
+
 .rsvp-header {
-    text-align: center;
     margin-bottom: 80px;
+
+    text-align: center;
 }
 
 .rsvp-eyebrow {
-    font-size: 12px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
     margin-bottom: 25px;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
 }
 
 .rsvp-title {
     margin: 0;
+
     font-size: clamp(48px, 7vw, 90px);
+
     line-height: 0.95;
+
     font-weight: 400;
+
     letter-spacing: -3px;
 }
 
 .rsvp-intro {
     max-width: 580px;
+
     margin: 30px auto 0;
+
     font-size: 17px;
+
     line-height: 1.6;
 }
 
+
+/* FORMULAIRE */
+
 .rsvp-form {
     display: flex;
+
     flex-direction: column;
+
     gap: 55px;
 }
 
 .form-group {
     padding-bottom: 45px;
+
     border-bottom: 1px solid rgba(79, 102, 71, 0.25);
+
+    transition:
+        opacity 0.3s ease;
 }
 
+
+/* NUMÉROS */
+
 .question-number {
+    width: 40px;
+    height: 40px;
+
+    margin-bottom: 20px;
+
     display: inline-flex;
     align-items: center;
     justify-content: center;
 
-    width: 38px;
-    height: 38px;
-
-    margin-bottom: 18px;
-
     border-radius: 50%;
 
     background: var(--yellow);
+
     color: var(--green);
 
     font-size: 13px;
+
     font-weight: 500;
 }
 
-.form-group label.question {
+
+/* QUESTIONS */
+
+.question {
     display: block;
-    font-size: 23px;
-    line-height: 1.3;
+
     margin-bottom: 22px;
+
+    font-size: 23px;
+
+    line-height: 1.3;
 }
 
 .helper-text {
+    margin: -10px 0 22px;
+
     font-size: 14px;
+
     line-height: 1.5;
+
     opacity: 0.75;
-    margin: -10px 0 20px;
 }
+
+
+/* INPUTS */
 
 .text-input,
 .number-input,
@@ -465,12 +556,17 @@ nav {
     padding: 16px 4px;
 
     border: none;
+
     border-bottom: 1px solid var(--green);
 
+    border-radius: 0;
+
     background: transparent;
+
     color: var(--green);
 
     font-family: "Acumin", Arial, sans-serif;
+
     font-size: 17px;
 
     outline: none;
@@ -484,43 +580,54 @@ nav {
 
 .textarea-input {
     min-height: 110px;
+
     resize: vertical;
 }
 
 .number-input {
-    max-width: 130px;
+    max-width: 140px;
 }
+
+
+/* CHOIX RADIO */
 
 .choice-list {
     display: flex;
+
     flex-direction: column;
-    gap: 14px;
+
+    gap: 16px;
 }
 
 .choice {
     position: relative;
+
     display: flex;
     align-items: center;
+
     gap: 14px;
 
     cursor: pointer;
 
     font-size: 16px;
+
     line-height: 1.4;
 }
 
 .choice input {
     position: absolute;
+
     opacity: 0;
 }
 
 .custom-radio {
-    width: 21px;
-    height: 21px;
+    width: 22px;
+    height: 22px;
 
     flex-shrink: 0;
 
     border: 1px solid var(--green);
+
     border-radius: 50%;
 
     display: flex;
@@ -531,22 +638,25 @@ nav {
 .choice input:checked + .custom-radio::after {
     content: "";
 
-    width: 11px;
-    height: 11px;
+    width: 12px;
+    height: 12px;
 
     border-radius: 50%;
 
     background: var(--green);
 }
 
+
+/* ALLERGIES */
+
 .conditional-section {
+    display: none;
+
     margin-top: 30px;
 
-    padding: 25px;
+    padding: 28px;
 
-    background: rgba(160, 159, 133, 0.13);
-
-    display: none;
+    background: rgba(160, 159, 133, 0.15);
 }
 
 .conditional-section.visible {
@@ -555,46 +665,65 @@ nav {
 
 .conditional-section label {
     display: block;
+
     margin-bottom: 15px;
 
     font-size: 15px;
+
     line-height: 1.5;
 }
 
+
+/* DATE LIMITE */
+
 .rsvp-deadline {
-    margin-top: 70px;
-    padding: 35px;
+    margin-top: 25px;
+
+    padding: 40px;
+
+    background: var(--green);
+
+    color: var(--cream);
 
     text-align: center;
 
-    background: var(--green);
-    color: var(--cream);
+    font-size: 17px;
+
+    line-height: 1.6;
 }
 
 .rsvp-deadline strong {
     color: var(--yellow);
 }
 
+
+/* ENVOI */
+
 .submit-area {
     text-align: center;
 }
 
 .rsvp-submit {
-    border: none;
+    margin-top: 15px;
 
-    padding: 18px 34px;
+    padding: 19px 38px;
+
+    border: none;
 
     border-radius: 100px;
 
     background: var(--yellow);
+
     color: var(--green);
 
     font-family: "Acumin", Arial, sans-serif;
 
     font-size: 13px;
+
     font-weight: 500;
 
     text-transform: uppercase;
+
     letter-spacing: 1.7px;
 
     cursor: pointer;
@@ -606,18 +735,27 @@ nav {
 
 .rsvp-submit:hover {
     transform: translateY(-3px);
+
     opacity: 0.9;
 }
+
+
+/* CONFIRMATION */
 
 .rsvp-success {
     display: none;
 
-    margin-top: 25px;
+    margin-top: 35px;
+
+    padding: 30px;
+
+    background: rgba(79, 102, 71, 0.10);
 
     text-align: center;
 
-    font-size: 17px;
-    line-height: 1.5;
+    font-size: 18px;
+
+    line-height: 1.6;
 }
 
 .rsvp-success.visible {
@@ -625,9 +763,103 @@ nav {
 }
 
 
-/* MOBILE RSVP */
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 800px) {
+
+    nav {
+        padding: 14px 18px;
+    }
+
+    .logo-img {
+        width: 48px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+
+    /* ACCUEIL */
+
+    .hero {
+        min-height: auto;
+
+        padding: 105px 24px 80px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 55px;
+    }
+
+    .hero-visual {
+        width: 100%;
+    }
+
+    .photo-wrapper {
+        width: 100%;
+
+        max-width: 500px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .names {
+        font-size: 64px;
+
+        letter-spacing: -3px;
+    }
+
+    .date {
+        font-size: 30px;
+    }
+
+    .intro {
+        font-size: 16px;
+    }
+
+
+    /* COUNTDOWN */
+
+    .countdown {
+        justify-content: center;
+
+        gap: 7px;
+    }
+
+    .countdown-item {
+        min-width: 58px;
+    }
+
+    .number {
+        font-size: 27px;
+    }
+
+    .label {
+        font-size: 7px;
+
+        letter-spacing: 1.3px;
+    }
+
+    .separator {
+        font-size: 20px;
+    }
+
+
+    /* INFORMATIONS */
+
+    .intro-section {
+        padding: 100px 30px;
+    }
+
+
+    /* RSVP */
 
     .rsvp-section {
         padding: 100px 24px;
@@ -638,7 +870,8 @@ nav {
     }
 
     .rsvp-title {
-        font-size: 53px;
+        font-size: 52px;
+
         letter-spacing: -2px;
     }
 
@@ -646,119 +879,12 @@ nav {
         padding-bottom: 35px;
     }
 
-    .form-group label.question {
+    .question {
         font-size: 20px;
     }
 
     .rsvp-deadline {
-        padding: 28px 20px;
-    }
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 800px) {
-
-    nav {
-        padding: 14px 18px;
-    }
-
-
-    .logo-img {
-        width: 45px;
-    }
-
-
-    .nav-links {
-        display: none;
-    }
-
-
-    .hero {
-        min-height: auto;
-
-        padding: 100px 24px 80px;
-
-        display: flex;
-
-        flex-direction: column;
-
-        gap: 55px;
-    }
-
-
-    .hero-visual {
-        width: 100%;
-    }
-
-
-    .photo-wrapper {
-        width: 100%;
-
-        max-width: 500px;
-    }
-
-
-    .hero-content {
-        text-align: center;
-    }
-
-
-    .names {
-        font-size: 65px;
-
-        letter-spacing: -3px;
-    }
-
-
-    .date {
-        font-size: 30px;
-    }
-
-
-    .intro {
-        font-size: 16px;
-    }
-
-
-    .countdown {
-        justify-content: center;
-
-        gap: 7px;
-    }
-
-
-    .countdown-item {
-        min-width: 58px;
-    }
-
-
-    .number {
-        font-size: 27px;
-    }
-
-
-    .label {
-        font-size: 7px;
-
-        letter-spacing: 1.3px;
-    }
-
-
-    .separator {
-        font-size: 20px;
-    }
-
-
-    .discover {
-        margin-top: 35px;
-    }
-
-
-    .intro-section {
-        padding: 100px 30px;
+        padding: 30px 20px;
     }
 
 }
@@ -771,25 +897,25 @@ nav {
 <body>
 
 
-<!-- =========================
+<!-- =========================================================
      NAVIGATION
-========================= -->
+========================================================= -->
 
 <nav>
 
-    <!--
-        Le citron ramène au haut de la page.
-        Ton fichier doit bien s'appeler :
-        citron-logo.png
-    -->
-
-    <a href="#accueil" class="logo-link" aria-label="Retour à l'accueil">
-    <img
-        src="./citron-logo.png"
-        alt="Logo citron Justine et Yvan"
-        class="logo-img"
+    <a
+        href="#accueil"
+        class="logo-link"
+        aria-label="Retour à l'accueil"
     >
-</a>
+
+        <img
+            src="./citron-logo.png"
+            alt="Logo Justine et Yvan"
+            class="logo-img"
+        >
+
+    </a>
 
 
     <div class="nav-links">
@@ -819,9 +945,9 @@ nav {
 </nav>
 
 
-<!-- =========================
+<!-- =========================================================
      ACCUEIL
-========================= -->
+========================================================= -->
 
 <section
     class="hero"
@@ -829,14 +955,12 @@ nav {
 >
 
 
-    <!-- PHOTO -->
-
     <div class="hero-visual">
 
         <div class="photo-wrapper">
 
             <img
-                src="photo-mariage.jpg"
+                src="./photo-mariage.jpg"
                 alt="Justine et Yvan"
             >
 
@@ -844,8 +968,6 @@ nav {
 
     </div>
 
-
-    <!-- TEXTE -->
 
     <div class="hero-content">
 
@@ -881,9 +1003,7 @@ nav {
         </p>
 
 
-        <!-- =========================
-             COMPTE À REBOURS
-        ========================= -->
+        <!-- COMPTE À REBOURS -->
 
         <div class="countdown">
 
@@ -985,15 +1105,15 @@ nav {
 </section>
 
 
-<!-- =========================
+
+<!-- =========================================================
      INFORMATIONS
-========================= -->
+========================================================= -->
 
 <section
     class="intro-section"
     id="informations"
 >
-
 
     <div class="intro-section-inner">
 
@@ -1017,28 +1137,63 @@ nav {
         <p>
 
             Cérémonie, cocktail, dîner et soirée :
-            retrouvez toutes les informations pratiques
-            pour profiter pleinement de cette belle journée.
+            toutes les informations pratiques seront ajoutées ici
+            progressivement.
+
+            <br><br>
+
+            Revenez nous voir bientôt 🤍
 
         </p>
 
 
     </div>
 
+</section>
+
+
+
+<!-- =========================================================
+     OÙ DORMIR
+========================================================= -->
+
+<section
+    class="coming-section"
+    id="hebergement"
+>
+
+    <div class="coming-inner">
+
+        <div class="section-number">
+            03 — Où dormir
+        </div>
+
+        <h2>
+            Un petit nid<br>
+            pour la nuit
+        </h2>
+
+        <p>
+            Nous préparons une sélection de gîtes,
+            Airbnb et logements à proximité du domaine.
+            Les bonnes adresses arrivent bientôt.
+        </p>
+
+    </div>
 
 </section>
 
 
-<!-- =========================
-     SECTIONS À VENIR
-========================= -->
 
-<section id="hebergement"></section>
-<!-- =========================
+<!-- =========================================================
      RSVP
-========================= -->
+========================================================= -->
 
-<section class="rsvp-section" id="rsvp">
+<section
+    class="rsvp-section"
+    id="rsvp"
+>
+
 
     <div class="rsvp-container">
 
@@ -1046,105 +1201,109 @@ nav {
         <div class="rsvp-header">
 
             <div class="rsvp-eyebrow">
+
                 04 — RSVP
+
             </div>
 
+
             <h2 class="rsvp-title">
+
                 Confirmez<br>
+
                 votre présence
+
             </h2>
 
+
             <p class="rsvp-intro">
+
                 Nous avons hâte de partager cette journée avec vous.
+
                 Merci de prendre quelques instants pour nous confirmer
                 votre présence.
+
             </p>
 
         </div>
 
 
-        <!--
-            GOOGLE FORM
 
-            On connectera ces champs à Google Forms
-            dans l'étape suivante.
-        -->
+        <!-- =================================================
+             FORMULAIRE GOOGLE FORMS
+        ================================================== -->
 
-       <form
-    class="rsvp-form"
-    id="rsvpForm"
-    action="https://docs.google.com/forms/d/e/1FAIpQLSc1ze6hvjM--YDSEmxs6XiWoPAv-SZ_VcvwYnJY4xZi3fckFQ/formResponse"
-    method="POST"
-    target="hidden_iframe"
->
+
+        <form
+            class="rsvp-form"
+            id="rsvpForm"
+            action="https://docs.google.com/forms/d/e/1FAIpQLSc1ze6hvjM--YDSEmxs6XiWoPAv-SZ_VcvwYnJY4xZi3fckFQ/formResponse"
+            method="POST"
+            target="hidden_iframe"
+        >
 
 
             <!-- QUESTION 1 -->
 
             <div class="form-group">
 
+
                 <div class="question-number">
+
                     01
+
                 </div>
+
 
                 <label
                     class="question"
                     for="fullName"
                 >
+
                     Nom et prénom
+
                 </label>
 
+
                 <p class="helper-text">
+
                     Nom et prénom de la personne qui remplit le formulaire.
+
                 </p>
-<label class="choice">
-
-    <input
-        type="radio"
-        name="entry.462814591"
-        value="oui"
-        required
-    >
-
-    <span class="custom-radio"></span>
-
-    <span>
-        Oui, avec grand plaisir !
-    </span>
-
-</label>
 
 
-<label class="choice">
+                <input
+                    type="text"
+                    id="fullName"
+                    name="entry.1648294777"
+                    class="text-input"
+                    placeholder="Votre nom et prénom"
+                    autocomplete="name"
+                    required
+                >
 
-    <input
-        type="radio"
-        name="entry.462814591"
-        value="non"
-    >
-
-    <span class="custom-radio"></span>
-
-    <span>
-        Malheureusement, je ne pourrai pas être présent(e)
-    </span>
-
-</label>
 
             </div>
+
 
 
             <!-- QUESTION 2 -->
 
             <div class="form-group">
 
+
                 <div class="question-number">
+
                     02
+
                 </div>
 
-                <label class="question">
+
+                <div class="question">
+
                     Serez-vous parmi nous pour célébrer notre mariage ? 🥂
-                </label>
+
+                </div>
 
 
                 <div class="choice-list">
@@ -1154,32 +1313,37 @@ nav {
 
                         <input
                             type="radio"
-                            name="attendance"
-                            value="Oui, avec grand plaisir !"
+                            name="entry.462814591"
+                            value="oui"
                             required
                         >
 
                         <span class="custom-radio"></span>
 
                         <span>
+
                             Oui, avec grand plaisir !
+
                         </span>
 
                     </label>
+
 
 
                     <label class="choice">
 
                         <input
                             type="radio"
-                            name="attendance"
-                            value="Malheureusement, je ne pourrai pas être présent(e)"
+                            name="entry.462814591"
+                            value="non"
                         >
 
                         <span class="custom-radio"></span>
 
                         <span>
+
                             Malheureusement, je ne pourrai pas être présent(e)
+
                         </span>
 
                     </label>
@@ -1187,7 +1351,9 @@ nav {
 
                 </div>
 
+
             </div>
+
 
 
             <!-- QUESTION 3 -->
@@ -1197,67 +1363,88 @@ nav {
                 id="guestsGroup"
             >
 
+
                 <div class="question-number">
+
                     03
+
                 </div>
 
-                <label class="question">
+
+                <div class="question">
+
                     Combien de personnes seront présentes ?
-                </label>
+
+                </div>
 
 
                 <p class="helper-text">
+
                     Merci d’indiquer le nom et le prénom
                     de chaque personne présente, vous compris.
+
                 </p>
 
 
                 <label for="guestNumber">
+
                     Nombre de personnes
+
                 </label>
+
 
                 <br>
 
-               <textarea
-    id="guestNames"
-    name="entry.855146474"
-    class="textarea-input"
-    placeholder="Ex. Justine Dupont, Yvan Martin..."
-></textarea>
+
+                <input
+                    type="number"
+                    id="guestNumber"
+                    name="entry.1714455056"
+                    class="number-input"
+                    min="1"
+                    placeholder="1"
+                >
 
 
-                <div style="height: 35px;"></div>
+                <div style="height:35px;"></div>
 
 
                 <label for="guestNames">
-                    Noms et prénoms
+
+                    Noms et prénoms des personnes présentes
+
                 </label>
 
-               <textarea
-    id="guestNames"
-    name="entry.855146474"
-    class="textarea-input"
-    placeholder="Ex. Justine Dupont, Yvan Martin..."
-></textarea>
+
+                <textarea
+                    id="guestNames"
+                    name="entry.855146474"
+                    class="textarea-input"
+                    placeholder="Ex. Justine Dupont, Yvan Martin..."
+                ></textarea>
+
 
             </div>
 
 
+
             <!-- QUESTION 4 -->
 
-            <div
-                class="form-group"
-                id="allergyGroup"
-            >
+            <div class="form-group">
+
 
                 <div class="question-number">
+
                     04
+
                 </div>
 
 
-                <label class="question">
+                <div class="question">
+
                     Avez-vous des allergies ou intolérances alimentaires ?
-                </label>
+
+                </div>
 
 
                 <div class="choice-list">
@@ -1265,50 +1452,39 @@ nav {
 
                     <label class="choice">
 
-    <input
-        type="radio"
-        name="entry.2096618548"
-        value="non"
-    >
+                        <input
+                            type="radio"
+                            name="entry.2096618548"
+                            value="non"
+                            required
+                        >
 
-    <span class="custom-radio"></span>
+                        <span class="custom-radio"></span>
 
-    <span>
-        Non
-    </span>
+                        <span>
 
-</label>
+                            Non
 
+                        </span>
 
-<label class="choice">
+                    </label>
 
-    <input
-        type="radio"
-        name="entry.2096618548"
-        value="oui"
-    >
-
-    <span class="custom-radio"></span>
-
-    <span>
-        Oui
-    </span>
-
-</label>
 
 
                     <label class="choice">
 
                         <input
                             type="radio"
-                            name="allergy"
-                            value="Oui"
+                            name="entry.2096618548"
+                            value="oui"
                         >
 
                         <span class="custom-radio"></span>
 
                         <span>
+
                             Oui
+
                         </span>
 
                     </label>
@@ -1317,12 +1493,12 @@ nav {
                 </div>
 
 
-                <!-- APPARAÎT UNIQUEMENT SI OUI -->
 
                 <div
                     class="conditional-section"
                     id="allergyDetails"
                 >
+
 
                     <label for="allergyText">
 
@@ -1332,70 +1508,90 @@ nav {
                     </label>
 
 
-                   <textarea
-    id="allergyText"
-    name="entry.535119558"
-    class="textarea-input"
-    placeholder="Ex. Yvan Martin — allergie aux fruits à coque"
-></textarea>
+                    <textarea
+                        id="allergyText"
+                        name="entry.535119558"
+                        class="textarea-input"
+                        placeholder="Ex. Yvan Martin — allergie aux fruits à coque"
+                    ></textarea>
+
 
                 </div>
 
+
             </div>
+
 
 
             <!-- QUESTION 5 -->
 
             <div class="form-group">
 
+
                 <div class="question-number">
+
                     05
+
                 </div>
+
 
                 <label
                     class="question"
                     for="message"
                 >
+
                     Souhaitez-vous nous faire part d’autre chose ?
+
                 </label>
 
 
                 <textarea
-    id="message"
-    name="entry.1794913655"
-    class="textarea-input"
-    placeholder="Un petit mot, une information particulière..."
-></textarea>
+                    id="message"
+                    name="entry.1794913655"
+                    class="textarea-input"
+                    placeholder="Un petit mot, une information particulière..."
+                ></textarea>
+
 
             </div>
+
 
 
             <!-- DATE LIMITE -->
 
             <div class="rsvp-deadline">
 
+
                 Merci de confirmer votre présence avant le
 
                 <strong>
+
                     30 novembre 2026
+
                 </strong>
 
                 ❤️
 
+
                 <br><br>
 
+
                 Nous avons hâte de célébrer cette journée avec vous !
+
 
             </div>
 
 
-            <!-- BOUTON -->
+
+            <!-- ENVOYER -->
 
             <div class="submit-area">
+
 
                 <button
                     type="submit"
                     class="rsvp-submit"
+                    id="rsvpSubmit"
                 >
 
                     Envoyer ma réponse
@@ -1408,39 +1604,109 @@ nav {
                     id="rsvpSuccess"
                 >
 
-                    Merci 🤍<br>
-                    Votre réponse a bien été prise en compte.
+                    <strong>
+                        Merci 🤍
+                    </strong>
+
+                    <br><br>
+
+                    Votre réponse a bien été envoyée.
+
+                    <br>
+
+                    Nous avons hâte de célébrer cette journée avec vous !
 
                 </div>
+
 
             </div>
 
 
         </form>
-<iframe
-    name="hidden_iframe"
-    id="hidden_iframe"
-    style="display:none;"
-></iframe>
+
+
+
+        <!--
+             Google Forms répond dans cette iframe.
+             Elle est complètement invisible.
+        -->
+
+        <iframe
+            name="hidden_iframe"
+            id="hidden_iframe"
+            style="display:none;"
+            title="Envoi du formulaire"
+        ></iframe>
+
 
     </div>
 
 </section>
 
-<section id="photos"></section>
 
 
-<!-- =========================
-     COMPTE À REBOURS
-========================= -->
+<!-- =========================================================
+     PHOTOS
+========================================================= -->
+
+<section
+    class="coming-section"
+    id="photos"
+>
+
+    <div class="coming-inner">
+
+        <div class="section-number">
+
+            05 — Photos
+
+        </div>
+
+
+        <h2>
+
+            Vos plus beaux<br>
+
+            souvenirs
+
+        </h2>
+
+
+        <p>
+
+            Le jour venu, vous pourrez retrouver ici
+            un lien pour partager avec nous vos photos
+            et vidéos de la journée.
+
+            <br><br>
+
+            Cette partie arrive bientôt 📸
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
 
 <script>
+
+/* =========================================================
+   COMPTE À REBOURS
+========================================================= */
 
 const weddingDate =
     new Date("2027-09-04T14:30:00").getTime();
 
 
 function updateCountdown() {
+
 
     const now =
         new Date().getTime();
@@ -1450,23 +1716,30 @@ function updateCountdown() {
         weddingDate - now;
 
 
+
     if (distance <= 0) {
+
 
         document.getElementById("days").textContent =
             "000";
 
+
         document.getElementById("hours").textContent =
             "00";
+
 
         document.getElementById("minutes").textContent =
             "00";
 
+
         document.getElementById("seconds").textContent =
             "00";
+
 
         return;
 
     }
+
 
 
     const days =
@@ -1474,6 +1747,7 @@ function updateCountdown() {
             distance /
             (1000 * 60 * 60 * 24)
         );
+
 
 
     const hours =
@@ -1485,6 +1759,7 @@ function updateCountdown() {
         );
 
 
+
     const minutes =
         Math.floor(
             (
@@ -1492,6 +1767,7 @@ function updateCountdown() {
                 (1000 * 60)
             ) % 60
         );
+
 
 
     const seconds =
@@ -1503,16 +1779,20 @@ function updateCountdown() {
         );
 
 
+
     document.getElementById("days").textContent =
         String(days).padStart(3, "0");
+
 
 
     document.getElementById("hours").textContent =
         String(hours).padStart(2, "0");
 
 
+
     document.getElementById("minutes").textContent =
         String(minutes).padStart(2, "0");
+
 
 
     document.getElementById("seconds").textContent =
@@ -1523,158 +1803,122 @@ function updateCountdown() {
 
 updateCountdown();
 
+
 setInterval(
     updateCountdown,
     1000
 );
 
-</script>
 
-<script>
 
-<script>
-
-/* =========================
-   RSVP - PRESENCE
-========================= */
+/* =========================================================
+   RSVP — PRÉSENCE
+========================================================= */
 
 const attendanceChoices =
     document.querySelectorAll(
         'input[name="entry.462814591"]'
     );
 
+
 const guestsGroup =
-    document.getElementById("guestsGroup");
+    document.getElementById(
+        "guestsGroup"
+    );
+
 
 const guestNumber =
-    document.getElementById("guestNumber");
+    document.getElementById(
+        "guestNumber"
+    );
+
 
 const guestNames =
-    document.getElementById("guestNames");
+    document.getElementById(
+        "guestNames"
+    );
+
 
 
 attendanceChoices.forEach(choice => {
 
-    choice.addEventListener("change", function () {
 
-        if (this.value === "non") {
+    choice.addEventListener(
+        "change",
+        function () {
 
-            guestsGroup.style.opacity = "0.35";
 
-            guestsGroup.style.pointerEvents = "none";
+            if (this.value === "non") {
 
-            guestNumber.required = false;
 
-            guestNames.required = false;
+                guestsGroup.style.opacity =
+                    "0.3";
 
-        } else {
 
-            guestsGroup.style.opacity = "1";
+                guestsGroup.style.pointerEvents =
+                    "none";
 
-            guestsGroup.style.pointerEvents = "auto";
 
-            guestNumber.required = true;
+                guestNumber.required =
+                    false;
 
-            guestNames.required = true;
+
+                guestNames.required =
+                    false;
+
+
+                guestNumber.value =
+                    "";
+
+
+                guestNames.value =
+                    "";
+
+
+            }
+
+            else {
+
+
+                guestsGroup.style.opacity =
+                    "1";
+
+
+                guestsGroup.style.pointerEvents =
+                    "auto";
+
+
+                guestNumber.required =
+                    true;
+
+
+                guestNames.required =
+                    true;
+
+            }
+
         }
-
-    });
+    );
 
 });
 
 
-/* =========================
-   RSVP - ALLERGIES
-========================= */
+
+/* =========================================================
+   RSVP — ALLERGIES
+========================================================= */
 
 const allergyChoices =
     document.querySelectorAll(
         'input[name="entry.2096618548"]'
     );
 
-const allergyDetails =
-    document.getElementById("allergyDetails");
-
-const allergyText =
-    document.getElementById("allergyText");
-
-
-allergyChoices.forEach(choice => {
-
-    choice.addEventListener("change", function () {
-
-        if (this.value === "oui") {
-
-            allergyDetails.classList.add("visible");
-
-            allergyText.required = true;
-
-        } else {
-
-            allergyDetails.classList.remove("visible");
-
-            allergyText.required = false;
-
-            allergyText.value = "";
-        }
-
-    });
-
-});
-
-
-/* =========================
-   ENVOI DU FORMULAIRE
-========================= */
-
-const rsvpForm =
-    document.getElementById("rsvpForm");
-
-const successMessage =
-    document.getElementById("rsvpSuccess");
-
-
-rsvpForm.addEventListener("submit", function () {
-
-    setTimeout(function () {
-
-        successMessage.classList.add("visible");
-
-        rsvpForm.reset();
-
-        guestsGroup.style.opacity = "1";
-
-        guestsGroup.style.pointerEvents = "auto";
-
-        allergyDetails.classList.remove("visible");
-
-        window.scrollTo({
-            top:
-                successMessage.getBoundingClientRect().top
-                + window.scrollY
-                - 180,
-
-            behavior: "smooth"
-        });
-
-    }, 800);
-
-});
-
-</script>
-/* =========================
-   ALLERGIES
-========================= */
-
-const allergyChoices =
-    document.querySelectorAll(
-        'input[name="allergy"]'
-    );
 
 const allergyDetails =
     document.getElementById(
         "allergyDetails"
     );
+
 
 const allergyText =
     document.getElementById(
@@ -1682,31 +1926,40 @@ const allergyText =
     );
 
 
+
 allergyChoices.forEach(choice => {
+
 
     choice.addEventListener(
         "change",
         function () {
 
-            if (this.value === "Oui") {
+
+            if (this.value === "oui") {
+
 
                 allergyDetails.classList.add(
                     "visible"
                 );
 
+
                 allergyText.required =
                     true;
+
 
             }
 
             else {
 
+
                 allergyDetails.classList.remove(
                     "visible"
                 );
 
+
                 allergyText.required =
                     false;
+
 
                 allergyText.value =
                     "";
@@ -1719,10 +1972,10 @@ allergyChoices.forEach(choice => {
 });
 
 
-/* =========================
-   TEMPORAIRE
-   GOOGLE FORM PAS ENCORE CONNECTÉ
-========================= */
+
+/* =========================================================
+   RSVP — ENVOI GOOGLE FORMS
+========================================================= */
 
 const rsvpForm =
     document.getElementById(
@@ -1730,20 +1983,152 @@ const rsvpForm =
     );
 
 
+const successMessage =
+    document.getElementById(
+        "rsvpSuccess"
+    );
+
+
+const hiddenIframe =
+    document.getElementById(
+        "hidden_iframe"
+    );
+
+
+const submitButton =
+    document.getElementById(
+        "rsvpSubmit"
+    );
+
+
+let formHasBeenSubmitted =
+    false;
+
+
+
+/*
+   Quand on clique sur Envoyer,
+   le formulaire est envoyé normalement
+   vers Google Forms.
+
+   IMPORTANT :
+   aucun preventDefault ici.
+*/
+
 rsvpForm.addEventListener(
     "submit",
-    function(event) {
+    function () {
 
-        event.preventDefault();
 
-        alert(
-            "Le formulaire est prêt. Il reste simplement à le connecter à Google Forms."
-        );
+        formHasBeenSubmitted =
+            true;
+
+
+        submitButton.disabled =
+            true;
+
+
+        submitButton.textContent =
+            "Envoi en cours...";
+
+
+        submitButton.style.opacity =
+            "0.6";
 
     }
 );
 
+
+
+/*
+   Lorsque Google Forms répond,
+   l'iframe invisible se recharge.
+*/
+
+hiddenIframe.addEventListener(
+    "load",
+    function () {
+
+
+        if (!formHasBeenSubmitted) {
+
+            return;
+
+        }
+
+
+
+        successMessage.classList.add(
+            "visible"
+        );
+
+
+
+        rsvpForm.reset();
+
+
+
+        guestsGroup.style.opacity =
+            "1";
+
+
+        guestsGroup.style.pointerEvents =
+            "auto";
+
+
+
+        guestNumber.required =
+            false;
+
+
+        guestNames.required =
+            false;
+
+
+
+        allergyDetails.classList.remove(
+            "visible"
+        );
+
+
+        allergyText.required =
+            false;
+
+
+
+        submitButton.disabled =
+            false;
+
+
+        submitButton.textContent =
+            "Envoyer ma réponse";
+
+
+        submitButton.style.opacity =
+            "1";
+
+
+
+        formHasBeenSubmitted =
+            false;
+
+
+
+        successMessage.scrollIntoView({
+
+            behavior: "smooth",
+
+            block: "center"
+
+        });
+
+    }
+);
+
+
 </script>
+
+
 </body>
 
 </html>
