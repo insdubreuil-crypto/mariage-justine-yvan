@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Photos — Justine & Yvan</title>
+
+<link
+    rel="stylesheet"
+    href="./style.css"
+>
+
+<style>
+
+/* =========================================================
+   PAGE PHOTOS
+========================================================= */
+
+.photos-page {
+    padding-top: 120px;
+}
+
+.photos-hero {
+    padding: 90px 8vw 70px;
+
+    text-align: center;
+}
+
+.photos-content {
+    padding: 0 8vw 120px;
+}
+
+.photos-container {
+    max-width: 950px;
+
+    margin: 0 auto;
+}
+
+.photos-card {
+    padding: 70px 50px;
+
+    background: var(--green);
+
+    color: var(--cream);
+
+    text-align: center;
+}
+
+.photos-icon {
+    font-size: 42px;
+
+    margin-bottom: 25px;
+}
+
+.photos-card h2 {
+    margin: 0;
+
+    font-size: clamp(36px, 5vw, 58px);
+
+    font-weight: 400;
+
+    line-height: 1.05;
+}
+
+.photos-card p {
+    max-width: 650px;
+
+    margin: 30px auto 0;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    opacity: 0.92;
+}
+
+.photos-actions {
+    margin-top: 45px;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 18px;
+}
+
+.photos-button {
+    display: inline-block;
+
+    padding: 16px 28px;
+
+    border-radius: 100px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.photos-button.primary {
+    background: var(--yellow);
+
+    color: var(--green);
+}
+
+.photos-button.secondary {
+    border: 1px solid var(--cream);
+
+    color: var(--cream);
+}
+
+.photos-button:hover {
+    transform: translateY(-3px);
+
+    opacity: 0.9;
+}
+
+
+/* PETIT BLOC INFO */
+
+.photos-note {
+    margin-top: 45px;
+
+    padding: 30px;
+
+    background:
+        rgba(160, 159, 133, 0.15);
+
+    color: var(--green);
+
+    text-align: center;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    .photos-page {
+        padding-top: 90px;
+    }
+
+    .photos-hero {
+        padding:
+            75px
+            24px
+            55px;
+    }
+
+    .photos-content {
+        padding:
+            0
+            24px
+            90px;
+    }
+
+    .photos-card {
+        padding:
+            50px
+            24px;
+    }
+
+    .photos-actions {
+        flex-direction: column;
+    }
+
+    .photos-button {
+        width: 100%;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<nav>
+
+    <a
+        href="./index.html"
+        class="logo-link"
+        aria-label="Retour à l'accueil"
+    >
+
+        <img
+            src="./citron-logo.png"
+            alt="Justine et Yvan"
+            class="logo-img"
+        >
+
+    </a>
+
+
+    <div class="nav-links">
+
+        <a href="./index.html">
+            Accueil
+        </a>
+
+        <a href="./dormir.html">
+            Où dormir
+        </a>
+
+        <a href="./rsvp.html">
+            RSVP
+        </a>
+
+        <a href="./photos.html">
+            Photos
+        </a>
+
+        <a href="./faq.html">
+            FAQ
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================================================
+     PHOTOS
+========================================================= -->
+
+<main class="photos-page">
+
+
+    <section class="photos-hero">
+
+
+        <div class="page-eyebrow">
+
+            Les souvenirs du jour J
+
+        </div>
+
+
+        <h1 class="page-title">
+
+            Photos
+
+        </h1>
+
+
+        <p class="page-intro">
+
+            Parce qu’il y aura sûrement des moments
+            que nous n’aurons pas vus…
+
+            <br><br>
+
+            Partagez avec nous vos photos et vidéos
+            afin que nous puissions revivre cette journée
+            à travers vos yeux.
+
+        </p>
+
+
+    </section>
+
+
+
+    <section class="photos-content">
+
+
+        <div class="photos-container">
+
+
+            <div class="photos-card">
+
+
+                <div class="photos-icon">
+
+                    📸
+
+                </div>
+
+
+                <h2>
+
+                    Partagez vos souvenirs
+
+                </h2>
+
+
+                <p>
+
+                    Le jour du mariage,
+                    vous pourrez ajouter vos photos et vidéos
+                    dans notre album partagé.
+
+                    <br><br>
+
+                    Vous pourrez également consulter
+                    et récupérer les souvenirs partagés
+                    par les autres invités.
+
+                </p>
+
+
+                <div class="photos-actions">
+
+
+                    <!--
+                        REMPLACE LE # PAR TON LIEN GOOGLE PHOTOS
+                    -->
+
+                    <a
+                        href="#"
+                        class="photos-button primary"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        Ajouter mes photos
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="photos-button secondary"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        Voir l’album
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="photos-note">
+
+                L’album sera activé à l’approche du mariage 🤍
+
+                <br>
+
+                Pensez à revenir sur cette page le jour J
+                pour déposer vos plus beaux souvenirs.
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+
+    <div class="footer-main">
+
+
+        <div>
+
+
+            <img
+                src="./citron-logo.png"
+                alt="Justine et Yvan"
+                class="footer-logo"
+            >
+
+
+            <h3>
+
+                Justine & Yvan
+
+            </h3>
+
+
+            <p>
+
+                04.09.2027
+
+            </p>
+
+
+        </div>
+
+
+
+        <div>
+
+
+            <div class="footer-heading">
+
+                Navigation
+
+            </div>
+
+
+            <div class="footer-links">
+
+
+                <a href="./index.html">
+
+                    Accueil
+
+                </a>
+
+
+                <a href="./dormir.html">
+
+                    Où dormir
+
+                </a>
+
+
+                <a href="./rsvp.html">
+
+                    RSVP
+
+                </a>
+
+
+                <a href="./photos.html">
+
+                    Photos
+
+                </a>
+
+
+                <a href="./faq.html">
+
+                    FAQ
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div>
+
+
+            <div class="footer-heading">
+
+                Informations
+
+            </div>
+
+
+            <p>
+
+                Saint-Martin-Lestra<br>
+
+                Salt-en-Donzy<br>
+
+                Loire — 42
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © Justine & Yvan — 2027
+
+    </div>
+
+
+</footer>
+
+
+</body>
+
+</html>
