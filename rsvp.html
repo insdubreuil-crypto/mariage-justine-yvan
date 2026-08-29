@@ -188,9 +188,7 @@
 
 
                 <div class="question-number">
-
                     01
-
                 </div>
 
 
@@ -243,9 +241,7 @@
 
 
                 <div class="question-number">
-
                     02
-
                 </div>
 
 
@@ -326,251 +322,132 @@
 
 
             <!-- =================================================
-                 QUESTION 03
+                 QUESTIONS QUI DISPARAISSENT EN CAS DE "NON"
             ================================================== -->
 
-            <div
-                class="form-group"
-                id="guestsGroup"
-            >
+            <div id="presenceQuestions">
 
 
-                <div class="question-number">
+                <!-- =================================================
+                     QUESTION 03
+                ================================================== -->
 
-                    03
+                <div class="form-group">
 
-                </div>
 
+                    <div class="question-number">
+                        03
+                    </div>
 
-                <div class="question">
 
-                    Combien de personnes seront présentes ?
+                    <div class="question">
 
-                </div>
+                        Combien de personnes seront présentes ?
 
+                    </div>
 
-                <p class="helper-text">
 
-                    Merci d’indiquer le nom et le prénom
-                    de chaque personne présente,
-                    vous compris.
+                    <p class="helper-text">
 
-                </p>
+                        Merci d’indiquer le nom et le prénom
+                        de chaque personne présente,
+                        vous compris.
 
+                    </p>
 
-                <label for="guestNumber">
 
-                    Nombre de personnes
+                    <label for="guestNumber">
 
-                </label>
-
-
-                <div class="select-wrapper">
-
-
-                    <select
-
-                        id="guestNumber"
-
-                        name="nombre"
-
-                        class="select-input"
-
-                    >
-
-
-                        <option value="">
-
-                            Sélectionnez
-
-                        </option>
-
-
-                        <option value="1">
-                            1 personne
-                        </option>
-
-                        <option value="2">
-                            2 personnes
-                        </option>
-
-                        <option value="3">
-                            3 personnes
-                        </option>
-
-                        <option value="4">
-                            4 personnes
-                        </option>
-
-                        <option value="5">
-                            5 personnes
-                        </option>
-
-                        <option value="6">
-                            6 personnes
-                        </option>
-
-                        <option value="7">
-                            7 personnes
-                        </option>
-
-                        <option value="8">
-                            8 personnes
-                        </option>
-
-                        <option value="9">
-                            9 personnes
-                        </option>
-
-                        <option value="10">
-                            10 personnes
-                        </option>
-
-
-                    </select>
-
-
-                </div>
-
-
-                <div style="height: 38px;"></div>
-
-
-                <label for="guestNames">
-
-                    Noms et prénoms
-                    des personnes présentes
-
-                </label>
-
-
-                <textarea
-
-                    id="guestNames"
-
-                    name="personnes"
-
-                    class="textarea-input"
-
-                    placeholder="Ex. Justine Dupont, Yvan Martin..."
-
-                ></textarea>
-
-
-            </div>
-
-
-
-            <!-- =================================================
-                 QUESTION 04
-            ================================================== -->
-
-            <div class="form-group">
-
-
-                <div class="question-number">
-
-                    04
-
-                </div>
-
-
-                <div class="question">
-
-                    Avez-vous des allergies
-                    ou intolérances alimentaires ?
-
-                </div>
-
-
-                <div class="choice-list">
-
-
-                    <label class="choice">
-
-
-                        <input
-
-                            type="radio"
-
-                            name="allergies"
-
-                            value="Non"
-
-                            required
-
-                        >
-
-
-                        <span class="custom-radio"></span>
-
-
-                        <span>
-
-                            Non
-
-                        </span>
-
+                        Nombre de personnes
 
                     </label>
 
 
+                    <div class="select-wrapper">
 
-                    <label class="choice">
 
+                        <select
 
-                        <input
+                            id="guestNumber"
 
-                            type="radio"
+                            name="nombre"
 
-                            name="allergies"
-
-                            value="Oui"
+                            class="select-input"
 
                         >
 
 
-                        <span class="custom-radio"></span>
+                            <option value="">
+                                Sélectionnez
+                            </option>
+
+                            <option value="1">
+                                1 personne
+                            </option>
+
+                            <option value="2">
+                                2 personnes
+                            </option>
+
+                            <option value="3">
+                                3 personnes
+                            </option>
+
+                            <option value="4">
+                                4 personnes
+                            </option>
+
+                            <option value="5">
+                                5 personnes
+                            </option>
+
+                            <option value="6">
+                                6 personnes
+                            </option>
+
+                            <option value="7">
+                                7 personnes
+                            </option>
+
+                            <option value="8">
+                                8 personnes
+                            </option>
+
+                            <option value="9">
+                                9 personnes
+                            </option>
+
+                            <option value="10">
+                                10 personnes
+                            </option>
 
 
-                        <span>
-
-                            Oui
-
-                        </span>
+                        </select>
 
 
-                    </label>
+                    </div>
 
 
-                </div>
+                    <div style="height: 38px;"></div>
 
 
+                    <label for="guestNames">
 
-                <div
-                    class="conditional-section"
-                    id="allergyDetails"
-                >
-
-
-                    <label for="allergyText">
-
-                        Merci de préciser la personne concernée
-                        ainsi que son allergie
-                        ou son intolérance.
+                        Noms et prénoms
+                        des personnes présentes
 
                     </label>
 
 
                     <textarea
 
-                        id="allergyText"
+                        id="guestNames"
 
-                        name="detailAllergies"
+                        name="personnes"
 
                         class="textarea-input"
 
-                        placeholder="Ex. Yvan Martin — allergie aux fruits à coque"
+                        placeholder="Ex. Justine Dupont, Yvan Martin..."
 
                     ></textarea>
 
@@ -578,46 +455,161 @@
                 </div>
 
 
-            </div>
+
+                <!-- =================================================
+                     QUESTION 04
+                ================================================== -->
+
+                <div class="form-group">
+
+
+                    <div class="question-number">
+                        04
+                    </div>
+
+
+                    <div class="question">
+
+                        Avez-vous des allergies
+                        ou intolérances alimentaires ?
+
+                    </div>
+
+
+                    <div class="choice-list">
+
+
+                        <label class="choice">
+
+
+                            <input
+
+                                type="radio"
+
+                                name="allergies"
+
+                                value="Non"
+
+                                id="allergyNo"
+
+                            >
+
+
+                            <span class="custom-radio"></span>
+
+
+                            <span>
+                                Non
+                            </span>
+
+
+                        </label>
 
 
 
-            <!-- =================================================
-                 QUESTION 05
-            ================================================== -->
-
-            <div class="form-group">
+                        <label class="choice">
 
 
-                <div class="question-number">
+                            <input
 
-                    05
+                                type="radio"
+
+                                name="allergies"
+
+                                value="Oui"
+
+                                id="allergyYes"
+
+                            >
+
+
+                            <span class="custom-radio"></span>
+
+
+                            <span>
+                                Oui
+                            </span>
+
+
+                        </label>
+
+
+                    </div>
+
+
+
+                    <div
+                        class="conditional-section"
+                        id="allergyDetails"
+                    >
+
+
+                        <label for="allergyText">
+
+                            Merci de préciser la personne concernée
+                            ainsi que son allergie
+                            ou son intolérance.
+
+                        </label>
+
+
+                        <textarea
+
+                            id="allergyText"
+
+                            name="detailAllergies"
+
+                            class="textarea-input"
+
+                            placeholder="Ex. Yvan Martin — allergie aux fruits à coque"
+
+                        ></textarea>
+
+
+                    </div>
+
 
                 </div>
 
 
-                <label
-                    class="question"
-                    for="message"
-                >
 
-                    Souhaitez-vous nous faire part
-                    d’autre chose ?
+                <!-- =================================================
+                     QUESTION 05
+                ================================================== -->
 
-                </label>
+                <div class="form-group">
 
 
-                <textarea
+                    <div class="question-number">
+                        05
+                    </div>
 
-                    id="message"
 
-                    name="message"
+                    <label
+                        class="question"
+                        for="message"
+                    >
 
-                    class="textarea-input"
+                        Souhaitez-vous nous faire part
+                        d’autre chose ?
 
-                    placeholder="Un petit mot, une information particulière..."
+                    </label>
 
-                ></textarea>
+
+                    <textarea
+
+                        id="message"
+
+                        name="message"
+
+                        class="textarea-input"
+
+                        placeholder="Un petit mot, une information particulière..."
+
+                    ></textarea>
+
+
+                </div>
 
 
             </div>
@@ -633,9 +625,7 @@
                 Merci de confirmer votre présence avant le
 
                 <strong>
-
                     30 novembre 2026
-
                 </strong>
 
                 ❤️
@@ -671,37 +661,6 @@
                 </button>
 
 
-
-                <div
-
-                    class="rsvp-success"
-
-                    id="rsvpSuccess"
-
-                >
-
-
-                    <strong>
-
-                        Merci 🤍
-
-                    </strong>
-
-
-                    <br><br>
-
-
-                    Votre réponse a bien été enregistrée.
-
-                    <br>
-
-                    Nous avons hâte de célébrer
-                    cette journée avec vous !
-
-
-                </div>
-
-
             </div>
 
 
@@ -709,10 +668,110 @@
 
 
 
-        <!--
-            L'envoi est réalisé dans cet iframe caché.
-            Cela évite de rediriger l'invité vers Apps Script.
-        -->
+        <!-- =====================================================
+             MESSAGE QUI REMPLACE LE FORMULAIRE APRÈS ENVOI
+        ====================================================== -->
+
+        <div
+
+            class="rsvp-success"
+
+            id="rsvpSuccess"
+
+            style="
+                text-align: center;
+                padding: 55px 30px;
+            "
+
+        >
+
+
+            <div
+                style="
+                    font-size: 42px;
+                    margin-bottom: 22px;
+                "
+            >
+
+                🤍
+
+            </div>
+
+
+            <div
+                class="page-eyebrow"
+                style="margin-bottom: 18px;"
+            >
+
+                Réponse enregistrée
+
+            </div>
+
+
+            <h2
+                style="
+                    margin: 0;
+                    font-size: clamp(36px, 5vw, 58px);
+                    font-weight: 400;
+                "
+            >
+
+                Merci !
+
+            </h2>
+
+
+            <p
+                style="
+                    max-width: 580px;
+                    margin: 25px auto 0;
+                    font-size: 17px;
+                    line-height: 1.7;
+                "
+            >
+
+                Votre réponse a bien été envoyée.
+
+                <br><br>
+
+                Merci d’avoir pris le temps
+                de nous répondre.
+
+                <br>
+
+                Nous avons hâte de partager
+                cette aventure avec vous 🤍
+
+            </p>
+
+
+            <div
+                style="
+                    margin-top: 35px;
+                "
+            >
+
+
+                <a
+                    href="./index.html"
+                    class="btn btn-yellow"
+                >
+
+                    Retour à l’accueil
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =====================================================
+             IFRAME CACHÉ POUR L'ENVOI GOOGLE SHEETS
+        ====================================================== -->
 
         <iframe
 
@@ -750,13 +809,9 @@
 
 
             <img
-
                 src="./citron-logo.png"
-
                 alt=""
-
                 class="footer-logo"
-
             >
 
 
@@ -879,16 +934,12 @@
 
 
         <span>
-
             © Justine & Yvan — 2027
-
         </span>
 
 
         <span>
-
             mariage-justine-yvan.fr
-
         </span>
 
 
@@ -905,15 +956,19 @@
 <script>
 
 
+/* =========================================================
+   ÉLÉMENTS DU FORMULAIRE
+========================================================= */
+
 const rsvpForm =
     document.getElementById(
         "rsvpForm"
     );
 
 
-const guestsGroup =
+const presenceQuestions =
     document.getElementById(
-        "guestsGroup"
+        "presenceQuestions"
     );
 
 
@@ -929,6 +984,18 @@ const guestNames =
     );
 
 
+const allergyNo =
+    document.getElementById(
+        "allergyNo"
+    );
+
+
+const allergyYes =
+    document.getElementById(
+        "allergyYes"
+    );
+
+
 const allergyDetails =
     document.getElementById(
         "allergyDetails"
@@ -938,6 +1005,12 @@ const allergyDetails =
 const allergyText =
     document.getElementById(
         "allergyText"
+    );
+
+
+const message =
+    document.getElementById(
+        "message"
     );
 
 
@@ -968,102 +1041,204 @@ let formHasBeenSubmitted =
    ÉTAT DE DÉPART
 ========================================================= */
 
+successMessage.style.display =
+    "none";
+
+
 allergyText.disabled =
     true;
 
 
 
 /* =========================================================
-   PRÉSENCE
+   FONCTION : PRÉSENT
+========================================================= */
+
+function showPresenceQuestions() {
+
+
+    presenceQuestions.style.display =
+        "block";
+
+
+    guestNumber.disabled =
+        false;
+
+
+    guestNames.disabled =
+        false;
+
+
+    allergyNo.disabled =
+        false;
+
+
+    allergyYes.disabled =
+        false;
+
+
+    message.disabled =
+        false;
+
+
+    guestNumber.required =
+        true;
+
+
+    guestNames.required =
+        true;
+
+
+    allergyNo.required =
+        true;
+
+
+}
+
+
+
+/* =========================================================
+   FONCTION : ABSENT
+========================================================= */
+
+function hidePresenceQuestions() {
+
+
+    presenceQuestions.style.display =
+        "none";
+
+
+    /*
+        On vide les champs qui ne concernent
+        plus la personne absente.
+    */
+
+    guestNumber.value =
+        "";
+
+
+    guestNames.value =
+        "";
+
+
+    allergyNo.checked =
+        false;
+
+
+    allergyYes.checked =
+        false;
+
+
+    allergyText.value =
+        "";
+
+
+    message.value =
+        "";
+
+
+    /*
+        On enlève les obligations.
+    */
+
+    guestNumber.required =
+        false;
+
+
+    guestNames.required =
+        false;
+
+
+    allergyNo.required =
+        false;
+
+
+    allergyText.required =
+        false;
+
+
+    /*
+        Et on désactive les champs.
+        Les champs désactivés ne sont pas envoyés
+        au Google Sheet.
+    */
+
+    guestNumber.disabled =
+        true;
+
+
+    guestNames.disabled =
+        true;
+
+
+    allergyNo.disabled =
+        true;
+
+
+    allergyYes.disabled =
+        true;
+
+
+    allergyText.disabled =
+        true;
+
+
+    message.disabled =
+        true;
+
+
+    allergyDetails.classList.remove(
+        "visible"
+    );
+
+
+}
+
+
+
+/* =========================================================
+   RÉPONSE OUI / NON
 ========================================================= */
 
 document
     .querySelectorAll(
         'input[name="presence"]'
     )
-    .forEach(function(choice) {
+    .forEach(
+        function(choice) {
 
 
-        choice.addEventListener(
-            "change",
-            function() {
+            choice.addEventListener(
+                "change",
+                function() {
 
 
-                if (
-                    this.value === "Non"
-                ) {
+                    if (
+                        this.value === "Non"
+                    ) {
 
 
-                    guestsGroup.style.opacity =
-                        "0.3";
+                        hidePresenceQuestions();
 
 
-                    guestsGroup.style.pointerEvents =
-                        "none";
+                    }
 
 
-                    guestNumber.required =
-                        false;
+                    else {
 
 
-                    guestNames.required =
-                        false;
+                        showPresenceQuestions();
 
 
-                    guestNumber.disabled =
-                        true;
-
-
-                    guestNames.disabled =
-                        true;
-
-
-                    guestNumber.value =
-                        "";
-
-
-                    guestNames.value =
-                        "";
+                    }
 
 
                 }
+            );
 
 
-                else {
-
-
-                    guestsGroup.style.opacity =
-                        "1";
-
-
-                    guestsGroup.style.pointerEvents =
-                        "auto";
-
-
-                    guestNumber.disabled =
-                        false;
-
-
-                    guestNames.disabled =
-                        false;
-
-
-                    guestNumber.required =
-                        true;
-
-
-                    guestNames.required =
-                        true;
-
-
-                }
-
-
-            }
-        );
-
-
-    });
+        }
+    );
 
 
 
@@ -1075,67 +1250,69 @@ document
     .querySelectorAll(
         'input[name="allergies"]'
     )
-    .forEach(function(choice) {
+    .forEach(
+        function(choice) {
 
 
-        choice.addEventListener(
-            "change",
-            function() {
+            choice.addEventListener(
+                "change",
+                function() {
 
 
-                if (
-                    this.value === "Oui"
-                ) {
+                    if (
+                        this.value === "Oui"
+                    ) {
 
 
-                    allergyDetails
-                        .classList
-                        .add(
-                            "visible"
-                        );
+                        allergyDetails
+                            .classList
+                            .add(
+                                "visible"
+                            );
 
 
-                    allergyText.disabled =
-                        false;
+                        allergyText.disabled =
+                            false;
 
 
-                    allergyText.required =
-                        true;
+                        allergyText.required =
+                            true;
+
+
+                    }
+
+
+                    else {
+
+
+                        allergyDetails
+                            .classList
+                            .remove(
+                                "visible"
+                            );
+
+
+                        allergyText.required =
+                            false;
+
+
+                        allergyText.disabled =
+                            true;
+
+
+                        allergyText.value =
+                            "";
+
+
+                    }
 
 
                 }
+            );
 
 
-                else {
-
-
-                    allergyDetails
-                        .classList
-                        .remove(
-                            "visible"
-                        );
-
-
-                    allergyText.required =
-                        false;
-
-
-                    allergyText.disabled =
-                        true;
-
-
-                    allergyText.value =
-                        "";
-
-
-                }
-
-
-            }
-        );
-
-
-    });
+        }
+    );
 
 
 
@@ -1166,7 +1343,7 @@ rsvpForm.addEventListener(
 
 
 /* =========================================================
-   CONFIRMATION
+   APRÈS ENVOI
 ========================================================= */
 
 hiddenIframe.addEventListener(
@@ -1183,66 +1360,26 @@ hiddenIframe.addEventListener(
         }
 
 
-        successMessage
-            .classList
-            .add(
-                "visible"
-            );
+        /*
+            Le formulaire disparaît complètement.
+        */
+
+        rsvpForm.style.display =
+            "none";
 
 
-        rsvpForm.reset();
+        /*
+            Le message de confirmation apparaît
+            à sa place.
+        */
+
+        successMessage.style.display =
+            "block";
 
 
-        guestsGroup.style.opacity =
-            "1";
-
-
-        guestsGroup.style.pointerEvents =
-            "auto";
-
-
-        guestNumber.disabled =
-            false;
-
-
-        guestNames.disabled =
-            false;
-
-
-        guestNumber.required =
-            false;
-
-
-        guestNames.required =
-            false;
-
-
-        allergyDetails
-            .classList
-            .remove(
-                "visible"
-            );
-
-
-        allergyText.disabled =
-            true;
-
-
-        allergyText.required =
-            false;
-
-
-        submitButton.disabled =
-            false;
-
-
-        submitButton.textContent =
-            "Envoyer ma réponse";
-
-
-        formHasBeenSubmitted =
-            false;
-
+        /*
+            On remonte doucement vers le message.
+        */
 
         successMessage.scrollIntoView({
 
@@ -1253,6 +1390,18 @@ hiddenIframe.addEventListener(
                 "center"
 
         });
+
+
+        /*
+            On remet le marqueur à false,
+            mais on NE réaffiche PAS le formulaire.
+
+            Le formulaire ne reviendra
+            qu'en rechargeant la page.
+        */
+
+        formHasBeenSubmitted =
+            false;
 
 
     }
