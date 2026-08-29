@@ -4,9 +4,11 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Justine & Yvan — 04.09.2027</title>
+
 
 <style>
 
@@ -49,6 +51,7 @@ body {
     margin: 0;
 
     background: var(--cream);
+
     color: var(--green);
 
     font-family: "Acumin", Arial, sans-serif;
@@ -78,27 +81,32 @@ nav {
     padding: 16px 40px;
 
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
 
-    background: rgba(250, 249, 229, 0.95);
+    background: rgba(250, 249, 229, 0.96);
 
     backdrop-filter: blur(8px);
+
     -webkit-backdrop-filter: blur(8px);
 }
 
 
-/* LOGO CITRON */
+/* LOGO */
 
 .logo-link {
     display: flex;
+
     align-items: center;
 
     text-decoration: none;
 }
 
 .logo-img {
-    width: 60px;
+    width: 62px;
+
     height: auto;
 
     display: block;
@@ -110,6 +118,7 @@ nav {
 
 .logo-link:hover .logo-img {
     transform: rotate(-5deg) scale(1.05);
+
     opacity: 0.85;
 }
 
@@ -118,6 +127,7 @@ nav {
 
 .nav-links {
     display: flex;
+
     align-items: center;
 
     gap: 28px;
@@ -153,7 +163,9 @@ nav {
 
     display: grid;
 
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
 
     gap: 7vw;
 
@@ -167,7 +179,9 @@ nav {
     width: 100%;
 
     display: flex;
+
     justify-content: center;
+
     align-items: center;
 }
 
@@ -181,11 +195,10 @@ nav {
 
 .photo-wrapper img {
     width: 100%;
+
     height: auto;
 
     display: block;
-
-    object-fit: cover;
 }
 
 
@@ -236,6 +249,7 @@ nav {
     margin-top: 55px;
 
     display: flex;
+
     align-items: center;
 
     gap: 18px;
@@ -276,17 +290,12 @@ nav {
    BOUTONS
 ========================================================= */
 
-.discover,
-.main-button {
+.discover {
     display: inline-block;
 
     margin-top: 45px;
 
-    padding: 16px 26px;
-
-    border: none;
-
-    border-radius: 100px;
+    padding: 16px 27px;
 
     background: var(--yellow);
 
@@ -294,7 +303,7 @@ nav {
 
     text-decoration: none;
 
-    font-family: "Acumin", Arial, sans-serif;
+    border-radius: 100px;
 
     font-size: 12px;
 
@@ -302,15 +311,12 @@ nav {
 
     text-transform: uppercase;
 
-    cursor: pointer;
-
     transition:
         transform 0.2s ease,
         opacity 0.2s ease;
 }
 
-.discover:hover,
-.main-button:hover {
+.discover:hover {
     transform: translateY(-3px);
 
     opacity: 0.9;
@@ -331,7 +337,9 @@ nav {
     color: var(--cream);
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     text-align: center;
@@ -373,7 +381,7 @@ nav {
 
 
 /* =========================================================
-   SECTIONS EN CONSTRUCTION
+   SECTIONS PROVISOIRES
 ========================================================= */
 
 .coming-section {
@@ -382,7 +390,9 @@ nav {
     padding: 120px 8vw;
 
     display: flex;
+
     justify-content: center;
+
     align-items: center;
 
     text-align: center;
@@ -391,7 +401,8 @@ nav {
 
     color: var(--green);
 
-    border-bottom: 1px solid rgba(79, 102, 71, 0.15);
+    border-bottom:
+        1px solid rgba(79, 102, 71, 0.15);
 }
 
 .coming-inner {
@@ -411,7 +422,7 @@ nav {
 .coming-section p {
     margin: 30px auto 0;
 
-    max-width: 570px;
+    max-width: 580px;
 
     font-size: 17px;
 
@@ -432,7 +443,7 @@ nav {
 }
 
 .rsvp-container {
-    max-width: 900px;
+    max-width: 960px;
 
     margin: 0 auto;
 }
@@ -469,13 +480,13 @@ nav {
 }
 
 .rsvp-intro {
-    max-width: 580px;
+    max-width: 600px;
 
     margin: 30px auto 0;
 
     font-size: 17px;
 
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 
@@ -490,25 +501,29 @@ nav {
 }
 
 .form-group {
-    padding-bottom: 45px;
+    padding-bottom: 50px;
 
-    border-bottom: 1px solid rgba(79, 102, 71, 0.25);
+    border-bottom:
+        1px solid rgba(79, 102, 71, 0.23);
 
     transition:
         opacity 0.3s ease;
 }
 
 
-/* NUMÉROS */
+/* NUMÉRO */
 
 .question-number {
-    width: 40px;
-    height: 40px;
+    width: 42px;
 
-    margin-bottom: 20px;
+    height: 42px;
+
+    margin-bottom: 24px;
 
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
 
     border-radius: 50%;
@@ -518,8 +533,6 @@ nav {
     color: var(--green);
 
     font-size: 13px;
-
-    font-weight: 500;
 }
 
 
@@ -528,54 +541,63 @@ nav {
 .question {
     display: block;
 
-    margin-bottom: 22px;
+    margin-bottom: 20px;
 
-    font-size: 23px;
+    font-size: 24px;
 
-    line-height: 1.3;
+    line-height: 1.35;
 }
 
 .helper-text {
-    margin: -10px 0 22px;
+    margin: -5px 0 27px;
 
-    font-size: 14px;
+    font-size: 15px;
 
-    line-height: 1.5;
+    line-height: 1.6;
 
-    opacity: 0.75;
+    color: rgba(79, 102, 71, 0.72);
 }
 
 
-/* INPUTS */
+/* TEXT INPUT */
 
 .text-input,
-.number-input,
 .textarea-input {
     width: 100%;
 
-    padding: 16px 4px;
+    padding: 15px 5px;
 
     border: none;
 
-    border-bottom: 1px solid var(--green);
-
-    border-radius: 0;
+    border-bottom:
+        1px solid var(--green);
 
     background: transparent;
 
     color: var(--green);
 
-    font-family: "Acumin", Arial, sans-serif;
+    font-family:
+        "Acumin",
+        Arial,
+        sans-serif;
 
-    font-size: 17px;
+    font-size: 18px;
 
     outline: none;
+
+    border-radius: 0;
+}
+
+.text-input::placeholder,
+.textarea-input::placeholder {
+    color:
+        rgba(79, 102, 71, 0.48);
 }
 
 .text-input:focus,
-.number-input:focus,
 .textarea-input:focus {
-    border-bottom: 2px solid var(--green);
+    border-bottom:
+        2px solid var(--green);
 }
 
 .textarea-input {
@@ -584,32 +606,97 @@ nav {
     resize: vertical;
 }
 
-.number-input {
-    max-width: 140px;
+
+/* =========================================================
+   SELECT NOMBRE DE PERSONNES
+========================================================= */
+
+.select-wrapper {
+    position: relative;
+
+    max-width: 300px;
+
+    margin-top: 12px;
+}
+
+.select-input {
+    width: 100%;
+
+    appearance: none;
+
+    -webkit-appearance: none;
+
+    padding:
+        16px
+        45px
+        16px
+        16px;
+
+    border:
+        1px solid var(--green);
+
+    border-radius: 0;
+
+    background:
+        var(--cream);
+
+    color:
+        var(--green);
+
+    font-family:
+        "Acumin",
+        Arial,
+        sans-serif;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    outline: none;
+}
+
+.select-wrapper::after {
+    content: "↓";
+
+    position: absolute;
+
+    right: 18px;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    pointer-events: none;
+
+    font-size: 18px;
 }
 
 
-/* CHOIX RADIO */
+/* =========================================================
+   CHOIX RADIO
+========================================================= */
 
 .choice-list {
     display: flex;
 
     flex-direction: column;
 
-    gap: 16px;
+    gap: 17px;
 }
 
 .choice {
     position: relative;
 
     display: flex;
+
     align-items: center;
 
     gap: 14px;
 
     cursor: pointer;
 
-    font-size: 16px;
+    font-size: 17px;
 
     line-height: 1.4;
 }
@@ -621,25 +708,32 @@ nav {
 }
 
 .custom-radio {
-    width: 22px;
-    height: 22px;
+    width: 23px;
+
+    height: 23px;
 
     flex-shrink: 0;
 
-    border: 1px solid var(--green);
+    border:
+        1px solid var(--green);
 
     border-radius: 50%;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 }
 
-.choice input:checked + .custom-radio::after {
+.choice input:checked
++ .custom-radio::after {
+
     content: "";
 
-    width: 12px;
-    height: 12px;
+    width: 13px;
+
+    height: 13px;
 
     border-radius: 50%;
 
@@ -647,16 +741,19 @@ nav {
 }
 
 
-/* ALLERGIES */
+/* =========================================================
+   ALLERGIES
+========================================================= */
 
 .conditional-section {
     display: none;
 
     margin-top: 30px;
 
-    padding: 28px;
+    padding: 30px;
 
-    background: rgba(160, 159, 133, 0.15);
+    background:
+        rgba(160, 159, 133, 0.15);
 }
 
 .conditional-section.visible {
@@ -666,7 +763,7 @@ nav {
 .conditional-section label {
     display: block;
 
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 
     font-size: 15px;
 
@@ -674,12 +771,14 @@ nav {
 }
 
 
-/* DATE LIMITE */
+/* =========================================================
+   DATE LIMITE
+========================================================= */
 
 .rsvp-deadline {
-    margin-top: 25px;
+    margin-top: 20px;
 
-    padding: 40px;
+    padding: 42px 30px;
 
     background: var(--green);
 
@@ -689,7 +788,7 @@ nav {
 
     font-size: 17px;
 
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .rsvp-deadline strong {
@@ -697,16 +796,18 @@ nav {
 }
 
 
-/* ENVOI */
+/* =========================================================
+   BOUTON RSVP
+========================================================= */
 
 .submit-area {
     text-align: center;
 }
 
 .rsvp-submit {
-    margin-top: 15px;
+    margin-top: 10px;
 
-    padding: 19px 38px;
+    padding: 19px 40px;
 
     border: none;
 
@@ -716,15 +817,16 @@ nav {
 
     color: var(--green);
 
-    font-family: "Acumin", Arial, sans-serif;
+    font-family:
+        "Acumin",
+        Arial,
+        sans-serif;
 
     font-size: 13px;
 
-    font-weight: 500;
+    letter-spacing: 1.8px;
 
     text-transform: uppercase;
-
-    letter-spacing: 1.7px;
 
     cursor: pointer;
 
@@ -739,19 +841,22 @@ nav {
     opacity: 0.9;
 }
 
+.rsvp-submit:disabled {
+    cursor: wait;
+}
 
-/* CONFIRMATION */
+
+/* MESSAGE SUCCÈS */
 
 .rsvp-success {
     display: none;
 
     margin-top: 35px;
 
-    padding: 30px;
+    padding: 35px;
 
-    background: rgba(79, 102, 71, 0.10);
-
-    text-align: center;
+    background:
+        rgba(79, 102, 71, 0.10);
 
     font-size: 18px;
 
@@ -760,6 +865,141 @@ nav {
 
 .rsvp-success.visible {
     display: block;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    background: var(--green);
+
+    color: var(--cream);
+
+    padding: 75px 6vw 30px;
+}
+
+.footer-main {
+    max-width: 1300px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        1fr
+        1fr;
+
+    gap: 70px;
+}
+
+.footer-logo {
+    width: 80px;
+
+    height: auto;
+
+    display: block;
+
+    margin-bottom: 25px;
+}
+
+.footer-title {
+    margin: 0;
+
+    font-size: 32px;
+
+    font-weight: 400;
+}
+
+.footer-date {
+    margin-top: 12px;
+
+    color: var(--yellow);
+
+    font-size: 17px;
+
+    letter-spacing: 2px;
+}
+
+.footer-text {
+    margin-top: 25px;
+
+    max-width: 350px;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    opacity: 0.85;
+}
+
+.footer-heading {
+    margin: 0 0 25px;
+
+    color: var(--yellow);
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+.footer-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+.footer-links a {
+    color: var(--cream);
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: opacity 0.2s ease;
+}
+
+.footer-links a:hover {
+    opacity: 0.6;
+}
+
+.footer-contact {
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    opacity: 0.9;
+}
+
+.footer-bottom {
+    max-width: 1300px;
+
+    margin: 60px auto 0;
+
+    padding-top: 25px;
+
+    border-top:
+        1px solid rgba(250,249,229,0.25);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    opacity: 0.7;
 }
 
 
@@ -787,7 +1027,10 @@ nav {
     .hero {
         min-height: auto;
 
-        padding: 105px 24px 80px;
+        padding:
+            105px
+            24px
+            80px;
 
         display: flex;
 
@@ -796,14 +1039,8 @@ nav {
         gap: 55px;
     }
 
-    .hero-visual {
-        width: 100%;
-    }
-
     .photo-wrapper {
         width: 100%;
-
-        max-width: 500px;
     }
 
     .hero-content {
@@ -825,16 +1062,16 @@ nav {
     }
 
 
-    /* COUNTDOWN */
+    /* COMPTE À REBOURS */
 
     .countdown {
         justify-content: center;
 
-        gap: 7px;
+        gap: 6px;
     }
 
     .countdown-item {
-        min-width: 58px;
+        min-width: 57px;
     }
 
     .number {
@@ -844,25 +1081,29 @@ nav {
     .label {
         font-size: 7px;
 
-        letter-spacing: 1.3px;
+        letter-spacing: 1px;
     }
 
     .separator {
-        font-size: 20px;
+        font-size: 19px;
     }
 
 
     /* INFORMATIONS */
 
     .intro-section {
-        padding: 100px 30px;
+        padding:
+            100px
+            28px;
     }
 
 
     /* RSVP */
 
     .rsvp-section {
-        padding: 100px 24px;
+        padding:
+            100px
+            24px;
     }
 
     .rsvp-header {
@@ -875,16 +1116,46 @@ nav {
         letter-spacing: -2px;
     }
 
-    .form-group {
-        padding-bottom: 35px;
-    }
-
     .question {
         font-size: 20px;
     }
 
+    .form-group {
+        padding-bottom: 38px;
+    }
+
+    .select-wrapper {
+        max-width: 100%;
+    }
+
     .rsvp-deadline {
-        padding: 30px 20px;
+        padding:
+            32px
+            20px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding:
+            60px
+            25px
+            25px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .footer-bottom {
+        margin-top: 45px;
+
+        flex-direction: column;
+
+        line-height: 1.6;
     }
 
 }
@@ -1003,8 +1274,6 @@ nav {
         </p>
 
 
-        <!-- COMPTE À REBOURS -->
-
         <div class="countdown">
 
 
@@ -1105,7 +1374,6 @@ nav {
 </section>
 
 
-
 <!-- =========================================================
      INFORMATIONS
 ========================================================= -->
@@ -1116,7 +1384,6 @@ nav {
 >
 
     <div class="intro-section-inner">
-
 
         <div class="section-number">
 
@@ -1137,8 +1404,8 @@ nav {
         <p>
 
             Cérémonie, cocktail, dîner et soirée :
-            toutes les informations pratiques seront ajoutées ici
-            progressivement.
+            toutes les informations pratiques seront
+            ajoutées ici progressivement.
 
             <br><br>
 
@@ -1146,15 +1413,13 @@ nav {
 
         </p>
 
-
     </div>
 
 </section>
 
 
-
 <!-- =========================================================
-     OÙ DORMIR
+     HÉBERGEMENT
 ========================================================= -->
 
 <section
@@ -1165,24 +1430,35 @@ nav {
     <div class="coming-inner">
 
         <div class="section-number">
+
             03 — Où dormir
+
         </div>
 
+
         <h2>
+
             Un petit nid<br>
+
             pour la nuit
+
         </h2>
 
+
         <p>
+
             Nous préparons une sélection de gîtes,
             Airbnb et logements à proximité du domaine.
+
+            <br><br>
+
             Les bonnes adresses arrivent bientôt.
+
         </p>
 
     </div>
 
 </section>
-
 
 
 <!-- =========================================================
@@ -1218,21 +1494,18 @@ nav {
 
             <p class="rsvp-intro">
 
-                Nous avons hâte de partager cette journée avec vous.
+                Nous avons hâte de partager cette journée
+                avec vous.
 
-                Merci de prendre quelques instants pour nous confirmer
-                votre présence.
+                Merci de prendre quelques instants
+                pour nous confirmer votre présence.
 
             </p>
 
         </div>
 
 
-
-        <!-- =================================================
-             FORMULAIRE GOOGLE FORMS
-        ================================================== -->
-
+        <!-- GOOGLE FORM -->
 
         <form
             class="rsvp-form"
@@ -1243,7 +1516,9 @@ nav {
         >
 
 
-            <!-- QUESTION 1 -->
+            <!-- =========================
+                 QUESTION 1
+            ========================= -->
 
             <div class="form-group">
 
@@ -1267,7 +1542,8 @@ nav {
 
                 <p class="helper-text">
 
-                    Nom et prénom de la personne qui remplit le formulaire.
+                    Nom et prénom de la personne
+                    qui remplit le formulaire.
 
                 </p>
 
@@ -1286,8 +1562,9 @@ nav {
             </div>
 
 
-
-            <!-- QUESTION 2 -->
+            <!-- =========================
+                 QUESTION 2
+            ========================= -->
 
             <div class="form-group">
 
@@ -1301,7 +1578,8 @@ nav {
 
                 <div class="question">
 
-                    Serez-vous parmi nous pour célébrer notre mariage ? 🥂
+                    Serez-vous parmi nous pour célébrer
+                    notre mariage ? 🥂
 
                 </div>
 
@@ -1329,7 +1607,6 @@ nav {
                     </label>
 
 
-
                     <label class="choice">
 
                         <input
@@ -1342,7 +1619,8 @@ nav {
 
                         <span>
 
-                            Malheureusement, je ne pourrai pas être présent(e)
+                            Malheureusement,
+                            je ne pourrai pas être présent(e)
 
                         </span>
 
@@ -1351,12 +1629,12 @@ nav {
 
                 </div>
 
-
             </div>
 
 
-
-            <!-- QUESTION 3 -->
+            <!-- =========================
+                 QUESTION 3
+            ========================= -->
 
             <div
                 class="form-group"
@@ -1381,7 +1659,8 @@ nav {
                 <p class="helper-text">
 
                     Merci d’indiquer le nom et le prénom
-                    de chaque personne présente, vous compris.
+                    de chaque personne présente,
+                    vous compris.
 
                 </p>
 
@@ -1393,20 +1672,64 @@ nav {
                 </label>
 
 
-                <br>
+                <div class="select-wrapper">
+
+                    <select
+                        id="guestNumber"
+                        name="entry.1714455056"
+                        class="select-input"
+                    >
+
+                        <option value="">
+                            Sélectionnez
+                        </option>
+
+                        <option value="1">
+                            1 personne
+                        </option>
+
+                        <option value="2">
+                            2 personnes
+                        </option>
+
+                        <option value="3">
+                            3 personnes
+                        </option>
+
+                        <option value="4">
+                            4 personnes
+                        </option>
+
+                        <option value="5">
+                            5 personnes
+                        </option>
+
+                        <option value="6">
+                            6 personnes
+                        </option>
+
+                        <option value="7">
+                            7 personnes
+                        </option>
+
+                        <option value="8">
+                            8 personnes
+                        </option>
+
+                        <option value="9">
+                            9 personnes
+                        </option>
+
+                        <option value="10">
+                            10 personnes
+                        </option>
+
+                    </select>
+
+                </div>
 
 
-                <input
-                    type="number"
-                    id="guestNumber"
-                    name="entry.1714455056"
-                    class="number-input"
-                    min="1"
-                    placeholder="1"
-                >
-
-
-                <div style="height:35px;"></div>
+                <div style="height:45px;"></div>
 
 
                 <label for="guestNames">
@@ -1427,8 +1750,9 @@ nav {
             </div>
 
 
-
-            <!-- QUESTION 4 -->
+            <!-- =========================
+                 QUESTION 4
+            ========================= -->
 
             <div class="form-group">
 
@@ -1442,7 +1766,8 @@ nav {
 
                 <div class="question">
 
-                    Avez-vous des allergies ou intolérances alimentaires ?
+                    Avez-vous des allergies
+                    ou intolérances alimentaires ?
 
                 </div>
 
@@ -1462,13 +1787,10 @@ nav {
                         <span class="custom-radio"></span>
 
                         <span>
-
                             Non
-
                         </span>
 
                     </label>
-
 
 
                     <label class="choice">
@@ -1482,16 +1804,13 @@ nav {
                         <span class="custom-radio"></span>
 
                         <span>
-
                             Oui
-
                         </span>
 
                     </label>
 
 
                 </div>
-
 
 
                 <div
@@ -1503,7 +1822,8 @@ nav {
                     <label for="allergyText">
 
                         Merci de préciser la personne concernée
-                        ainsi que son allergie ou son intolérance.
+                        ainsi que son allergie
+                        ou son intolérance.
 
                     </label>
 
@@ -1522,8 +1842,9 @@ nav {
             </div>
 
 
-
-            <!-- QUESTION 5 -->
+            <!-- =========================
+                 QUESTION 5
+            ========================= -->
 
             <div class="form-group">
 
@@ -1540,7 +1861,8 @@ nav {
                     for="message"
                 >
 
-                    Souhaitez-vous nous faire part d’autre chose ?
+                    Souhaitez-vous nous faire part
+                    d’autre chose ?
 
                 </label>
 
@@ -1556,8 +1878,9 @@ nav {
             </div>
 
 
-
-            <!-- DATE LIMITE -->
+            <!-- =========================
+                 DATE LIMITE
+            ========================= -->
 
             <div class="rsvp-deadline">
 
@@ -1576,14 +1899,16 @@ nav {
                 <br><br>
 
 
-                Nous avons hâte de célébrer cette journée avec vous !
+                Nous avons hâte de célébrer cette journée
+                avec vous !
 
 
             </div>
 
 
-
-            <!-- ENVOYER -->
+            <!-- =========================
+                 ENVOYER
+            ========================= -->
 
             <div class="submit-area">
 
@@ -1605,16 +1930,24 @@ nav {
                 >
 
                     <strong>
+
                         Merci 🤍
+
                     </strong>
+
 
                     <br><br>
 
+
                     Votre réponse a bien été envoyée.
+
 
                     <br>
 
-                    Nous avons hâte de célébrer cette journée avec vous !
+
+                    Nous avons hâte de célébrer
+                    cette journée avec vous !
+
 
                 </div>
 
@@ -1625,11 +1958,7 @@ nav {
         </form>
 
 
-
-        <!--
-             Google Forms répond dans cette iframe.
-             Elle est complètement invisible.
-        -->
+        <!-- IFRAME GOOGLE INVISIBLE -->
 
         <iframe
             name="hidden_iframe"
@@ -1644,7 +1973,6 @@ nav {
 </section>
 
 
-
 <!-- =========================================================
      PHOTOS
 ========================================================= -->
@@ -1655,6 +1983,7 @@ nav {
 >
 
     <div class="coming-inner">
+
 
         <div class="section-number">
 
@@ -1675,7 +2004,7 @@ nav {
         <p>
 
             Le jour venu, vous pourrez retrouver ici
-            un lien pour partager avec nous vos photos
+            un lien pour partager vos photos
             et vidéos de la journée.
 
             <br><br>
@@ -1684,18 +2013,181 @@ nav {
 
         </p>
 
+
     </div>
 
 </section>
 
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+
+    <div class="footer-main">
+
+
+        <!-- COLONNE 1 -->
+
+        <div>
+
+
+            <img
+                src="./citron-logo.png"
+                alt="Justine et Yvan"
+                class="footer-logo"
+            >
+
+
+            <h3 class="footer-title">
+
+                Justine & Yvan
+
+            </h3>
+
+
+            <div class="footer-date">
+
+                04.09.2027
+
+            </div>
+
+
+            <p class="footer-text">
+
+                Toutes les informations utiles
+                pour célébrer cette journée
+                à nos côtés se trouvent ici.
+
+            </p>
+
+
+        </div>
+
+
+        <!-- COLONNE 2 -->
+
+        <div>
+
+
+            <h4 class="footer-heading">
+
+                Navigation
+
+            </h4>
+
+
+            <div class="footer-links">
+
+
+                <a href="#accueil">
+                    Accueil
+                </a>
+
+
+                <a href="#informations">
+                    Informations
+                </a>
+
+
+                <a href="#hebergement">
+                    Où dormir
+                </a>
+
+
+                <a href="#rsvp">
+                    Confirmer ma présence
+                </a>
+
+
+                <a href="#photos">
+                    Photos
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+        <!-- COLONNE 3 -->
+
+        <div>
+
+
+            <h4 class="footer-heading">
+
+                Contact & informations
+
+            </h4>
+
+
+            <div class="footer-contact">
+
+
+                Une question concernant
+                l'organisation de la journée ?
+
+                <br><br>
+
+                N'hésitez pas à nous contacter
+                directement.
+
+                <br><br>
+
+                <strong>
+
+                    Saint-Martin-Lestra
+                    & Salt-en-Donzy
+
+                </strong>
+
+                <br>
+
+                Loire — 42
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+
+        <div>
+
+            © Justine & Yvan — 2027
+
+        </div>
+
+
+        <div>
+
+            mariage-justine-yvan.fr
+
+        </div>
+
+
+    </div>
+
+
+</footer>
 
 
 <!-- =========================================================
      JAVASCRIPT
 ========================================================= -->
 
-
 <script>
+
 
 /* =========================================================
    COMPTE À REBOURS
@@ -1714,7 +2206,6 @@ function updateCountdown() {
 
     const distance =
         weddingDate - now;
-
 
 
     if (distance <= 0) {
@@ -1741,13 +2232,11 @@ function updateCountdown() {
     }
 
 
-
     const days =
         Math.floor(
             distance /
             (1000 * 60 * 60 * 24)
         );
-
 
 
     const hours =
@@ -1759,7 +2248,6 @@ function updateCountdown() {
         );
 
 
-
     const minutes =
         Math.floor(
             (
@@ -1767,7 +2255,6 @@ function updateCountdown() {
                 (1000 * 60)
             ) % 60
         );
-
 
 
     const seconds =
@@ -1779,20 +2266,16 @@ function updateCountdown() {
         );
 
 
-
     document.getElementById("days").textContent =
         String(days).padStart(3, "0");
-
 
 
     document.getElementById("hours").textContent =
         String(hours).padStart(2, "0");
 
 
-
     document.getElementById("minutes").textContent =
         String(minutes).padStart(2, "0");
-
 
 
     document.getElementById("seconds").textContent =
@@ -1810,10 +2293,13 @@ setInterval(
 );
 
 
-
 /* =========================================================
-   RSVP — PRÉSENCE
+   VARIABLES RSVP
 ========================================================= */
+
+const rsvpForm =
+    document.getElementById("rsvpForm");
+
 
 const attendanceChoices =
     document.querySelectorAll(
@@ -1822,30 +2308,56 @@ const attendanceChoices =
 
 
 const guestsGroup =
-    document.getElementById(
-        "guestsGroup"
-    );
+    document.getElementById("guestsGroup");
 
 
 const guestNumber =
-    document.getElementById(
-        "guestNumber"
-    );
+    document.getElementById("guestNumber");
 
 
 const guestNames =
-    document.getElementById(
-        "guestNames"
+    document.getElementById("guestNames");
+
+
+const allergyChoices =
+    document.querySelectorAll(
+        'input[name="entry.2096618548"]'
     );
 
 
+const allergyDetails =
+    document.getElementById("allergyDetails");
 
-attendanceChoices.forEach(choice => {
+
+const allergyText =
+    document.getElementById("allergyText");
+
+
+const successMessage =
+    document.getElementById("rsvpSuccess");
+
+
+const hiddenIframe =
+    document.getElementById("hidden_iframe");
+
+
+const submitButton =
+    document.getElementById("rsvpSubmit");
+
+
+let formHasBeenSubmitted = false;
+
+
+/* =========================================================
+   PRÉSENCE
+========================================================= */
+
+attendanceChoices.forEach(function(choice) {
 
 
     choice.addEventListener(
         "change",
-        function () {
+        function() {
 
 
             if (this.value === "non") {
@@ -1875,9 +2387,7 @@ attendanceChoices.forEach(choice => {
                     "";
 
 
-            }
-
-            else {
+            } else {
 
 
                 guestsGroup.style.opacity =
@@ -1895,44 +2405,27 @@ attendanceChoices.forEach(choice => {
                 guestNames.required =
                     true;
 
+
             }
+
 
         }
     );
 
+
 });
 
 
-
 /* =========================================================
-   RSVP — ALLERGIES
+   ALLERGIES
 ========================================================= */
 
-const allergyChoices =
-    document.querySelectorAll(
-        'input[name="entry.2096618548"]'
-    );
-
-
-const allergyDetails =
-    document.getElementById(
-        "allergyDetails"
-    );
-
-
-const allergyText =
-    document.getElementById(
-        "allergyText"
-    );
-
-
-
-allergyChoices.forEach(choice => {
+allergyChoices.forEach(function(choice) {
 
 
     choice.addEventListener(
         "change",
-        function () {
+        function() {
 
 
             if (this.value === "oui") {
@@ -1947,9 +2440,7 @@ allergyChoices.forEach(choice => {
                     true;
 
 
-            }
-
-            else {
+            } else {
 
 
                 allergyDetails.classList.remove(
@@ -1964,60 +2455,24 @@ allergyChoices.forEach(choice => {
                 allergyText.value =
                     "";
 
+
             }
+
 
         }
     );
 
+
 });
 
 
-
 /* =========================================================
-   RSVP — ENVOI GOOGLE FORMS
+   ENVOI DU FORMULAIRE
 ========================================================= */
-
-const rsvpForm =
-    document.getElementById(
-        "rsvpForm"
-    );
-
-
-const successMessage =
-    document.getElementById(
-        "rsvpSuccess"
-    );
-
-
-const hiddenIframe =
-    document.getElementById(
-        "hidden_iframe"
-    );
-
-
-const submitButton =
-    document.getElementById(
-        "rsvpSubmit"
-    );
-
-
-let formHasBeenSubmitted =
-    false;
-
-
-
-/*
-   Quand on clique sur Envoyer,
-   le formulaire est envoyé normalement
-   vers Google Forms.
-
-   IMPORTANT :
-   aucun preventDefault ici.
-*/
 
 rsvpForm.addEventListener(
     "submit",
-    function () {
+    function() {
 
 
         formHasBeenSubmitted =
@@ -2035,19 +2490,18 @@ rsvpForm.addEventListener(
         submitButton.style.opacity =
             "0.6";
 
+
     }
 );
 
 
-
-/*
-   Lorsque Google Forms répond,
-   l'iframe invisible se recharge.
-*/
+/* =========================================================
+   CONFIRMATION GOOGLE FORM
+========================================================= */
 
 hiddenIframe.addEventListener(
     "load",
-    function () {
+    function() {
 
 
         if (!formHasBeenSubmitted) {
@@ -2057,15 +2511,12 @@ hiddenIframe.addEventListener(
         }
 
 
-
         successMessage.classList.add(
             "visible"
         );
 
 
-
         rsvpForm.reset();
-
 
 
         guestsGroup.style.opacity =
@@ -2076,14 +2527,12 @@ hiddenIframe.addEventListener(
             "auto";
 
 
-
         guestNumber.required =
             false;
 
 
         guestNames.required =
             false;
-
 
 
         allergyDetails.classList.remove(
@@ -2093,7 +2542,6 @@ hiddenIframe.addEventListener(
 
         allergyText.required =
             false;
-
 
 
         submitButton.disabled =
@@ -2108,10 +2556,8 @@ hiddenIframe.addEventListener(
             "1";
 
 
-
         formHasBeenSubmitted =
             false;
-
 
 
         successMessage.scrollIntoView({
@@ -2121,6 +2567,7 @@ hiddenIframe.addEventListener(
             block: "center"
 
         });
+
 
     }
 );
