@@ -10,178 +10,45 @@
 <title>FAQ — Justine & Yvan</title>
 
 <link
+    rel="icon"
+    type="image/png"
+    href="./citron-logo.png"
+>
+
+<meta
+    name="description"
+    content="Toutes les informations pratiques pour le mariage de Justine & Yvan."
+>
+
+<meta
+    property="og:title"
+    content="FAQ — Justine & Yvan"
+>
+
+<meta
+    property="og:description"
+    content="Horaires, transport, hébergements, RSVP, allergies, photos et autres informations pratiques."
+>
+
+<meta
+    property="og:image"
+    content="https://mariage-justine-yvan.fr/photo-mariage.jpg"
+>
+
+<meta
+    property="og:type"
+    content="website"
+>
+
+<meta
+    name="theme-color"
+    content="#4f6647"
+>
+
+<link
     rel="stylesheet"
     href="./style.css"
 >
-
-<style>
-
-/* =========================================================
-   PAGE FAQ
-========================================================= */
-
-.faq-page {
-    padding-top: 120px;
-}
-
-.faq-hero {
-    padding: 90px 8vw 70px;
-    text-align: center;
-}
-
-.faq-section {
-    padding: 0 8vw 120px;
-}
-
-.faq-container {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.faq-list {
-    display: flex;
-    flex-direction: column;
-}
-
-.faq-item {
-    border-bottom:
-        1px solid rgba(79, 102, 71, 0.22);
-}
-
-.faq-question {
-    width: 100%;
-
-    padding: 26px 0;
-
-    border: none;
-
-    background: transparent;
-
-    color: var(--green);
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 25px;
-
-    text-align: left;
-
-    font-family:
-        "Acumin",
-        Arial,
-        sans-serif;
-
-    font-size: 21px;
-
-    line-height: 1.4;
-
-    cursor: pointer;
-}
-
-.faq-question:hover {
-    opacity: 0.7;
-}
-
-.faq-symbol {
-    flex-shrink: 0;
-
-    width: 34px;
-    height: 34px;
-
-    border-radius: 50%;
-
-    background: var(--yellow);
-
-    color: var(--green);
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    font-size: 20px;
-}
-
-.faq-answer {
-    display: none;
-
-    padding: 0 55px 28px 0;
-
-    color:
-        rgba(79, 102, 71, 0.82);
-
-    font-size: 16px;
-
-    line-height: 1.7;
-}
-
-.faq-item.open .faq-answer {
-    display: block;
-}
-
-
-/* PETIT BLOC FINAL */
-
-.faq-contact-box {
-    margin-top: 70px;
-
-    padding: 40px;
-
-    background: var(--green);
-
-    color: var(--cream);
-
-    text-align: center;
-
-    line-height: 1.7;
-}
-
-.faq-contact-box strong {
-    color: var(--yellow);
-}
-
-
-/* MOBILE */
-
-@media (max-width: 650px) {
-
-    .faq-page {
-        padding-top: 90px;
-    }
-
-    .faq-hero {
-        padding:
-            75px
-            24px
-            55px;
-    }
-
-    .faq-section {
-        padding:
-            0
-            24px
-            90px;
-    }
-
-    .faq-question {
-        font-size: 18px;
-    }
-
-    .faq-answer {
-        padding-right: 0;
-    }
-
-    .faq-contact-box {
-        padding: 30px 22px;
-    }
-
-}
-
-</style>
 
 </head>
 
@@ -203,7 +70,7 @@
 
         <img
             src="./citron-logo.png"
-            alt="Justine et Yvan"
+            alt="Logo Justine et Yvan"
             class="logo-img"
         >
 
@@ -228,8 +95,15 @@
             Photos
         </a>
 
-        <a href="./faq.html">
+        <a
+            href="./faq.html"
+            aria-current="page"
+        >
             FAQ
+        </a>
+
+        <a href="./liste.html">
+            Liste de mariage
         </a>
 
     </div>
@@ -238,539 +112,843 @@
 
 
 <!-- =========================================================
+     CONTENU
+========================================================= -->
+
+<main>
+
+
+<!-- =========================================================
+     INTRO
+========================================================= -->
+
+<section class="page-hero">
+
+
+    <div class="page-eyebrow">
+
+        Toutes les petites questions
+
+    </div>
+
+
+    <h1 class="page-title">
+
+        FAQ
+
+    </h1>
+
+
+    <p class="page-intro">
+
+        Nous avons regroupé ici
+        les principales informations pratiques
+        pour vous aider à préparer cette journée.
+
+        <br><br>
+
+        Certaines réponses seront encore précisées
+        à l’approche du mariage.
+
+    </p>
+
+
+</section>
+
+
+<!-- =========================================================
      FAQ
 ========================================================= -->
 
-<main class="faq-page">
+<section class="faq-list">
 
 
-    <section class="faq-hero">
+    <!-- QUESTION 1 -->
+
+    <div class="faq-item">
 
 
-        <div class="page-eyebrow">
+        <button
+            class="faq-question"
+            type="button"
+        >
 
-            Toutes les petites questions
+            <span>
+
+                Y a-t-il un dress code ?
+
+            </span>
+
+            <span class="faq-symbol">
+
+                +
+
+            </span>
+
+        </button>
+
+
+        <div class="faq-answer">
+
+            Aucun dress code strict.
+
+            <br><br>
+
+            Nous souhaitons surtout que vous vous sentiez
+            beaux, élégants et à l’aise
+            pour profiter pleinement de cette journée.
 
         </div>
 
 
-        <h1 class="page-title">
+    </div>
 
-            FAQ
 
-        </h1>
 
+    <!-- QUESTION 2 -->
 
-        <p class="page-intro">
+    <div class="faq-item">
 
-            On a regroupé ici les réponses
-            aux questions que vous pourriez vous poser
-            avant le grand jour.
 
-        </p>
+        <button
+            class="faq-question"
+            type="button"
+        >
 
+            <span>
 
-    </section>
+                Les enfants sont-ils invités ?
 
+            </span>
 
+            <span class="faq-symbol">
 
-    <section class="faq-section">
+                +
 
+            </span>
 
-        <div class="faq-container">
+        </button>
 
 
-            <div class="faq-list">
+        <div class="faq-answer">
 
+            Cette information dépendra de votre invitation.
 
-                <!-- QUESTION 1 -->
+            <br><br>
 
-                <div class="faq-item">
-
-
-                    <button
-                        class="faq-question"
-                        type="button"
-                    >
-
-                        <span>
-
-                            Y a-t-il un dress code ?
-
-                        </span>
-
-                        <span class="faq-symbol">
-
-                            +
-
-                        </span>
-
-                    </button>
-
-
-                    <div class="faq-answer">
-
-                        Aucun dress code strict.
-                        Nous souhaitons surtout que vous vous sentiez
-                        beaux, élégants et à l’aise pour profiter
-                        pleinement de cette journée.
-
-                    </div>
-
-
-                </div>
-
-
-
-                <!-- QUESTION 2 -->
-
-                <div class="faq-item">
-
-
-                    <button
-                        class="faq-question"
-                        type="button"
-                    >
-
-                        <span>
-
-                            Les enfants sont-ils invités ?
-
-                        </span>
-
-                        <span class="faq-symbol">
-
-                            +
-
-                        </span>
-
-                    </button>
-
-
-                    <div class="faq-answer">
-
-                        Cette information dépendra de votre invitation.
-                        Si vos enfants sont conviés,
-                        cela sera précisé directement avec vous.
-
-                    </div>
-
-
-                </div>
-
-
-
-                <!-- QUESTION 3 -->
-
-                <div class="faq-item">
-
-
-                    <button
-                        class="faq-question"
-                        type="button"
-                    >
-
-                        <span>
-
-                            Les animaux sont-ils acceptés ?
-
-                        </span>
-
-                        <span class="faq-symbol">
-
-                            +
-
-                        </span>
-
-                    </button>
-
-
-                    <div class="faq-answer">
-
-                        Pour le confort de tous et en fonction
-                        des règles des différents lieux,
-                        nous vous conseillons de ne pas venir
-                        accompagné de votre animal.
-
-                    </div>
-
-
-                </div>
-
-
-
-                <!-- QUESTION 4 -->
-
-                <div class="faq-item">
-
-
-                    <button
-                        class="faq-question"
-                        type="button"
-                    >
-
-                        <span>
-
-                            À quelle heure faut-il arriver à l’église ?
-
-                        </span>
-
-                        <span class="faq-symbol">
-
-                            +
-
-                        </span>
-
-                    </button>
-
-
-                    <div class="faq-answer">
-
-                        La cérémonie commence à 14h30.
-                        Nous vous conseillons d’arriver
-                        environ 15 à 20 minutes avant
-                        afin de vous installer tranquillement.
-
-                    </div>
-
-
-                </div>
-
-
-
-                <!-- QUESTION 5 -->
-
-                <div class="faq-item">
-
-
-                    <button
-                        class="faq-question"
-                        type="button"
-                    >
-
-                        <span>
-
-                            Y a-t-il un parking ?
-
-                        </span>
-
-                        <span class="faq-symbol">
-
-                            +
-
-                        </span>
-
-                    </button>
-
-
-                    <div class="faq-answer">
-
-                        Nous préciserons les possibilités
-                        de stationnement pour l’église et le domaine
-                        dès que nous aurons toutes les informations pratiques.
-
-                    </div>
-
-
-                </div>
-
-
-
-                <!-- QUESTION 6 -->
-
-                <div class="faq-item">
-
-
-                    <button
-                        class="faq-question"
-                        type="button"
-                    >
-
-                        <span>
-
-                            Combien de temps faut-il entre l’église et le domaine ?
-
-                        </span>
-
-                        <span class="faq-symbol">
-
-                            +
-
-                        </span>
-
-                    </button>
-
-
-                    <div class="faq-answer">
-
-                        Il faut environ 8 minutes en voiture
-                        entre l’église et le Domaine Le Gardien du Chai.
-
-                    </div>
-
-
-                </div>
-
-
-
-                <!-- QUESTION 7 -->
-
-                <div class="faq-item">
-
-
-                    <button
-                        class="faq-question"
-                        type="button"
-                    >
-
-                        <span>
-
-                            Peut-on dormir à proximité ?
-
-                        </span>
-
-                        <span class="faq-symbol">
-
-                            +
-
-                        </span>
-
-                    </button>
-
-
-                    <div class="faq-answer">
-
-                        Oui.
-                        Nous avons prévu une page dédiée
-                        avec plusieurs hébergements situés
-                        autour du domaine.
-
-                        Rendez-vous dans l’onglet
-                        « Où dormir ».
-
-                    </div>
-
-
-                </div>
-
-
-
-                <!-- QUESTION 8 -->
-
-                <div class="faq-item">
-
-
-                    <button
-                        class="faq-question"
-                        type="button"
-                    >
-
-                        <span>
-
-                            Jusqu’à quand peut-on confirmer notre présence ?
-
-                        </span>
-
-                        <span class="faq-symbol">
-
-                            +
-
-                        </span>
-
-                    </button>
-
-
-                    <div class="faq-answer">
-
-                        Merci de nous confirmer votre présence
-                        avant le <strong>30 novembre 2026</strong>
-                        via la page RSVP du site.
-
-                    </div>
-
-
-                </div>
-
-
-
-                <!-- QUESTION 9 -->
-
-                <div class="faq-item">
-
-
-                    <button
-                        class="faq-question"
-                        type="button"
-                    >
-
-                        <span>
-
-                            Que faire si j’ai une allergie ou une intolérance ?
-
-                        </span>
-
-                        <span class="faq-symbol">
-
-                            +
-
-                        </span>
-
-                    </button>
-
-
-                    <div class="faq-answer">
-
-                        Vous pouvez nous le signaler directement
-                        dans le formulaire RSVP.
-                        Merci de préciser la personne concernée
-                        ainsi que l’allergie ou l’intolérance.
-
-                    </div>
-
-
-                </div>
-
-
-
-                <!-- QUESTION 10 -->
-
-                <div class="faq-item">
-
-
-                    <button
-                        class="faq-question"
-                        type="button"
-                    >
-
-                        <span>
-
-                            Peut-on prendre des photos pendant la cérémonie ?
-
-                        </span>
-
-                        <span class="faq-symbol">
-
-                            +
-
-                        </span>
-
-                    </button>
-
-
-                    <div class="faq-answer">
-
-                        Nous vous donnerons les consignes
-                        définitives à l’approche du mariage.
-                        Nous souhaitons simplement que chacun
-                        puisse profiter pleinement du moment.
-
-                    </div>
-
-
-                </div>
-
-
-
-                <!-- QUESTION 11 -->
-
-                <div class="faq-item">
-
-
-                    <button
-                        class="faq-question"
-                        type="button"
-                    >
-
-                        <span>
-
-                            Comment partager les photos du mariage ?
-
-                        </span>
-
-                        <span class="faq-symbol">
-
-                            +
-
-                        </span>
-
-                    </button>
-
-
-                    <div class="faq-answer">
-
-                        Une page « Photos » sera disponible
-                        sur le site le jour du mariage.
-                        Vous pourrez y déposer vos photos
-                        et consulter celles partagées
-                        par les autres invités.
-
-                    </div>
-
-
-                </div>
-
-
-
-                <!-- QUESTION 12 -->
-
-                <div class="faq-item">
-
-
-                    <button
-                        class="faq-question"
-                        type="button"
-                    >
-
-                        <span>
-
-                            Y aura-t-il une liste de mariage ou une urne ?
-
-                        </span>
-
-                        <span class="faq-symbol">
-
-                            +
-
-                        </span>
-
-                    </button>
-
-
-                    <div class="faq-answer">
-
-                        Votre présence est déjà un très beau cadeau.
-                        Pour celles et ceux qui le souhaitent,
-                        une urne sera disponible sur place.
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
-
-
-            <div class="faq-contact-box">
-
-                Vous ne trouvez pas la réponse à votre question ?
-
-                <br><br>
-
-                <strong>
-
-                    Écrivez-nous directement 🤍
-
-                </strong>
-
-            </div>
-
+            Si vos enfants sont conviés,
+            cela vous sera précisé directement.
 
         </div>
 
 
-    </section>
+    </div>
+
+
+
+    <!-- QUESTION 3 -->
+
+    <div class="faq-item">
+
+
+        <button
+            class="faq-question"
+            type="button"
+        >
+
+            <span>
+
+                Les animaux sont-ils acceptés ?
+
+            </span>
+
+            <span class="faq-symbol">
+
+                +
+
+            </span>
+
+        </button>
+
+
+        <div class="faq-answer">
+
+            Pour le confort de tous
+            et selon les règles des différents lieux,
+            nous vous conseillons de ne pas venir
+            accompagné de votre animal.
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- QUESTION 4 -->
+
+    <div class="faq-item open">
+
+
+        <button
+            class="faq-question"
+            type="button"
+        >
+
+            <span>
+
+                À quelle heure faut-il arriver à l’église ?
+
+            </span>
+
+            <span class="faq-symbol">
+
+                −
+
+            </span>
+
+        </button>
+
+
+        <div class="faq-answer">
+
+            La cérémonie commence à
+
+            <strong>
+                14h30
+            </strong>.
+
+            <br><br>
+
+            Nous vous conseillons d’arriver
+            environ 15 à 20 minutes avant
+            afin de pouvoir vous installer tranquillement.
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- QUESTION 5 -->
+
+    <div class="faq-item">
+
+
+        <button
+            class="faq-question"
+            type="button"
+        >
+
+            <span>
+
+                Où se trouve l’église ?
+
+            </span>
+
+            <span class="faq-symbol">
+
+                +
+
+            </span>
+
+        </button>
+
+
+        <div class="faq-answer">
+
+            La cérémonie aura lieu au :
+
+            <br><br>
+
+            <strong>
+                574 route de Lyon<br>
+                42110 Saint-Martin-Lestra
+            </strong>
+
+            <br><br>
+
+            <a
+                href="https://www.google.com/maps/search/?api=1&query=574+route+de+Lyon+42110+Saint-Martin-Lestra"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                Ouvrir l’adresse dans Google Maps ↗
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- QUESTION 6 -->
+
+    <div class="faq-item">
+
+
+        <button
+            class="faq-question"
+            type="button"
+        >
+
+            <span>
+
+                Où se trouve le domaine ?
+
+            </span>
+
+            <span class="faq-symbol">
+
+                +
+
+            </span>
+
+        </button>
+
+
+        <div class="faq-answer">
+
+            Le cocktail, le dîner et la soirée
+            auront lieu au :
+
+            <br><br>
+
+            <strong>
+                Domaine Le Gardien du Chai<br>
+                543 chemin de la Varenne<br>
+                42110 Salt-en-Donzy
+            </strong>
+
+            <br><br>
+
+            <a
+                href="https://www.google.com/maps/search/?api=1&query=543+chemin+de+la+Varenne+42110+Salt-en-Donzy"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                Ouvrir l’adresse dans Google Maps ↗
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- QUESTION 7 -->
+
+    <div class="faq-item">
+
+
+        <button
+            class="faq-question"
+            type="button"
+        >
+
+            <span>
+
+                Combien de temps faut-il entre l’église et le domaine ?
+
+            </span>
+
+            <span class="faq-symbol">
+
+                +
+
+            </span>
+
+        </button>
+
+
+        <div class="faq-answer">
+
+            Il faut environ
+
+            <strong>
+                8 minutes en voiture
+            </strong>
+
+            entre l’église
+            et le Domaine Le Gardien du Chai.
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- QUESTION 8 -->
+
+    <div class="faq-item">
+
+
+        <button
+            class="faq-question"
+            type="button"
+        >
+
+            <span>
+
+                Y a-t-il un parking ?
+
+            </span>
+
+            <span class="faq-symbol">
+
+                +
+
+            </span>
+
+        </button>
+
+
+        <div class="faq-answer">
+
+            Les informations précises concernant
+            le stationnement seront ajoutées ici
+            dès que l’organisation sera définitivement confirmée.
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- QUESTION 9 -->
+
+    <div class="faq-item">
+
+
+        <button
+            class="faq-question"
+            type="button"
+        >
+
+            <span>
+
+                Puis-je laisser ma voiture au domaine pour la récupérer le lendemain ?
+
+            </span>
+
+            <span class="faq-symbol">
+
+                +
+
+            </span>
+
+        </button>
+
+
+        <div class="faq-answer">
+
+            Nous confirmerons cette possibilité
+            dès que l’organisation du stationnement
+            sera finalisée avec le domaine.
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- QUESTION 10 -->
+
+    <div class="faq-item">
+
+
+        <button
+            class="faq-question"
+            type="button"
+        >
+
+            <span>
+
+                Peut-on dormir à proximité ?
+
+            </span>
+
+            <span class="faq-symbol">
+
+                +
+
+            </span>
+
+        </button>
+
+
+        <div class="faq-answer">
+
+            Oui.
+
+            <br><br>
+
+            Nous avons préparé une sélection
+            de plusieurs hébergements
+            situés à proximité du domaine.
+
+            <br><br>
+
+            <a href="./dormir.html">
+
+                Voir les hébergements →
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- QUESTION 11 -->
+
+    <div class="faq-item">
+
+
+        <button
+            class="faq-question"
+            type="button"
+        >
+
+            <span>
+
+                Jusqu’à quand peut-on confirmer notre présence ?
+
+            </span>
+
+            <span class="faq-symbol">
+
+                +
+
+            </span>
+
+        </button>
+
+
+        <div class="faq-answer">
+
+            Merci de confirmer votre présence
+            avant le
+
+            <strong>
+                30 novembre 2026
+            </strong>.
+
+            <br><br>
+
+            Vous pouvez répondre directement
+            grâce à notre formulaire.
+
+            <br><br>
+
+            <a href="./rsvp.html">
+
+                Répondre au RSVP →
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- QUESTION 12 -->
+
+    <div class="faq-item">
+
+
+        <button
+            class="faq-question"
+            type="button"
+        >
+
+            <span>
+
+                Que faire si j’ai une allergie ou une intolérance alimentaire ?
+
+            </span>
+
+            <span class="faq-symbol">
+
+                +
+
+            </span>
+
+        </button>
+
+
+        <div class="faq-answer">
+
+            Vous pouvez nous l’indiquer
+            directement dans le formulaire RSVP.
+
+            <br><br>
+
+            Merci de préciser
+            la personne concernée
+            ainsi que son allergie
+            ou son intolérance.
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- QUESTION 13 -->
+
+    <div class="faq-item">
+
+
+        <button
+            class="faq-question"
+            type="button"
+        >
+
+            <span>
+
+                Le domaine est-il accessible aux personnes à mobilité réduite ?
+
+            </span>
+
+            <span class="faq-symbol">
+
+                +
+
+            </span>
+
+        </button>
+
+
+        <div class="faq-answer">
+
+            Cette information sera confirmée
+            et ajoutée ici avant le mariage.
+
+            <br><br>
+
+            Si vous avez un besoin particulier,
+            n’hésitez pas à nous prévenir
+            suffisamment tôt afin que nous puissions
+            nous organiser au mieux.
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- QUESTION 14 -->
+
+    <div class="faq-item">
+
+
+        <button
+            class="faq-question"
+            type="button"
+        >
+
+            <span>
+
+                Peut-on prendre des photos pendant la cérémonie ?
+
+            </span>
+
+            <span class="faq-symbol">
+
+                +
+
+            </span>
+
+        </button>
+
+
+        <div class="faq-answer">
+
+            Nous préciserons les consignes
+            à l’approche du mariage.
+
+            <br><br>
+
+            Nous souhaitons surtout que chacun
+            profite pleinement de la cérémonie
+            et vive le moment avec nous.
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- QUESTION 15 -->
+
+    <div class="faq-item">
+
+
+        <button
+            class="faq-question"
+            type="button"
+        >
+
+            <span>
+
+                Comment partager les photos du mariage ?
+
+            </span>
+
+            <span class="faq-symbol">
+
+                +
+
+            </span>
+
+        </button>
+
+
+        <div class="faq-answer">
+
+            Un album partagé sera disponible
+            le jour du mariage.
+
+            <br><br>
+
+            Vous pourrez y accéder depuis
+            la page Photos du site
+            ou grâce à un QR code.
+
+            <br><br>
+
+            <a href="./photos.html">
+
+                Voir la page Photos →
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- QUESTION 16 -->
+
+    <div class="faq-item">
+
+
+        <button
+            class="faq-question"
+            type="button"
+        >
+
+            <span>
+
+                Y aura-t-il une urne ou une liste de mariage ?
+
+            </span>
+
+            <span class="faq-symbol">
+
+                +
+
+            </span>
+
+        </button>
+
+
+        <div class="faq-answer">
+
+            Votre présence à nos côtés
+            sera déjà le plus beau des cadeaux.
+
+            <br><br>
+
+            Pour celles et ceux qui souhaitent
+            participer à nos futurs projets,
+            une urne sera disponible
+            le jour du mariage.
+
+            <br><br>
+
+            Les informations complémentaires
+            seront également disponibles
+            sur notre page Liste de mariage.
+
+            <br><br>
+
+            <a href="./liste.html">
+
+                Voir la liste de mariage →
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- QUESTION 17 -->
+
+    <div class="faq-item">
+
+
+        <button
+            class="faq-question"
+            type="button"
+        >
+
+            <span>
+
+                Qui contacter en cas de problème le jour J ?
+
+            </span>
+
+            <span class="faq-symbol">
+
+                +
+
+            </span>
+
+        </button>
+
+
+        <div class="faq-answer">
+
+            Un contact dédié sera ajouté ici
+            avant le mariage.
+
+            <br><br>
+
+            Cela permettra d’éviter
+            de solliciter directement les mariés
+            pendant les préparatifs et la journée.
+
+        </div>
+
+
+    </div>
+
+
+</section>
 
 
 </main>
@@ -791,21 +969,28 @@
 
             <img
                 src="./citron-logo.png"
-                alt="Justine et Yvan"
+                alt=""
                 class="footer-logo"
             >
 
 
-            <h3>
+            <h3 class="footer-title">
 
                 Justine & Yvan
 
             </h3>
 
 
-            <p>
+            <div class="footer-date">
 
                 04.09.2027
+
+            </div>
+
+
+            <p>
+
+                On a hâte de vous retrouver 🤍
 
             </p>
 
@@ -828,37 +1013,32 @@
 
 
                 <a href="./index.html">
-
                     Accueil
-
                 </a>
 
 
                 <a href="./dormir.html">
-
                     Où dormir
-
                 </a>
 
 
                 <a href="./rsvp.html">
-
                     RSVP
-
                 </a>
 
 
                 <a href="./photos.html">
-
                     Photos
-
                 </a>
 
 
                 <a href="./faq.html">
-
                     FAQ
+                </a>
 
+
+                <a href="./liste.html">
+                    Liste de mariage
                 </a>
 
 
@@ -874,20 +1054,34 @@
 
             <div class="footer-heading">
 
-                Informations
+                Contact & informations
 
             </div>
 
 
-            <p>
+            <div class="footer-contact">
 
-                Saint-Martin-Lestra<br>
+                Une question sur l'organisation ?
 
-                Salt-en-Donzy<br>
+                <br>
+
+                Contact jour J :
+
+                <strong>
+
+                    à compléter
+
+                </strong>
+
+                <br><br>
+
+                Saint-Martin-Lestra & Salt-en-Donzy
+
+                <br>
 
                 Loire — 42
 
-            </p>
+            </div>
 
 
         </div>
@@ -896,9 +1090,23 @@
     </div>
 
 
+
     <div class="footer-bottom">
 
-        © Justine & Yvan — 2027
+
+        <span>
+
+            © Justine & Yvan — 2027
+
+        </span>
+
+
+        <span>
+
+            mariage-justine-yvan.fr
+
+        </span>
+
 
     </div>
 
@@ -912,82 +1120,110 @@
 
 <script>
 
-const faqItems =
+
+const faqQuestions =
     document.querySelectorAll(
-        ".faq-item"
+        ".faq-question"
     );
 
 
-faqItems.forEach(function(item) {
-
-    const button =
-        item.querySelector(
-            ".faq-question"
-        );
-
-    const symbol =
-        item.querySelector(
-            ".faq-symbol"
-        );
+faqQuestions.forEach(
+    function(button) {
 
 
-    button.addEventListener(
-        "click",
-        function() {
-
-            const isOpen =
-                item.classList.contains(
-                    "open"
-                );
+        button.addEventListener(
+            "click",
+            function() {
 
 
-            /*
-                On ferme toutes les autres questions.
-            */
-
-            faqItems.forEach(
-                function(otherItem) {
-
-                    otherItem.classList.remove(
-                        "open"
+                const currentItem =
+                    button.closest(
+                        ".faq-item"
                     );
 
-                    const otherSymbol =
-                        otherItem.querySelector(
-                            ".faq-symbol"
+
+                const isAlreadyOpen =
+                    currentItem
+                        .classList
+                        .contains(
+                            "open"
                         );
 
-                    if (otherSymbol) {
 
-                        otherSymbol.textContent =
-                            "+";
+                document
+                    .querySelectorAll(
+                        ".faq-item"
+                    )
+                    .forEach(
+                        function(item) {
+
+
+                            item
+                                .classList
+                                .remove(
+                                    "open"
+                                );
+
+
+                            const symbol =
+                                item.querySelector(
+                                    ".faq-symbol"
+                                );
+
+
+                            if (
+                                symbol
+                            ) {
+
+                                symbol.textContent =
+                                    "+";
+
+                            }
+
+
+                        }
+                    );
+
+
+                if (
+                    !isAlreadyOpen
+                ) {
+
+
+                    currentItem
+                        .classList
+                        .add(
+                            "open"
+                        );
+
+
+                    const currentSymbol =
+                        currentItem
+                            .querySelector(
+                                ".faq-symbol"
+                            );
+
+
+                    if (
+                        currentSymbol
+                    ) {
+
+                        currentSymbol.textContent =
+                            "−";
 
                     }
 
+
                 }
-            );
 
-
-            /*
-                Si celle-ci était fermée,
-                on l'ouvre.
-            */
-
-            if (!isOpen) {
-
-                item.classList.add(
-                    "open"
-                );
-
-                symbol.textContent =
-                    "−";
 
             }
+        );
 
-        }
-    );
 
-});
+    }
+);
+
 
 </script>
 
