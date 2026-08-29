@@ -118,27 +118,16 @@
 <main>
 
 
-<!-- =========================================================
-     INTRO
-========================================================= -->
-
 <section class="page-hero">
 
-
     <div class="page-eyebrow">
-
         Serez-vous des nôtres ?
-
     </div>
 
-
     <h1 class="page-title">
-
         Confirmez<br>
         votre présence
-
     </h1>
-
 
     <p class="page-intro">
 
@@ -151,19 +140,21 @@
 
     </p>
 
-
 </section>
 
 
 <!-- =========================================================
-     FORMULAIRE
+     ZONE RSVP
 ========================================================= -->
 
 <section class="rsvp-form-section">
 
-
     <div class="rsvp-container">
 
+
+        <!-- =====================================================
+             FORMULAIRE
+        ====================================================== -->
 
         <form
 
@@ -180,27 +171,20 @@
         >
 
 
-            <!-- =================================================
-                 QUESTION 01
-            ================================================== -->
+            <!-- QUESTION 01 -->
 
             <div class="form-group">
-
 
                 <div class="question-number">
                     01
                 </div>
 
-
                 <label
                     class="question"
                     for="fullName"
                 >
-
                     Nom et prénom
-
                 </label>
-
 
                 <p class="helper-text">
 
@@ -209,41 +193,27 @@
 
                 </p>
 
-
                 <input
-
                     type="text"
-
                     id="fullName"
-
                     name="nom"
-
                     class="text-input"
-
                     placeholder="Votre nom et prénom"
-
                     autocomplete="name"
-
                     required
-
                 >
-
 
             </div>
 
 
 
-            <!-- =================================================
-                 QUESTION 02
-            ================================================== -->
+            <!-- QUESTION 02 -->
 
             <div class="form-group">
-
 
                 <div class="question-number">
                     02
                 </div>
-
 
                 <div class="question">
 
@@ -252,56 +222,35 @@
 
                 </div>
 
-
                 <div class="choice-list">
-
 
                     <label class="choice">
 
-
                         <input
-
                             type="radio"
-
                             name="presence"
-
                             value="Oui"
-
                             required
-
                         >
-
 
                         <span class="custom-radio"></span>
 
-
                         <span>
-
                             Oui, avec grand plaisir !
-
                         </span>
-
 
                     </label>
 
 
-
                     <label class="choice">
 
-
                         <input
-
                             type="radio"
-
                             name="presence"
-
                             value="Non"
-
                         >
 
-
                         <span class="custom-radio"></span>
-
 
                         <span>
 
@@ -310,42 +259,35 @@
 
                         </span>
 
-
                     </label>
 
-
                 </div>
-
 
             </div>
 
 
 
             <!-- =================================================
-                 QUESTIONS QUI DISPARAISSENT EN CAS DE "NON"
+                 TOUTES LES QUESTIONS QUI DOIVENT DISPARAÎTRE
+                 SI LA PERSONNE RÉPOND NON
             ================================================== -->
 
-            <div id="presenceQuestions">
+            <div id="questionsPresence">
 
 
-                <!-- =================================================
-                     QUESTION 03
-                ================================================== -->
+                <!-- QUESTION 03 -->
 
                 <div class="form-group">
-
 
                     <div class="question-number">
                         03
                     </div>
-
 
                     <div class="question">
 
                         Combien de personnes seront présentes ?
 
                     </div>
-
 
                     <p class="helper-text">
 
@@ -355,27 +297,17 @@
 
                     </p>
 
-
                     <label for="guestNumber">
-
                         Nombre de personnes
-
                     </label>
-
 
                     <div class="select-wrapper">
 
-
                         <select
-
                             id="guestNumber"
-
                             name="nombre"
-
                             class="select-input"
-
                         >
-
 
                             <option value="">
                                 Sélectionnez
@@ -421,9 +353,7 @@
                                 10 personnes
                             </option>
 
-
                         </select>
-
 
                     </div>
 
@@ -438,35 +368,24 @@
 
                     </label>
 
-
                     <textarea
-
                         id="guestNames"
-
                         name="personnes"
-
                         class="textarea-input"
-
                         placeholder="Ex. Justine Dupont, Yvan Martin..."
-
                     ></textarea>
-
 
                 </div>
 
 
 
-                <!-- =================================================
-                     QUESTION 04
-                ================================================== -->
+                <!-- QUESTION 04 -->
 
                 <div class="form-group">
-
 
                     <div class="question-number">
                         04
                     </div>
-
 
                     <div class="question">
 
@@ -475,74 +394,50 @@
 
                     </div>
 
-
                     <div class="choice-list">
-
 
                         <label class="choice">
 
-
                             <input
-
                                 type="radio"
-
                                 name="allergies"
-
                                 value="Non"
-
                                 id="allergyNo"
-
                             >
 
-
                             <span class="custom-radio"></span>
-
 
                             <span>
                                 Non
                             </span>
 
-
                         </label>
-
 
 
                         <label class="choice">
 
-
                             <input
-
                                 type="radio"
-
                                 name="allergies"
-
                                 value="Oui"
-
                                 id="allergyYes"
-
                             >
 
-
                             <span class="custom-radio"></span>
-
 
                             <span>
                                 Oui
                             </span>
 
-
                         </label>
 
-
                     </div>
-
 
 
                     <div
                         class="conditional-section"
                         id="allergyDetails"
                     >
-
 
                         <label for="allergyText">
 
@@ -552,38 +447,26 @@
 
                         </label>
 
-
                         <textarea
-
                             id="allergyText"
-
                             name="detailAllergies"
-
                             class="textarea-input"
-
                             placeholder="Ex. Yvan Martin — allergie aux fruits à coque"
-
                         ></textarea>
 
-
                     </div>
-
 
                 </div>
 
 
 
-                <!-- =================================================
-                     QUESTION 05
-                ================================================== -->
+                <!-- QUESTION 05 -->
 
                 <div class="form-group">
-
 
                     <div class="question-number">
                         05
                     </div>
-
 
                     <label
                         class="question"
@@ -595,19 +478,12 @@
 
                     </label>
 
-
                     <textarea
-
                         id="message"
-
                         name="message"
-
                         class="textarea-input"
-
                         placeholder="Un petit mot, une information particulière..."
-
                     ></textarea>
-
 
                 </div>
 
@@ -617,7 +493,27 @@
 
 
             <!-- =================================================
-                 DATE LIMITE
+                 BOUTON EN PREMIER
+            ================================================== -->
+
+            <div class="submit-area">
+
+                <button
+                    type="submit"
+                    class="rsvp-submit"
+                    id="rsvpSubmit"
+                >
+
+                    Envoyer ma réponse
+
+                </button>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 MESSAGE DATE LIMITE EN DESSOUS DU BOUTON
             ================================================== -->
 
             <div class="rsvp-deadline">
@@ -638,80 +534,57 @@
             </div>
 
 
-
-            <!-- =================================================
-                 ENVOI
-            ================================================== -->
-
-            <div class="submit-area">
-
-
-                <button
-
-                    type="submit"
-
-                    class="rsvp-submit"
-
-                    id="rsvpSubmit"
-
-                >
-
-                    Envoyer ma réponse
-
-                </button>
-
-
-            </div>
-
-
         </form>
 
 
 
         <!-- =====================================================
-             MESSAGE QUI REMPLACE LE FORMULAIRE APRÈS ENVOI
+             MESSAGE DE CONFIRMATION
+             IL PREND EXACTEMENT LA PLACE DU FORMULAIRE
         ====================================================== -->
 
         <div
 
-            class="rsvp-success"
-
             id="rsvpSuccess"
 
             style="
+                display: none;
+                min-height: 430px;
+                background: #4f6647;
+                color: #faf9e5;
                 text-align: center;
-                padding: 55px 30px;
+                padding: 70px 35px;
             "
 
         >
 
-
             <div
                 style="
-                    font-size: 42px;
+                    font-size: 46px;
                     margin-bottom: 22px;
                 "
             >
-
                 🤍
-
             </div>
 
-
             <div
-                class="page-eyebrow"
-                style="margin-bottom: 18px;"
+                style="
+                    color: #ffcd07;
+                    font-size: 11px;
+                    letter-spacing: 4px;
+                    text-transform: uppercase;
+                    margin-bottom: 22px;
+                "
             >
 
                 Réponse enregistrée
 
             </div>
 
-
             <h2
                 style="
                     margin: 0;
-                    font-size: clamp(36px, 5vw, 58px);
+                    font-size: clamp(42px, 6vw, 70px);
                     font-weight: 400;
                 "
             >
@@ -720,13 +593,12 @@
 
             </h2>
 
-
             <p
                 style="
                     max-width: 580px;
-                    margin: 25px auto 0;
+                    margin: 28px auto 0;
                     font-size: 17px;
-                    line-height: 1.7;
+                    line-height: 1.75;
                 "
             >
 
@@ -737,20 +609,14 @@
                 Merci d’avoir pris le temps
                 de nous répondre.
 
-                <br>
+                <br><br>
 
-                Nous avons hâte de partager
-                cette aventure avec vous 🤍
+                Nous avons hâte de célébrer
+                cette journée avec vous 🤍
 
             </p>
 
-
-            <div
-                style="
-                    margin-top: 35px;
-                "
-            >
-
+            <div style="margin-top: 38px;">
 
                 <a
                     href="./index.html"
@@ -761,33 +627,23 @@
 
                 </a>
 
-
             </div>
-
 
         </div>
 
 
 
-        <!-- =====================================================
-             IFRAME CACHÉ POUR L'ENVOI GOOGLE SHEETS
-        ====================================================== -->
+        <!-- IFRAME CACHÉ -->
 
         <iframe
-
             name="hidden_iframe"
-
             id="hidden_iframe"
-
             style="display: none;"
-
             title="Envoi de votre réponse"
-
         ></iframe>
 
 
     </div>
-
 
 </section>
 
@@ -801,12 +657,9 @@
 
 <footer>
 
-
     <div class="footer-main">
 
-
         <div>
-
 
             <img
                 src="./citron-logo.png"
@@ -814,91 +667,63 @@
                 class="footer-logo"
             >
 
-
             <h3 class="footer-title">
-
                 Justine & Yvan
-
             </h3>
 
-
             <div class="footer-date">
-
                 04.09.2027
-
             </div>
 
-
             <p>
-
                 On a hâte de vous retrouver 🤍
-
             </p>
-
 
         </div>
 
 
-
         <div>
 
-
             <div class="footer-heading">
-
                 Navigation
-
             </div>
 
-
             <div class="footer-links">
-
 
                 <a href="./index.html">
                     Accueil
                 </a>
 
-
                 <a href="./dormir.html">
                     Où dormir
                 </a>
-
 
                 <a href="./rsvp.html">
                     RSVP
                 </a>
 
-
                 <a href="./photos.html">
                     Photos
                 </a>
-
 
                 <a href="./faq.html">
                     FAQ
                 </a>
 
-
                 <a href="./liste.html">
                     Liste de mariage
                 </a>
 
-
             </div>
-
 
         </div>
 
 
-
         <div>
 
-
             <div class="footer-heading">
-
                 Contact & informations
-
             </div>
-
 
             <div class="footer-contact">
 
@@ -922,53 +747,42 @@
 
             </div>
 
-
         </div>
-
 
     </div>
 
 
-
     <div class="footer-bottom">
-
 
         <span>
             © Justine & Yvan — 2027
         </span>
 
-
         <span>
             mariage-justine-yvan.fr
         </span>
 
-
     </div>
-
 
 </footer>
 
 
 <!-- =========================================================
-     JAVASCRIPT RSVP
+     JAVASCRIPT
 ========================================================= -->
 
 <script>
 
 
-/* =========================================================
-   ÉLÉMENTS DU FORMULAIRE
-========================================================= */
-
-const rsvpForm =
+const form =
     document.getElementById(
         "rsvpForm"
     );
 
 
-const presenceQuestions =
+const questionsPresence =
     document.getElementById(
-        "presenceQuestions"
+        "questionsPresence"
     );
 
 
@@ -1020,7 +834,7 @@ const submitButton =
     );
 
 
-const successMessage =
+const success =
     document.getElementById(
         "rsvpSuccess"
     );
@@ -1032,18 +846,14 @@ const hiddenIframe =
     );
 
 
-let formHasBeenSubmitted =
+let submitted =
     false;
 
 
 
 /* =========================================================
-   ÉTAT DE DÉPART
+   ÉTAT INITIAL
 ========================================================= */
-
-successMessage.style.display =
-    "none";
-
 
 allergyText.disabled =
     true;
@@ -1051,13 +861,13 @@ allergyText.disabled =
 
 
 /* =========================================================
-   FONCTION : PRÉSENT
+   SI PRÉSENT
 ========================================================= */
 
-function showPresenceQuestions() {
+function present() {
 
 
-    presenceQuestions.style.display =
+    questionsPresence.style.display =
         "block";
 
 
@@ -1098,19 +908,43 @@ function showPresenceQuestions() {
 
 
 /* =========================================================
-   FONCTION : ABSENT
+   SI ABSENT
 ========================================================= */
 
-function hidePresenceQuestions() {
+function absent() {
 
 
-    presenceQuestions.style.display =
+    /*
+        IMPORTANT :
+        tout le bloc questions 3 + 4 + 5 disparaît.
+    */
+
+    questionsPresence.style.display =
         "none";
 
 
     /*
-        On vide les champs qui ne concernent
-        plus la personne absente.
+        On enlève tous les champs obligatoires.
+    */
+
+    guestNumber.required =
+        false;
+
+
+    guestNames.required =
+        false;
+
+
+    allergyNo.required =
+        false;
+
+
+    allergyText.required =
+        false;
+
+
+    /*
+        On vide les réponses éventuelles.
     */
 
     guestNumber.value =
@@ -1138,29 +972,7 @@ function hidePresenceQuestions() {
 
 
     /*
-        On enlève les obligations.
-    */
-
-    guestNumber.required =
-        false;
-
-
-    guestNames.required =
-        false;
-
-
-    allergyNo.required =
-        false;
-
-
-    allergyText.required =
-        false;
-
-
-    /*
-        Et on désactive les champs.
-        Les champs désactivés ne sont pas envoyés
-        au Google Sheet.
+        On désactive les champs masqués.
     */
 
     guestNumber.disabled =
@@ -1197,7 +1009,7 @@ function hidePresenceQuestions() {
 
 
 /* =========================================================
-   RÉPONSE OUI / NON
+   ÉCOUTE OUI / NON
 ========================================================= */
 
 document
@@ -1217,18 +1029,13 @@ document
                         this.value === "Non"
                     ) {
 
-
-                        hidePresenceQuestions();
-
+                        absent();
 
                     }
 
-
                     else {
 
-
-                        showPresenceQuestions();
-
+                        present();
 
                     }
 
@@ -1281,7 +1088,6 @@ document
 
                     }
 
-
                     else {
 
 
@@ -1317,15 +1123,15 @@ document
 
 
 /* =========================================================
-   ENVOI
+   ENVOI DU FORMULAIRE
 ========================================================= */
 
-rsvpForm.addEventListener(
+form.addEventListener(
     "submit",
     function() {
 
 
-        formHasBeenSubmitted =
+        submitted =
             true;
 
 
@@ -1343,7 +1149,7 @@ rsvpForm.addEventListener(
 
 
 /* =========================================================
-   APRÈS ENVOI
+   QUAND APPS SCRIPT A TERMINÉ
 ========================================================= */
 
 hiddenIframe.addEventListener(
@@ -1352,7 +1158,7 @@ hiddenIframe.addEventListener(
 
 
         if (
-            !formHasBeenSubmitted
+            !submitted
         ) {
 
             return;
@@ -1361,46 +1167,59 @@ hiddenIframe.addEventListener(
 
 
         /*
-            Le formulaire disparaît complètement.
+            On mémorise la position actuelle du formulaire.
         */
 
-        rsvpForm.style.display =
+        const formTop =
+            form.getBoundingClientRect().top
+            +
+            window.scrollY;
+
+
+        /*
+            On cache COMPLÈTEMENT le formulaire.
+        */
+
+        form.style.display =
             "none";
 
 
         /*
-            Le message de confirmation apparaît
-            à sa place.
+            Puis on affiche le message Merci
+            exactement dans le même conteneur.
         */
 
-        successMessage.style.display =
+        success.style.display =
             "block";
 
 
         /*
-            On remonte doucement vers le message.
+            On repositionne la page au début
+            de l'ancien formulaire.
+
+            Donc le message Merci apparaît
+            à la place du formulaire,
+            et pas tout en bas.
         */
 
-        successMessage.scrollIntoView({
+        window.scrollTo({
+
+            top:
+                formTop - 110,
 
             behavior:
-                "smooth",
-
-            block:
-                "center"
+                "smooth"
 
         });
 
 
         /*
-            On remet le marqueur à false,
-            mais on NE réaffiche PAS le formulaire.
-
-            Le formulaire ne reviendra
-            qu'en rechargeant la page.
+            Le formulaire reste caché.
+            Il reviendra uniquement
+            après rechargement de la page.
         */
 
-        formHasBeenSubmitted =
+        submitted =
             false;
 
 
