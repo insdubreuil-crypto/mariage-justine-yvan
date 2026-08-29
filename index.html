@@ -1070,10 +1070,13 @@ nav {
             dans l'étape suivante.
         -->
 
-        <form
-            class="rsvp-form"
-            id="rsvpForm"
-        >
+       <form
+    class="rsvp-form"
+    id="rsvpForm"
+    action="https://docs.google.com/forms/d/e/1FAIpQLSc1ze6hvjM--YDSEmxs6XiWoPAv-SZ_VcvwYnJY4xZi3fckFQ/formResponse"
+    method="POST"
+    target="hidden_iframe"
+>
 
 
             <!-- QUESTION 1 -->
@@ -1094,15 +1097,39 @@ nav {
                 <p class="helper-text">
                     Nom et prénom de la personne qui remplit le formulaire.
                 </p>
+<label class="choice">
 
-                <input
-                    type="text"
-                    id="fullName"
-                    name="fullName"
-                    class="text-input"
-                    placeholder="Votre nom et prénom"
-                    required
-                >
+    <input
+        type="radio"
+        name="entry.462814591"
+        value="oui"
+        required
+    >
+
+    <span class="custom-radio"></span>
+
+    <span>
+        Oui, avec grand plaisir !
+    </span>
+
+</label>
+
+
+<label class="choice">
+
+    <input
+        type="radio"
+        name="entry.462814591"
+        value="non"
+    >
+
+    <span class="custom-radio"></span>
+
+    <span>
+        Malheureusement, je ne pourrai pas être présent(e)
+    </span>
+
+</label>
 
             </div>
 
@@ -1191,14 +1218,12 @@ nav {
 
                 <br>
 
-                <input
-                    type="number"
-                    id="guestNumber"
-                    name="guestNumber"
-                    class="number-input"
-                    min="1"
-                    placeholder="1"
-                >
+               <textarea
+    id="guestNames"
+    name="entry.855146474"
+    class="textarea-input"
+    placeholder="Ex. Justine Dupont, Yvan Martin..."
+></textarea>
 
 
                 <div style="height: 35px;"></div>
@@ -1208,12 +1233,12 @@ nav {
                     Noms et prénoms
                 </label>
 
-                <textarea
-                    id="guestNames"
-                    name="guestNames"
-                    class="textarea-input"
-                    placeholder="Ex. Justine Dupont, Yvan Martin..."
-                ></textarea>
+               <textarea
+    id="guestNames"
+    name="entry.855146474"
+    class="textarea-input"
+    placeholder="Ex. Justine Dupont, Yvan Martin..."
+></textarea>
 
             </div>
 
@@ -1240,19 +1265,36 @@ nav {
 
                     <label class="choice">
 
-                        <input
-                            type="radio"
-                            name="allergy"
-                            value="Non"
-                        >
+    <input
+        type="radio"
+        name="entry.2096618548"
+        value="non"
+    >
 
-                        <span class="custom-radio"></span>
+    <span class="custom-radio"></span>
 
-                        <span>
-                            Non
-                        </span>
+    <span>
+        Non
+    </span>
 
-                    </label>
+</label>
+
+
+<label class="choice">
+
+    <input
+        type="radio"
+        name="entry.2096618548"
+        value="oui"
+    >
+
+    <span class="custom-radio"></span>
+
+    <span>
+        Oui
+    </span>
+
+</label>
 
 
                     <label class="choice">
@@ -1290,12 +1332,12 @@ nav {
                     </label>
 
 
-                    <textarea
-                        id="allergyText"
-                        name="allergyText"
-                        class="textarea-input"
-                        placeholder="Ex. Yvan Martin — allergie aux fruits à coque"
-                    ></textarea>
+                   <textarea
+    id="allergyText"
+    name="entry.535119558"
+    class="textarea-input"
+    placeholder="Ex. Yvan Martin — allergie aux fruits à coque"
+></textarea>
 
                 </div>
 
@@ -1319,11 +1361,11 @@ nav {
 
 
                 <textarea
-                    id="message"
-                    name="message"
-                    class="textarea-input"
-                    placeholder="Un petit mot, une information particulière..."
-                ></textarea>
+    id="message"
+    name="entry.1794913655"
+    class="textarea-input"
+    placeholder="Un petit mot, une information particulière..."
+></textarea>
 
             </div>
 
@@ -1375,7 +1417,11 @@ nav {
 
 
         </form>
-
+<iframe
+    name="hidden_iframe"
+    id="hidden_iframe"
+    style="display:none;"
+></iframe>
 
     </div>
 
@@ -1486,79 +1532,136 @@ setInterval(
 
 <script>
 
+<script>
+
 /* =========================
-   RSVP
+   RSVP - PRESENCE
 ========================= */
 
 const attendanceChoices =
     document.querySelectorAll(
-        'input[name="attendance"]'
+        'input[name="entry.462814591"]'
     );
 
 const guestsGroup =
-    document.getElementById(
-        "guestsGroup"
-    );
+    document.getElementById("guestsGroup");
 
 const guestNumber =
-    document.getElementById(
-        "guestNumber"
-    );
+    document.getElementById("guestNumber");
 
 const guestNames =
-    document.getElementById(
-        "guestNames"
-    );
+    document.getElementById("guestNames");
 
 
 attendanceChoices.forEach(choice => {
 
-    choice.addEventListener(
-        "change",
-        function () {
+    choice.addEventListener("change", function () {
 
-            if (
-                this.value.includes(
-                    "Malheureusement"
-                )
-            ) {
+        if (this.value === "non") {
 
-                guestsGroup.style.opacity =
-                    "0.35";
+            guestsGroup.style.opacity = "0.35";
 
-                guestsGroup.style.pointerEvents =
-                    "none";
+            guestsGroup.style.pointerEvents = "none";
 
-                guestNumber.required =
-                    false;
+            guestNumber.required = false;
 
-                guestNames.required =
-                    false;
+            guestNames.required = false;
 
-            }
+        } else {
 
-            else {
+            guestsGroup.style.opacity = "1";
 
-                guestsGroup.style.opacity =
-                    "1";
+            guestsGroup.style.pointerEvents = "auto";
 
-                guestsGroup.style.pointerEvents =
-                    "auto";
+            guestNumber.required = true;
 
-                guestNumber.required =
-                    true;
-
-                guestNames.required =
-                    true;
-
-            }
-
+            guestNames.required = true;
         }
-    );
+
+    });
 
 });
 
 
+/* =========================
+   RSVP - ALLERGIES
+========================= */
+
+const allergyChoices =
+    document.querySelectorAll(
+        'input[name="entry.2096618548"]'
+    );
+
+const allergyDetails =
+    document.getElementById("allergyDetails");
+
+const allergyText =
+    document.getElementById("allergyText");
+
+
+allergyChoices.forEach(choice => {
+
+    choice.addEventListener("change", function () {
+
+        if (this.value === "oui") {
+
+            allergyDetails.classList.add("visible");
+
+            allergyText.required = true;
+
+        } else {
+
+            allergyDetails.classList.remove("visible");
+
+            allergyText.required = false;
+
+            allergyText.value = "";
+        }
+
+    });
+
+});
+
+
+/* =========================
+   ENVOI DU FORMULAIRE
+========================= */
+
+const rsvpForm =
+    document.getElementById("rsvpForm");
+
+const successMessage =
+    document.getElementById("rsvpSuccess");
+
+
+rsvpForm.addEventListener("submit", function () {
+
+    setTimeout(function () {
+
+        successMessage.classList.add("visible");
+
+        rsvpForm.reset();
+
+        guestsGroup.style.opacity = "1";
+
+        guestsGroup.style.pointerEvents = "auto";
+
+        allergyDetails.classList.remove("visible");
+
+        window.scrollTo({
+            top:
+                successMessage.getBoundingClientRect().top
+                + window.scrollY
+                - 180,
+
+            behavior: "smooth"
+        });
+
+    }, 800);
+
+});
+
+</script>
 /* =========================
    ALLERGIES
 ========================= */
