@@ -1,1187 +1,439 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Justine & Yvan — 04.09.2027</title>
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
-<style>
+<title>
+Justine & Yvan — 04.09.2027
+</title>
 
-@font-face {
-    font-family: "Acumin";
-    src: local("Acumin Variable Concept"),
-         local("AcuminVariableConcept");
-}
+<link
+    rel="stylesheet"
+    href="./style.css"
+>
 
-:root {
-    --green: #4f6647;
-    --khaki: #a09f85;
-    --yellow: #ffcd07;
-    --cream: #faf9e5;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    background: var(--cream);
-    color: var(--green);
-    font-family: "Acumin", Arial, sans-serif;
-    overflow-x: hidden;
-}
-
-section {
-    scroll-margin-top: 90px;
-}
-
-/* =========================
-   NAVIGATION
-========================= */
-
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    padding: 16px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(250, 249, 229, 0.96);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-}
-
-.logo-link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-}
-
-.logo-img {
-    width: 62px;
-    height: auto;
-    display: block;
-    transition: transform 0.25s ease, opacity 0.25s ease;
-}
-
-.logo-link:hover .logo-img {
-    transform: rotate(-5deg) scale(1.05);
-    opacity: 0.85;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 28px;
-}
-
-.nav-links a {
-    color: var(--green);
-    text-decoration: none;
-    font-size: 13px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: opacity 0.2s ease;
-}
-
-.nav-links a:hover {
-    opacity: 0.55;
-}
-
-/* =========================
-   ACCUEIL
-========================= */
-
-.hero {
-    min-height: 100vh;
-    padding: 130px 6vw 80px;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 7vw;
-    align-items: center;
-}
-
-.hero-visual {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.photo-wrapper {
-    width: 82%;
-    max-width: 580px;
-    overflow: hidden;
-}
-
-.photo-wrapper img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.hero-content {
-    width: 100%;
-    max-width: 650px;
-}
-
-.names {
-    margin: 0;
-    font-size: clamp(55px, 7vw, 105px);
-    line-height: 0.88;
-    font-weight: 500;
-    letter-spacing: -4px;
-}
-
-.date {
-    margin-top: 35px;
-    font-size: clamp(28px, 4vw, 52px);
-    letter-spacing: 3px;
-}
-
-.intro {
-    margin-top: 45px;
-    max-width: 570px;
-    font-size: 18px;
-    line-height: 1.65;
-}
-
-/* =========================
-   COMPTE À REBOURS
-========================= */
-
-.countdown {
-    margin-top: 55px;
-    display: flex;
-    align-items: center;
-    gap: 18px;
-}
-
-.countdown-item {
-    min-width: 75px;
-    text-align: center;
-}
-
-.number {
-    font-size: 38px;
-    line-height: 1;
-    font-weight: 500;
-}
-
-.label {
-    margin-top: 9px;
-    font-size: 9px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-.separator {
-    margin-top: -15px;
-    font-size: 28px;
-}
-
-/* =========================
-   BOUTONS
-========================= */
-
-.discover {
-    display: inline-block;
-    margin-top: 45px;
-    padding: 16px 27px;
-    background: var(--yellow);
-    color: var(--green);
-    text-decoration: none;
-    border-radius: 100px;
-    font-size: 12px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.discover:hover {
-    transform: translateY(-3px);
-    opacity: 0.9;
-}
-
-/* =========================
-   INFORMATIONS
-========================= */
-
-.intro-section {
-    min-height: 70vh;
-    padding: 150px 10vw;
-    background: var(--green);
-    color: var(--cream);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.intro-section-inner {
-    max-width: 850px;
-}
-
-.section-number {
-    margin-bottom: 30px;
-    font-size: 12px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-}
-
-.intro-section h2 {
-    margin: 0;
-    font-size: clamp(38px, 6vw, 80px);
-    line-height: 0.95;
-    font-weight: 400;
-}
-
-.intro-section p {
-    margin: 40px auto 0;
-    max-width: 650px;
-    font-size: 18px;
-    line-height: 1.7;
-}
-
-/* =========================
-   SECTIONS PROVISOIRES
-========================= */
-
-.coming-section {
-    min-height: 55vh;
-    padding: 120px 8vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: var(--cream);
-    color: var(--green);
-    border-bottom: 1px solid rgba(79, 102, 71, 0.15);
-}
-
-.coming-inner {
-    max-width: 750px;
-}
-
-.coming-section h2 {
-    margin: 0;
-    font-size: clamp(42px, 6vw, 75px);
-    font-weight: 400;
-    line-height: 1;
-}
-
-.coming-section p {
-    margin: 30px auto 0;
-    max-width: 580px;
-    font-size: 17px;
-    line-height: 1.7;
-}
-
-/* =========================
-   RSVP
-========================= */
-
-.rsvp-section {
-    padding: 140px 8vw;
-    background: var(--cream);
-    color: var(--green);
-}
-
-.rsvp-container {
-    max-width: 960px;
-    margin: 0 auto;
-}
-
-.rsvp-header {
-    margin-bottom: 80px;
-    text-align: center;
-}
-
-.rsvp-eyebrow {
-    margin-bottom: 25px;
-    font-size: 12px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-}
-
-.rsvp-title {
-    margin: 0;
-    font-size: clamp(48px, 7vw, 90px);
-    line-height: 0.95;
-    font-weight: 400;
-    letter-spacing: -3px;
-}
-
-.rsvp-intro {
-    max-width: 600px;
-    margin: 30px auto 0;
-    font-size: 17px;
-    line-height: 1.7;
-}
-
-.rsvp-form {
-    display: flex;
-    flex-direction: column;
-    gap: 55px;
-}
-
-.form-group {
-    padding-bottom: 50px;
-    border-bottom: 1px solid rgba(79, 102, 71, 0.23);
-    transition: opacity 0.3s ease;
-}
-
-.question-number {
-    width: 42px;
-    height: 42px;
-    margin-bottom: 24px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: var(--yellow);
-    color: var(--green);
-    font-size: 13px;
-}
-
-.question {
-    display: block;
-    margin-bottom: 20px;
-    font-size: 24px;
-    line-height: 1.35;
-}
-
-.helper-text {
-    margin: -5px 0 27px;
-    font-size: 15px;
-    line-height: 1.6;
-    color: rgba(79, 102, 71, 0.72);
-}
-
-.text-input,
-.textarea-input {
-    width: 100%;
-    padding: 15px 5px;
-    border: none;
-    border-bottom: 1px solid var(--green);
-    background: transparent;
-    color: var(--green);
-    font-family: "Acumin", Arial, sans-serif;
-    font-size: 18px;
-    outline: none;
-    border-radius: 0;
-}
-
-.text-input::placeholder,
-.textarea-input::placeholder {
-    color: rgba(79, 102, 71, 0.48);
-}
-
-.text-input:focus,
-.textarea-input:focus {
-    border-bottom: 2px solid var(--green);
-}
-
-.textarea-input {
-    min-height: 110px;
-    resize: vertical;
-}
-
-/* SELECT */
-
-.select-wrapper {
-    position: relative;
-    max-width: 300px;
-    margin-top: 12px;
-}
-
-.select-input {
-    width: 100%;
-    appearance: none;
-    -webkit-appearance: none;
-    padding: 16px 45px 16px 16px;
-    border: 1px solid var(--green);
-    border-radius: 0;
-    background: var(--cream);
-    color: var(--green);
-    font-family: "Acumin", Arial, sans-serif;
-    font-size: 17px;
-    cursor: pointer;
-    outline: none;
-}
-
-.select-wrapper::after {
-    content: "↓";
-    position: absolute;
-    right: 18px;
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none;
-    font-size: 18px;
-}
-
-/* RADIO */
-
-.choice-list {
-    display: flex;
-    flex-direction: column;
-    gap: 17px;
-}
-
-.choice {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    cursor: pointer;
-    font-size: 17px;
-    line-height: 1.4;
-}
-
-.choice input {
-    position: absolute;
-    opacity: 0;
-}
-
-.custom-radio {
-    width: 23px;
-    height: 23px;
-    flex-shrink: 0;
-    border: 1px solid var(--green);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.choice input:checked + .custom-radio::after {
-    content: "";
-    width: 13px;
-    height: 13px;
-    border-radius: 50%;
-    background: var(--green);
-}
-
-/* ALLERGIES */
-
-.conditional-section {
-    display: none;
-    margin-top: 30px;
-    padding: 30px;
-    background: rgba(160, 159, 133, 0.15);
-}
-
-.conditional-section.visible {
-    display: block;
-}
-
-.conditional-section label {
-    display: block;
-    margin-bottom: 18px;
-    font-size: 15px;
-    line-height: 1.5;
-}
-
-/* DATE LIMITE */
-
-.rsvp-deadline {
-    margin-top: 20px;
-    padding: 42px 30px;
-    background: var(--green);
-    color: var(--cream);
-    text-align: center;
-    font-size: 17px;
-    line-height: 1.7;
-}
-
-.rsvp-deadline strong {
-    color: var(--yellow);
-}
-
-/* ENVOI */
-
-.submit-area {
-    text-align: center;
-}
-
-.rsvp-submit {
-    margin-top: 10px;
-    padding: 19px 40px;
-    border: none;
-    border-radius: 100px;
-    background: var(--yellow);
-    color: var(--green);
-    font-family: "Acumin", Arial, sans-serif;
-    font-size: 13px;
-    letter-spacing: 1.8px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.rsvp-submit:hover {
-    transform: translateY(-3px);
-    opacity: 0.9;
-}
-
-.rsvp-submit:disabled {
-    cursor: wait;
-}
-
-.rsvp-success,
-.rsvp-error {
-    display: none;
-    margin-top: 35px;
-    padding: 35px;
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-.rsvp-success {
-    background: rgba(79, 102, 71, 0.10);
-}
-
-.rsvp-error {
-    background: rgba(255, 205, 7, 0.18);
-}
-
-.rsvp-success.visible,
-.rsvp-error.visible {
-    display: block;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-    background: var(--green);
-    color: var(--cream);
-    padding: 75px 6vw 30px;
-}
-
-.footer-main {
-    max-width: 1300px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr;
-    gap: 70px;
-}
-
-.footer-logo {
-    width: 80px;
-    height: auto;
-    display: block;
-    margin-bottom: 25px;
-}
-
-.footer-title {
-    margin: 0;
-    font-size: 32px;
-    font-weight: 400;
-}
-
-.footer-date {
-    margin-top: 12px;
-    color: var(--yellow);
-    font-size: 17px;
-    letter-spacing: 2px;
-}
-
-.footer-text {
-    margin-top: 25px;
-    max-width: 350px;
-    font-size: 14px;
-    line-height: 1.7;
-    opacity: 0.85;
-}
-
-.footer-heading {
-    margin: 0 0 25px;
-    color: var(--yellow);
-    font-size: 12px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-}
-
-.footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 13px;
-}
-
-.footer-links a {
-    color: var(--cream);
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.footer-contact {
-    font-size: 14px;
-    line-height: 1.8;
-    opacity: 0.9;
-}
-
-.footer-bottom {
-    max-width: 1300px;
-    margin: 60px auto 0;
-    padding-top: 25px;
-    border-top: 1px solid rgba(250,249,229,0.25);
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    font-size: 11px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    opacity: 0.7;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 800px) {
-
-    nav {
-        padding: 14px 18px;
-    }
-
-    .logo-img {
-        width: 48px;
-    }
-
-    .nav-links {
-        display: none;
-    }
-
-    .hero {
-        min-height: auto;
-        padding: 105px 24px 80px;
-        display: flex;
-        flex-direction: column;
-        gap: 55px;
-    }
-
-    .photo-wrapper {
-        width: 100%;
-    }
-
-    .hero-content {
-        text-align: center;
-    }
-
-    .names {
-        font-size: 64px;
-        letter-spacing: -3px;
-    }
-
-    .date {
-        font-size: 30px;
-    }
-
-    .intro {
-        font-size: 16px;
-    }
-
-    .countdown {
-        justify-content: center;
-        gap: 6px;
-    }
-
-    .countdown-item {
-        min-width: 57px;
-    }
-
-    .number {
-        font-size: 27px;
-    }
-
-    .label {
-        font-size: 7px;
-        letter-spacing: 1px;
-    }
-
-    .separator {
-        font-size: 19px;
-    }
-
-    .intro-section {
-        padding: 100px 28px;
-    }
-
-    .rsvp-section {
-        padding: 100px 24px;
-    }
-
-    .rsvp-title {
-        font-size: 52px;
-        letter-spacing: -2px;
-    }
-
-    .question {
-        font-size: 20px;
-    }
-
-    .select-wrapper {
-        max-width: 100%;
-    }
-
-    footer {
-        padding: 60px 25px 25px;
-    }
-
-    .footer-main {
-        grid-template-columns: 1fr;
-        gap: 45px;
-    }
-
-    .footer-bottom {
-        margin-top: 45px;
-        flex-direction: column;
-    }
-}
-
-</style>
 </head>
+
 
 <body>
 
+
 <nav>
 
-    <a href="#accueil" class="logo-link" aria-label="Retour à l'accueil">
+    <a
+        href="./index.html"
+        class="logo-link"
+        aria-label="Retour à l'accueil"
+    >
+
         <img
             src="./citron-logo.png"
-            alt="Logo Justine et Yvan"
+            alt="Justine et Yvan"
             class="logo-img"
         >
+
     </a>
 
+
     <div class="nav-links">
-        <a href="#accueil">Accueil</a>
-        <a href="#informations">Informations</a>
-        <a href="#hebergement">Où dormir</a>
-        <a href="#rsvp">RSVP</a>
-        <a href="#photos">Photos</a>
-    </div>
 
-</nav>
+        <a href="./index.html">
+            Accueil
+        </a>
 
-<section class="hero" id="accueil">
+        <a href="./dormir.html">
+            Où dormir
+        </a>
 
-    <div class="hero-visual">
-        <div class="photo-wrapper">
-            <img
-                src="./photo-mariage.jpg"
-                alt="Justine et Yvan"
-            >
-        </div>
-    </div>
+        <a href="./rsvp.html">
+            RSVP
+        </a>
 
-    <div class="hero-content">
+        <a href="./photos.html">
+            Photos
+        </a>
 
-        <h1 class="names">
-            Justine<br>
-            & Yvan
-        </h1>
-
-        <div class="date">
-            04.09.2027
-        </div>
-
-        <p class="intro">
-            Voilà maintenant 10 ans que notre histoire a commencé.
-            10 années à grandir ensemble, à rire, voyager,
-            partager, construire et rêver à deux.
-            Des milliers de souvenirs plus tard,
-            nous avons décidé d’en créer un nouveau,
-            et certainement l’un des plus beaux :
-            notre mariage.
-        </p>
-
-        <div class="countdown">
-
-            <div class="countdown-item">
-                <div class="number" id="days">000</div>
-                <div class="label">Jours</div>
-            </div>
-
-            <div class="separator">:</div>
-
-            <div class="countdown-item">
-                <div class="number" id="hours">00</div>
-                <div class="label">Heures</div>
-            </div>
-
-            <div class="separator">:</div>
-
-            <div class="countdown-item">
-                <div class="number" id="minutes">00</div>
-                <div class="label">Minutes</div>
-            </div>
-
-            <div class="separator">:</div>
-
-            <div class="countdown-item">
-                <div class="number" id="seconds">00</div>
-                <div class="label">Secondes</div>
-            </div>
-
-        </div>
-
-        <a class="discover" href="#informations">
-            Découvrir le jour J ↓
+        <a href="./faq.html">
+            FAQ
         </a>
 
     </div>
 
-</section>
+</nav>
 
-<section class="intro-section" id="informations">
 
-    <div class="intro-section-inner">
+<!-- =========================
+     ACCUEIL
+========================= -->
 
-        <div class="section-number">
-            02 — Informations
+<section class="hero">
+
+
+    <div class="hero-visual">
+
+        <div class="photo-wrapper">
+
+            <img
+                src="./photo-mariage.jpg"
+                alt="Justine et Yvan"
+            >
+
         </div>
-
-        <h2>
-            Le jour où<br>
-            tout commence
-        </h2>
-
-        <p>
-            Cérémonie, cocktail, dîner et soirée :
-            toutes les informations pratiques seront ajoutées ici progressivement.
-            <br><br>
-            Revenez nous voir bientôt 🤍
-        </p>
 
     </div>
 
-</section>
 
-<section class="coming-section" id="hebergement">
+    <div class="hero-content">
 
-    <div class="coming-inner">
 
-        <div class="section-number">
-            03 — Où dormir
+        <h1 class="names">
+
+            Justine<br>
+            & Yvan
+
+        </h1>
+
+
+        <div class="date">
+
+            04.09.2027
+
         </div>
 
-        <h2>
-            Un petit nid<br>
-            pour la nuit
-        </h2>
 
-        <p>
-            Nous préparons une sélection de gîtes,
-            Airbnb et logements à proximité du domaine.
-            <br><br>
-            Les bonnes adresses arrivent bientôt.
+        <p class="intro">
+
+            Voilà maintenant 10 ans que notre histoire a commencé.
+
+            10 années à grandir ensemble,
+            à rire, voyager, partager,
+            construire et rêver à deux.
+
+            Des milliers de souvenirs plus tard,
+            nous avons décidé d’en créer un nouveau,
+            et certainement l’un des plus beaux :
+            notre mariage.
+
         </p>
 
-    </div>
 
-</section>
+        <div class="countdown">
 
-<section class="rsvp-section" id="rsvp">
 
-    <div class="rsvp-container">
+            <div class="countdown-item">
 
-        <div class="rsvp-header">
+                <div
+                    class="number"
+                    id="days"
+                >
+                    000
+                </div>
 
-            <div class="rsvp-eyebrow">
-                04 — RSVP
+                <div class="label">
+                    Jours
+                </div>
+
             </div>
 
-            <h2 class="rsvp-title">
-                Confirmez<br>
-                votre présence
+
+            <div class="separator">
+                :
+            </div>
+
+
+            <div class="countdown-item">
+
+                <div
+                    class="number"
+                    id="hours"
+                >
+                    00
+                </div>
+
+                <div class="label">
+                    Heures
+                </div>
+
+            </div>
+
+
+            <div class="separator">
+                :
+            </div>
+
+
+            <div class="countdown-item">
+
+                <div
+                    class="number"
+                    id="minutes"
+                >
+                    00
+                </div>
+
+                <div class="label">
+                    Minutes
+                </div>
+
+            </div>
+
+
+            <div class="separator">
+                :
+            </div>
+
+
+            <div class="countdown-item">
+
+                <div
+                    class="number"
+                    id="seconds"
+                >
+                    00
+                </div>
+
+                <div class="label">
+                    Secondes
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+<!-- =========================
+     PROGRAMME
+========================= -->
+
+<section class="program-section">
+
+
+    <div class="program-container">
+
+
+        <div class="program-header">
+
+
+            <div class="page-eyebrow">
+
+                Le jour J
+
+            </div>
+
+
+            <h2 class="program-title">
+
+                Le programme
+
             </h2>
 
-            <p class="rsvp-intro">
-                Nous avons hâte de partager cette journée avec vous.
-                Merci de prendre quelques instants pour nous confirmer votre présence.
-            </p>
 
         </div>
 
-        <form class="rsvp-form" id="rsvpForm">
 
-            <div class="form-group">
+        <div class="timeline">
 
-                <div class="question-number">01</div>
 
-                <label class="question" for="fullName">
-                    Nom et prénom
-                </label>
+            <!-- ÉGLISE -->
 
-                <p class="helper-text">
-                    Nom et prénom de la personne qui remplit le formulaire.
+            <div class="timeline-item">
+
+
+                <div class="timeline-dot"></div>
+
+
+                <div class="timeline-time">
+
+                    14H30
+
+                </div>
+
+
+                <h3>
+
+                    Cérémonie
+
+                </h3>
+
+
+                <p>
+
+                    Église<br>
+
+                    574 route de Lyon<br>
+
+                    42110 Saint-Martin-Lestra
+
                 </p>
 
-                <input
-                    type="text"
-                    id="fullName"
-                    name="nom"
-                    class="text-input"
-                    placeholder="Votre nom et prénom"
-                    required
+
+                <a
+                    class="maps-button"
+                    href="https://www.google.com/maps/search/?api=1&query=574+route+de+Lyon+42110+Saint-Martin-Lestra"
+                    target="_blank"
+                    rel="noopener noreferrer"
                 >
 
-            </div>
+                    Ouvrir dans Google Maps ↗
 
-            <div class="form-group">
+                </a>
 
-                <div class="question-number">02</div>
-
-                <div class="question">
-                    Serez-vous parmi nous pour célébrer notre mariage ? 🥂
-                </div>
-
-                <div class="choice-list">
-
-                    <label class="choice">
-                        <input
-                            type="radio"
-                            name="presence"
-                            value="oui"
-                            required
-                        >
-                        <span class="custom-radio"></span>
-                        <span>Oui, avec grand plaisir !</span>
-                    </label>
-
-                    <label class="choice">
-                        <input
-                            type="radio"
-                            name="presence"
-                            value="non"
-                        >
-                        <span class="custom-radio"></span>
-                        <span>
-                            Malheureusement, je ne pourrai pas être présent(e)
-                        </span>
-                    </label>
-
-                </div>
 
             </div>
 
-            <div class="form-group" id="guestsGroup">
 
-                <div class="question-number">03</div>
+            <div class="travel-time">
 
-                <div class="question">
-                    Combien de personnes seront présentes ?
+                8 minutes en voiture
+
+            </div>
+
+
+            <!-- COCKTAIL -->
+
+            <div class="timeline-item">
+
+
+                <div class="timeline-dot"></div>
+
+
+                <div class="timeline-time">
+
+                    À PARTIR DE 17H00
+
                 </div>
 
-                <p class="helper-text">
-                    Merci d’indiquer le nom et le prénom de chaque personne présente,
-                    vous compris.
+
+                <h3>
+
+                    Cocktail
+
+                </h3>
+
+
+                <p>
+
+                    Domaine Le Gardien du Chai<br>
+
+                    543 chemin de la Varenne<br>
+
+                    42110 Salt-en-Donzy
+
                 </p>
 
-                <label for="guestNumber">
-                    Nombre de personnes
-                </label>
 
-                <div class="select-wrapper">
-
-                    <select
-                        id="guestNumber"
-                        name="nombre"
-                        class="select-input"
-                    >
-                        <option value="">Sélectionnez</option>
-                        <option value="1">1 personne</option>
-                        <option value="2">2 personnes</option>
-                        <option value="3">3 personnes</option>
-                        <option value="4">4 personnes</option>
-                        <option value="5">5 personnes</option>
-                        <option value="6">6 personnes</option>
-                        <option value="7">7 personnes</option>
-                        <option value="8">8 personnes</option>
-                        <option value="9">9 personnes</option>
-                        <option value="10">10 personnes</option>
-                    </select>
-
-                </div>
-
-                <div style="height:45px;"></div>
-
-                <label for="guestNames">
-                    Noms et prénoms des personnes présentes
-                </label>
-
-                <textarea
-                    id="guestNames"
-                    name="personnes"
-                    class="textarea-input"
-                    placeholder="Ex. Justine Dupont, Yvan Martin..."
-                ></textarea>
-
-            </div>
-
-            <div class="form-group">
-
-                <div class="question-number">04</div>
-
-                <div class="question">
-                    Avez-vous des allergies ou intolérances alimentaires ?
-                </div>
-
-                <div class="choice-list">
-
-                    <label class="choice">
-                        <input
-                            type="radio"
-                            name="allergies"
-                            value="non"
-                            required
-                        >
-                        <span class="custom-radio"></span>
-                        <span>Non</span>
-                    </label>
-
-                    <label class="choice">
-                        <input
-                            type="radio"
-                            name="allergies"
-                            value="oui"
-                        >
-                        <span class="custom-radio"></span>
-                        <span>Oui</span>
-                    </label>
-
-                </div>
-
-                <div
-                    class="conditional-section"
-                    id="allergyDetails"
+                <a
+                    class="maps-button"
+                    href="https://www.google.com/maps/search/?api=1&query=543+chemin+de+la+Varenne+42110+Salt-en-Donzy"
+                    target="_blank"
+                    rel="noopener noreferrer"
                 >
 
-                    <label for="allergyText">
-                        Merci de préciser la personne concernée ainsi que son allergie
-                        ou son intolérance.
-                    </label>
+                    Ouvrir dans Google Maps ↗
 
-                    <textarea
-                        id="allergyText"
-                        name="detailAllergies"
-                        class="textarea-input"
-                        placeholder="Ex. Yvan Martin — allergie aux fruits à coque"
-                    ></textarea>
+                </a>
+
+
+            </div>
+
+
+            <!-- DÎNER -->
+
+            <div class="timeline-item">
+
+
+                <div class="timeline-dot"></div>
+
+
+                <div class="timeline-time">
+
+                    20H00
 
                 </div>
 
-            </div>
 
-            <div class="form-group">
+                <h3>
 
-                <div class="question-number">05</div>
+                    Dîner
 
-                <label class="question" for="message">
-                    Souhaitez-vous nous faire part d’autre chose ?
-                </label>
+                </h3>
 
-                <textarea
-                    id="message"
-                    name="message"
-                    class="textarea-input"
-                    placeholder="Un petit mot, une information particulière..."
-                ></textarea>
+
+                <p>
+
+                    Au Domaine Le Gardien du Chai.
+
+                </p>
+
 
             </div>
 
-            <div class="rsvp-deadline">
 
-                Merci de confirmer votre présence avant le
+            <!-- SOIRÉE -->
 
-                <strong>
-                    30 novembre 2026
-                </strong>
+            <div class="timeline-item">
 
-                ❤️
 
-                <br><br>
+                <div class="timeline-dot"></div>
 
-                Nous avons hâte de célébrer cette journée avec vous !
 
-            </div>
+                <div class="timeline-time">
 
-            <div class="submit-area">
+                    À SUIVRE...
 
-                <button
-                    type="submit"
-                    class="rsvp-submit"
-                    id="rsvpSubmit"
-                >
-                    Envoyer ma réponse
-                </button>
-
-                <div
-                    class="rsvp-success"
-                    id="rsvpSuccess"
-                >
-                    <strong>Merci 🤍</strong>
-                    <br><br>
-                    Votre réponse a bien été enregistrée.
                 </div>
 
-                <div
-                    class="rsvp-error"
-                    id="rsvpError"
-                >
-                    Une erreur est survenue pendant l’envoi.
-                    Merci de réessayer dans quelques instants.
-                </div>
+
+                <h3>
+
+                    Soirée
+
+                </h3>
+
+
+                <p>
+
+                    Et ensuite... on danse.
+
+                </p>
+
 
             </div>
 
-        </form>
 
-    </div>
-
-</section>
-
-<section class="coming-section" id="photos">
-
-    <div class="coming-inner">
-
-        <div class="section-number">
-            05 — Photos
         </div>
 
-        <h2>
-            Vos plus beaux<br>
-            souvenirs
-        </h2>
-
-        <p>
-            Le jour venu, vous pourrez retrouver ici
-            un lien pour partager vos photos et vidéos de la journée.
-            <br><br>
-            Cette partie arrive bientôt 📸
-        </p>
 
     </div>
 
+
 </section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
+
     <div class="footer-main">
 
+
         <div>
+
 
             <img
                 src="./citron-logo.png"
@@ -1189,288 +441,102 @@ footer {
                 class="footer-logo"
             >
 
-            <h3 class="footer-title">
+
+            <h3>
+
                 Justine & Yvan
+
             </h3>
 
-            <div class="footer-date">
-                04.09.2027
-            </div>
 
-            <p class="footer-text">
-                Toutes les informations utiles pour célébrer cette journée
-                à nos côtés se trouvent ici.
+            <p>
+
+                04.09.2027
+
             </p>
+
 
         </div>
 
+
         <div>
 
-            <h4 class="footer-heading">
+
+            <div class="footer-heading">
+
                 Navigation
-            </h4>
+
+            </div>
+
 
             <div class="footer-links">
 
-                <a href="#accueil">Accueil</a>
-                <a href="#informations">Informations</a>
-                <a href="#hebergement">Où dormir</a>
-                <a href="#rsvp">Confirmer ma présence</a>
-                <a href="#photos">Photos</a>
+                <a href="./index.html">
+                    Accueil
+                </a>
+
+                <a href="./dormir.html">
+                    Où dormir
+                </a>
+
+                <a href="./rsvp.html">
+                    RSVP
+                </a>
+
+                <a href="./photos.html">
+                    Photos
+                </a>
+
+                <a href="./faq.html">
+                    FAQ
+                </a>
 
             </div>
 
+
         </div>
+
 
         <div>
 
-            <h4 class="footer-heading">
-                Contact & informations
-            </h4>
 
-            <div class="footer-contact">
-                Une question concernant l'organisation de la journée ?
-                <br><br>
-                N'hésitez pas à nous contacter directement.
-                <br><br>
-                <strong>
-                    Saint-Martin-Lestra & Salt-en-Donzy
-                </strong>
-                <br>
-                Loire — 42
+            <div class="footer-heading">
+
+                Informations
+
             </div>
+
+
+            <p>
+
+                Saint-Martin-Lestra<br>
+
+                Salt-en-Donzy<br>
+
+                Loire — 42
+
+            </p>
+
 
         </div>
 
+
     </div>
+
 
     <div class="footer-bottom">
 
-        <div>
-            © Justine & Yvan — 2027
-        </div>
-
-        <div>
-            mariage-justine-yvan.fr
-        </div>
+        © Justine & Yvan — 2027
 
     </div>
 
+
 </footer>
 
-<script>
 
-/* =========================
-   COMPTE À REBOURS
-========================= */
+<script src="./script.js"></script>
 
-const weddingDate =
-    new Date("2027-09-04T14:30:00").getTime();
-
-function updateCountdown() {
-
-    const now =
-        new Date().getTime();
-
-    const distance =
-        weddingDate - now;
-
-    if (distance <= 0) {
-
-        document.getElementById("days").textContent = "000";
-        document.getElementById("hours").textContent = "00";
-        document.getElementById("minutes").textContent = "00";
-        document.getElementById("seconds").textContent = "00";
-
-        return;
-    }
-
-    const days =
-        Math.floor(distance / (1000 * 60 * 60 * 24));
-
-    const hours =
-        Math.floor((distance / (1000 * 60 * 60)) % 24);
-
-    const minutes =
-        Math.floor((distance / (1000 * 60)) % 60);
-
-    const seconds =
-        Math.floor((distance / 1000) % 60);
-
-    document.getElementById("days").textContent =
-        String(days).padStart(3, "0");
-
-    document.getElementById("hours").textContent =
-        String(hours).padStart(2, "0");
-
-    document.getElementById("minutes").textContent =
-        String(minutes).padStart(2, "0");
-
-    document.getElementById("seconds").textContent =
-        String(seconds).padStart(2, "0");
-}
-
-updateCountdown();
-setInterval(updateCountdown, 1000);
-
-/* =========================
-   RSVP
-========================= */
-
-const SCRIPT_URL =
-    "https://script.google.com/macros/s/AKfycbwuFAbOggqDw7k_s4vhme73gucFdAVW7ThsEzATW2UOhbID32yaaETkdJIfXLk28JKtaQ/exec";
-
-const rsvpForm =
-    document.getElementById("rsvpForm");
-
-const submitButton =
-    document.getElementById("rsvpSubmit");
-
-const successMessage =
-    document.getElementById("rsvpSuccess");
-
-const errorMessage =
-    document.getElementById("rsvpError");
-
-const guestsGroup =
-    document.getElementById("guestsGroup");
-
-const guestNumber =
-    document.getElementById("guestNumber");
-
-const guestNames =
-    document.getElementById("guestNames");
-
-const allergyDetails =
-    document.getElementById("allergyDetails");
-
-const allergyText =
-    document.getElementById("allergyText");
-
-/* Présence */
-
-document
-    .querySelectorAll('input[name="presence"]')
-    .forEach(function(choice) {
-
-        choice.addEventListener(
-            "change",
-            function() {
-
-                if (this.value === "non") {
-
-                    guestsGroup.style.opacity = "0.3";
-                    guestsGroup.style.pointerEvents = "none";
-
-                    guestNumber.required = false;
-                    guestNames.required = false;
-
-                    guestNumber.value = "";
-                    guestNames.value = "";
-
-                } else {
-
-                    guestsGroup.style.opacity = "1";
-                    guestsGroup.style.pointerEvents = "auto";
-
-                    guestNumber.required = true;
-                    guestNames.required = true;
-                }
-            }
-        );
-    });
-
-/* Allergies */
-
-document
-    .querySelectorAll('input[name="allergies"]')
-    .forEach(function(choice) {
-
-        choice.addEventListener(
-            "change",
-            function() {
-
-                if (this.value === "oui") {
-
-                    allergyDetails.classList.add("visible");
-                    allergyText.required = true;
-
-                } else {
-
-                    allergyDetails.classList.remove("visible");
-                    allergyText.required = false;
-                    allergyText.value = "";
-                }
-            }
-        );
-    });
-
-/* Envoi */
-
-rsvpForm.addEventListener(
-    "submit",
-    async function(event) {
-
-        event.preventDefault();
-
-        successMessage.classList.remove("visible");
-        errorMessage.classList.remove("visible");
-
-        submitButton.disabled = true;
-        submitButton.textContent = "Envoi en cours...";
-        submitButton.style.opacity = "0.6";
-
-        const formData =
-            new FormData(rsvpForm);
-
-        try {
-
-            await fetch(
-                SCRIPT_URL,
-                {
-                    method: "POST",
-                    body: formData,
-                    mode: "no-cors"
-                }
-            );
-
-            successMessage.classList.add("visible");
-
-            rsvpForm.reset();
-
-            guestsGroup.style.opacity = "1";
-            guestsGroup.style.pointerEvents = "auto";
-
-            guestNumber.required = false;
-            guestNames.required = false;
-
-            allergyDetails.classList.remove("visible");
-            allergyText.required = false;
-
-            successMessage.scrollIntoView({
-                behavior: "smooth",
-                block: "center"
-            });
-
-        } catch (error) {
-
-            console.error(error);
-
-            errorMessage.classList.add("visible");
-
-            errorMessage.scrollIntoView({
-                behavior: "smooth",
-                block: "center"
-            });
-        }
-
-        submitButton.disabled = false;
-        submitButton.textContent = "Envoyer ma réponse";
-        submitButton.style.opacity = "1";
-    }
-);
-
-</script>
 
 </body>
+
 </html>
