@@ -4031,3 +4031,19 @@ nav {
     }
 
 }
+.wedshoots-card {
+    background: red !important;
+    border: 20px solid blue !important;
+}
+
+.wedshoots-button {
+    background: yellow !important;
+    padding: 30px !important;
+    display: inline-block !important;
+}
+
+.qr-box img {
+    width: 100px !important;
+    height: 100px !important;
+    max-width: 100px !important;
+}
