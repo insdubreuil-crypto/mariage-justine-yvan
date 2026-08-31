@@ -4033,3 +4033,16 @@ nav {
 }
 
 
+@media (max-width: 700px) {
+
+    .wedshoots-card {
+        background: #4f6647 !important;
+        border: none !important;
+    }
+
+    .wedshoots-button {
+        background: #ffcd07 !important;
+        color: #4f6647 !important;
+    }
+
+}
