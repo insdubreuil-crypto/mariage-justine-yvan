@@ -7,7 +7,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Où dormir — Justine & Yvan</title>
+<title>RSVP — Justine & Yvan</title>
 
 <link
     rel="icon"
@@ -17,17 +17,17 @@
 
 <meta
     name="description"
-    content="Découvrez les logements à proximité du mariage de Justine et Yvan."
+    content="Confirmez votre présence au mariage de Justine & Yvan — 04.09.2027."
 >
 
 <meta
     property="og:title"
-    content="Où dormir — Justine & Yvan"
+    content="RSVP — Justine & Yvan"
 >
 
 <meta
     property="og:description"
-    content="Quelques logements à proximité du Domaine Le Gardien du Chai."
+    content="Confirmez votre présence au mariage de Justine & Yvan."
 >
 
 <meta
@@ -83,14 +83,14 @@
             Accueil
         </a>
 
-        <a
-            href="./dormir.html"
-            aria-current="page"
-        >
+        <a href="./dormir.html">
             Où dormir
         </a>
 
-        <a href="./rsvp.html">
+        <a
+            href="./rsvp.html"
+            aria-current="page"
+        >
             RSVP
         </a>
 
@@ -111,732 +111,569 @@
 </nav>
 
 
+<!-- =========================================================
+     CONTENU
+========================================================= -->
 
 <main>
 
 
-<!-- =========================================================
-     INTRO
-========================================================= -->
-
 <section class="page-hero">
 
     <div class="page-eyebrow">
-        Pour prolonger la fête
+        Serez-vous des nôtres ?
     </div>
 
     <h1 class="page-title">
-        Où dormir
+        Confirmez<br>
+        votre présence
     </h1>
 
     <p class="page-intro">
 
-        Voici quelques logements situés
-        à proximité du Domaine Le Gardien du Chai.
+        Nous avons hâte de partager cette journée avec vous.
 
         <br><br>
 
-        Les disponibilités et les tarifs peuvent évoluer,
-        alors pensez à réserver suffisamment tôt 🤍
+        Merci de prendre quelques instants
+        pour nous confirmer votre présence.
 
     </p>
 
 </section>
 
 
-
 <!-- =========================================================
-     GÎTE
+     FORMULAIRE RSVP
 ========================================================= -->
 
-<section>
+<section class="rsvp-form-section">
 
-    <div
-        style="
-            text-align:center;
-            margin-bottom:45px;
-            padding:0 22px;
-        "
-    >
+    <div class="rsvp-container">
 
-        <div class="page-eyebrow">
-            Gîte
+
+        <form
+
+            class="rsvp-form"
+
+            id="rsvpForm"
+
+            action="https://script.google.com/macros/s/AKfycbwuFAbOggqDw7k_s4vhme73gucFdAVW7ThsEzATW2UOhbID32yaaETkdJIfXLk28JKtaQ/exec"
+
+            method="POST"
+
+            target="hidden_iframe"
+
+        >
+
+
+            <!-- =================================================
+                 QUESTION 01
+            ================================================== -->
+
+            <div class="form-group">
+
+                <div class="question-number">
+                    01
+                </div>
+
+                <label
+                    class="question"
+                    for="fullName"
+                >
+                    Nom et prénom
+                </label>
+
+                <p class="helper-text">
+
+                    Nom et prénom de la personne
+                    qui remplit le formulaire.
+
+                </p>
+
+                <input
+                    type="text"
+                    id="fullName"
+                    name="nom"
+                    class="text-input"
+                    placeholder="Votre nom et prénom"
+                    autocomplete="name"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- =================================================
+                 QUESTION 02
+            ================================================== -->
+
+            <div class="form-group">
+
+                <div class="question-number">
+                    02
+                </div>
+
+                <div class="question">
+
+                    Serez-vous parmi nous
+                    pour célébrer notre mariage ? 🥂
+
+                </div>
+
+
+                <div class="choice-list">
+
+
+                    <label class="choice">
+
+                        <input
+                            type="radio"
+                            name="presence"
+                            value="Oui"
+                            required
+                        >
+
+                        <span class="custom-radio"></span>
+
+                        <span>
+                            Oui, avec grand plaisir !
+                        </span>
+
+                    </label>
+
+
+                    <label class="choice">
+
+                        <input
+                            type="radio"
+                            name="presence"
+                            value="Non"
+                        >
+
+                        <span class="custom-radio"></span>
+
+                        <span>
+
+                            Malheureusement,
+                            je ne pourrai pas être présent(e)
+
+                        </span>
+
+                    </label>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 QUESTIONS 03 + 04 + 05
+
+                 TOUT CE BLOC DISPARAÎT
+                 SI LA PERSONNE RÉPOND NON
+            ================================================== -->
+
+            <div id="questionsPresence">
+
+
+                <!-- =================================================
+                     QUESTION 03
+                ================================================== -->
+
+                <div class="form-group">
+
+                    <div class="question-number">
+                        03
+                    </div>
+
+                    <div class="question">
+
+                        Combien de personnes seront présentes ?
+
+                    </div>
+
+                    <p class="helper-text">
+
+                        Merci d’indiquer le nom et le prénom
+                        de chaque personne présente,
+                        vous compris.
+
+                    </p>
+
+
+                    <label for="guestNumber">
+
+                        Nombre de personnes
+
+                    </label>
+
+
+                    <div class="select-wrapper">
+
+                        <select
+                            id="guestNumber"
+                            name="nombre"
+                            class="select-input"
+                        >
+
+                            <option value="">
+                                Sélectionnez
+                            </option>
+
+                            <option value="1">
+                                1 personne
+                            </option>
+
+                            <option value="2">
+                                2 personnes
+                            </option>
+
+                            <option value="3">
+                                3 personnes
+                            </option>
+
+                            <option value="4">
+                                4 personnes
+                            </option>
+
+                            <option value="5">
+                                5 personnes
+                            </option>
+
+                            <option value="6">
+                                6 personnes
+                            </option>
+
+                            <option value="7">
+                                7 personnes
+                            </option>
+
+                            <option value="8">
+                                8 personnes
+                            </option>
+
+                            <option value="9">
+                                9 personnes
+                            </option>
+
+                            <option value="10">
+                                10 personnes
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div style="height:38px;"></div>
+
+
+                    <label for="guestNames">
+
+                        Noms et prénoms
+                        des personnes présentes
+
+                    </label>
+
+
+                    <textarea
+                        id="guestNames"
+                        name="personnes"
+                        class="textarea-input"
+                        placeholder="Ex. Justine Dupont, Yvan Martin..."
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     QUESTION 04
+                ================================================== -->
+
+                <div class="form-group">
+
+                    <div class="question-number">
+                        04
+                    </div>
+
+                    <div class="question">
+
+                        Avez-vous des allergies
+                        ou intolérances alimentaires ?
+
+                    </div>
+
+
+                    <div class="choice-list">
+
+
+                        <label class="choice">
+
+                            <input
+                                type="radio"
+                                name="allergies"
+                                value="Non"
+                                id="allergyNo"
+                            >
+
+                            <span class="custom-radio"></span>
+
+                            <span>
+                                Non
+                            </span>
+
+                        </label>
+
+
+                        <label class="choice">
+
+                            <input
+                                type="radio"
+                                name="allergies"
+                                value="Oui"
+                                id="allergyYes"
+                            >
+
+                            <span class="custom-radio"></span>
+
+                            <span>
+                                Oui
+                            </span>
+
+                        </label>
+
+
+                    </div>
+
+
+                    <!-- DÉTAIL ALLERGIES -->
+
+                    <div
+                        class="conditional-section"
+                        id="allergyDetails"
+                    >
+
+                        <label for="allergyText">
+
+                            Merci de préciser la personne concernée
+                            ainsi que son allergie
+                            ou son intolérance.
+
+                        </label>
+
+
+                        <textarea
+                            id="allergyText"
+                            name="detailAllergies"
+                            class="textarea-input"
+                            placeholder="Ex. Yvan Martin — allergie aux fruits à coque"
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     QUESTION 05
+                ================================================== -->
+
+                <div class="form-group">
+
+                    <div class="question-number">
+                        05
+                    </div>
+
+                    <label
+                        class="question"
+                        for="message"
+                    >
+
+                        Souhaitez-vous nous faire part
+                        d’autre chose ?
+
+                    </label>
+
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        class="textarea-input"
+                        placeholder="Un petit mot, une information particulière..."
+                    ></textarea>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 BOUTON ENVOYER
+            ================================================== -->
+
+            <div class="submit-area">
+
+                <button
+                    type="submit"
+                    class="rsvp-submit"
+                    id="rsvpSubmit"
+                >
+
+                    Envoyer ma réponse
+
+                </button>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 RAPPEL DATE LIMITE
+            ================================================== -->
+
+            <div class="rsvp-deadline">
+
+                Merci de confirmer votre présence avant le
+
+                <strong>
+                    30 novembre 2026
+                </strong>
+
+                ❤️
+
+                <br><br>
+
+                Nous avons hâte de célébrer
+                cette journée avec vous !
+
+            </div>
+
+
+        </form>
+
+
+
+        <!-- =====================================================
+             MESSAGE APRÈS ENVOI
+        ====================================================== -->
+
+        <div
+
+            id="rsvpSuccess"
+
+            style="
+                display:none;
+                min-height:430px;
+                background:#4f6647;
+                color:#faf9e5;
+                text-align:center;
+                padding:70px 35px;
+            "
+
+        >
+
+            <div
+                style="
+                    font-size:46px;
+                    margin-bottom:22px;
+                "
+            >
+                🤍
+            </div>
+
+
+            <div
+                style="
+                    color:#ffcd07;
+                    font-size:11px;
+                    letter-spacing:4px;
+                    text-transform:uppercase;
+                    margin-bottom:22px;
+                "
+            >
+
+                Réponse enregistrée
+
+            </div>
+
+
+            <h2
+                style="
+                    margin:0;
+                    font-size:clamp(42px,6vw,70px);
+                    font-weight:400;
+                "
+            >
+
+                Merci !
+
+            </h2>
+
+
+            <p
+                style="
+                    max-width:580px;
+                    margin:28px auto 0;
+                    font-size:17px;
+                    line-height:1.75;
+                "
+            >
+
+                Votre réponse a bien été envoyée.
+
+                <br><br>
+
+                Merci d’avoir pris le temps
+                de nous répondre.
+
+                <br><br>
+
+                Nous avons hâte de célébrer
+                cette journée avec vous 🤍
+
+            </p>
+
+
+            <div style="margin-top:38px;">
+
+                <a
+                    href="./index.html"
+                    class="btn btn-yellow"
+                >
+
+                    Retour à l’accueil
+
+                </a>
+
+            </div>
+
         </div>
 
-        <h2
-            style="
-                margin:0;
-                font-size:clamp(34px,5vw,55px);
-                font-weight:400;
-            "
-        >
-            À proximité du domaine
-        </h2>
-
-    </div>
 
 
-    <div class="lodging-grid">
+        <!-- =====================================================
+             IFRAME CACHÉ POUR L'ENVOI
+        ====================================================== -->
 
-
-        <!-- =================================================
-             01 — MAISON DE PIERRETTE
-        ================================================== -->
-
-        <a
-            class="lodging-card"
-            href="https://www.loiretourisme.com/hebergements/gites-et-locations/gite-la-maison-de-pierrette-salt-en-donzy-fr-4203339/"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-
-            <div class="lodging-image-placeholder">
-                Gîte
-            </div>
-
-
-            <div class="lodging-content">
-
-                <div class="lodging-number">
-                    Gîte · Salt-en-Donzy
-                </div>
-
-                <h2>
-                    La Maison de Pierrette
-                </h2>
-
-
-                <div class="lodging-meta">
-
-                    <span>
-                        👥 6 à 7 personnes
-                    </span>
-
-                    <span>
-                        🚗 Environ 6 min du domaine
-                    </span>
-
-                    <span>
-                        💶 Tarif : à vérifier
-                    </span>
-
-                </div>
-
-
-                <span class="lodging-link">
-                    Voir le logement →
-                </span>
-
-            </div>
-
-        </a>
+        <iframe
+            name="hidden_iframe"
+            id="hidden_iframe"
+            style="display:none;"
+            title="Envoi de votre réponse"
+        ></iframe>
 
 
     </div>
 
 </section>
-
-
-
-<!-- =========================================================
-     HÔTELS & BOOKING
-========================================================= -->
-
-<section>
-
-    <div
-        style="
-            text-align:center;
-            margin-bottom:45px;
-            padding:0 22px;
-        "
-    >
-
-        <div class="page-eyebrow">
-            Hôtels & Booking
-        </div>
-
-        <h2
-            style="
-                margin:0;
-                font-size:clamp(34px,5vw,55px);
-                font-weight:400;
-            "
-        >
-            Quelques alternatives
-        </h2>
-
-    </div>
-
-
-    <div class="lodging-grid">
-
-
-        <!-- =================================================
-             02 — LA CIGOGNE
-        ================================================== -->
-
-        <a
-            class="lodging-card"
-            href="https://www.booking.com/Share-t4IPh85"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-
-            <div class="lodging-image-placeholder">
-                Booking
-            </div>
-
-
-            <div class="lodging-content">
-
-                <div class="lodging-number">
-                    Booking
-                </div>
-
-                <h2>
-                    La Cigogne
-                </h2>
-
-
-                <div class="lodging-meta">
-
-                    <span>
-                        👥 2 personnes
-                    </span>
-
-                    <span>
-                        🚗 Environ 11 min du domaine
-                    </span>
-
-                    <span>
-                        💶 Environ 70 €
-                    </span>
-
-                </div>
-
-
-                <span class="lodging-link">
-                    Voir sur Booking →
-                </span>
-
-            </div>
-
-        </a>
-
-
-
-        <!-- =================================================
-             03 — COTTAGE DU PARC
-        ================================================== -->
-
-        <div class="lodging-card">
-
-            <div class="lodging-image-placeholder">
-                Booking
-            </div>
-
-
-            <div class="lodging-content">
-
-                <div class="lodging-number">
-                    Booking
-                </div>
-
-                <h2>
-                    Le Cottage du Parc
-                </h2>
-
-
-                <div class="lodging-meta">
-
-                    <span>
-                        🛏 Plusieurs chambres disponibles
-                    </span>
-
-                    <span>
-                        👥 De 2 à 5 personnes
-                    </span>
-
-                    <span>
-                        🛌 1 lit double ou 3 lits simples selon la chambre
-                    </span>
-
-                    <span>
-                        🚗 Environ 15 min du domaine
-                    </span>
-
-                    <span>
-                        💶 Environ 100 à 200 €
-                    </span>
-
-                </div>
-
-
-                <span
-                    class="lodging-link"
-                    style="opacity:.65;"
-                >
-                    Lien à venir
-                </span>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- =================================================
-             09 — LE TISSEUR DES SAVEURS
-        ================================================== -->
-
-        <a
-            class="lodging-card"
-            href="https://www.booking.com/Share-is6u3S"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-
-            <div class="lodging-image-placeholder">
-                Hôtel
-            </div>
-
-
-            <div class="lodging-content">
-
-                <div class="lodging-number">
-                    Hôtel · 2 étoiles
-                </div>
-
-                <h2>
-                    Logis Hôtel Le Tisseur des Saveurs
-                </h2>
-
-
-                <div class="lodging-meta">
-
-                    <span>
-                        👥 2 personnes
-                    </span>
-
-                    <span>
-                        🚗 Environ 12 min du domaine
-                    </span>
-
-                    <span>
-                        💶 Environ 102 €
-                    </span>
-
-                </div>
-
-
-                <span class="lodging-link">
-                    Voir sur Booking →
-                </span>
-
-            </div>
-
-        </a>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     AIRBNB
-========================================================= -->
-
-<section>
-
-    <div
-        style="
-            text-align:center;
-            margin-bottom:45px;
-            padding:0 22px;
-        "
-    >
-
-        <div class="page-eyebrow">
-            Airbnb
-        </div>
-
-        <h2
-            style="
-                margin:0;
-                font-size:clamp(34px,5vw,55px);
-                font-weight:400;
-            "
-        >
-            Chambres & maisons
-        </h2>
-
-    </div>
-
-
-    <div class="lodging-grid">
-
-
-        <!-- =================================================
-             04
-        ================================================== -->
-
-        <div class="lodging-card">
-
-            <div class="lodging-image-placeholder">
-                Airbnb
-            </div>
-
-
-            <div class="lodging-content">
-
-                <div class="lodging-number">
-                    Chambre chez l’habitant
-                </div>
-
-                <h2>
-                    Chambre d’hôte à proximité immédiate
-                </h2>
-
-
-                <div class="lodging-meta">
-
-                    <span>
-                        👥 2 personnes
-                    </span>
-
-                    <span>
-                        🚿 Salle de bain privative
-                    </span>
-
-                    <span>
-                        🚶 Environ 2 min à pied du domaine
-                    </span>
-
-                    <span>
-                        💶 Environ 74 € / nuit
-                    </span>
-
-                </div>
-
-
-                <span
-                    class="lodging-link"
-                    style="opacity:.65;"
-                >
-                    Lien Airbnb à venir
-                </span>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- =================================================
-             05
-        ================================================== -->
-
-        <div class="lodging-card">
-
-            <div class="lodging-image-placeholder">
-                Airbnb
-            </div>
-
-
-            <div class="lodging-content">
-
-                <div class="lodging-number">
-                    Chambre chez l’habitant
-                </div>
-
-                <h2>
-                    Chambre avec salle de bain privée
-                </h2>
-
-
-                <div class="lodging-meta">
-
-                    <span>
-                        👥 2 personnes
-                    </span>
-
-                    <span>
-                        🚿 Salle de bain privée
-                    </span>
-
-                    <span>
-                        🚶 Environ 4 min à pied du domaine
-                    </span>
-
-                    <span>
-                        💶 Environ 74 €
-                    </span>
-
-                </div>
-
-
-                <span
-                    class="lodging-link"
-                    style="opacity:.65;"
-                >
-                    Lien Airbnb à venir
-                </span>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- =================================================
-             06
-        ================================================== -->
-
-        <div class="lodging-card">
-
-            <div class="lodging-image-placeholder">
-                Airbnb
-            </div>
-
-
-            <div class="lodging-content">
-
-                <div class="lodging-number">
-                    Airbnb
-                </div>
-
-                <h2>
-                    Logement 2 chambres
-                </h2>
-
-
-                <div class="lodging-meta">
-
-                    <span>
-                        👥 Jusqu’à 4 personnes
-                    </span>
-
-                    <span>
-                        🛏 2 chambres
-                    </span>
-
-                    <span>
-                        🚗 Environ 10 min du domaine
-                    </span>
-
-                    <span>
-                        💶 Environ 116 €
-                    </span>
-
-                </div>
-
-
-                <span
-                    class="lodging-link"
-                    style="opacity:.65;"
-                >
-                    Lien Airbnb à venir
-                </span>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- =================================================
-             07
-        ================================================== -->
-
-        <div class="lodging-card">
-
-            <div class="lodging-image-placeholder">
-                Airbnb
-            </div>
-
-
-            <div class="lodging-content">
-
-                <div class="lodging-number">
-                    Chambres chez l’habitant
-                </div>
-
-                <h2>
-                    Deux chambres chez l’habitant
-                </h2>
-
-
-                <div class="lodging-meta">
-
-                    <span>
-                        👥 Jusqu’à 4 personnes
-                    </span>
-
-                    <span>
-                        🛏 2 chambres
-                    </span>
-
-                    <span>
-                        ℹ Possibilité de réserver seulement 1 chambre
-                    </span>
-
-                    <span>
-                        🚿 Salle de bain privée
-                    </span>
-
-                    <span>
-                        🚗 Environ 10 min du domaine
-                    </span>
-
-                    <span>
-                        💶 68 € pour 2 personnes
-                    </span>
-
-                    <span>
-                        💶 129 € pour 4 personnes
-                    </span>
-
-                </div>
-
-
-                <span
-                    class="lodging-link"
-                    style="opacity:.65;"
-                >
-                    Lien Airbnb à venir
-                </span>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- =================================================
-             08
-        ================================================== -->
-
-        <div class="lodging-card">
-
-            <div class="lodging-image-placeholder">
-                Airbnb
-            </div>
-
-
-            <div class="lodging-content">
-
-                <div class="lodging-number">
-                    Maison entière
-                </div>
-
-                <h2>
-                    Grande maison — 10 personnes
-                </h2>
-
-
-                <div class="lodging-meta">
-
-                    <span>
-                        👥 Jusqu’à 10 personnes
-                    </span>
-
-                    <span>
-                        🛏 4 chambres
-                    </span>
-
-                    <span>
-                        🌙 Réservation minimum de 2 nuits
-                    </span>
-
-                    <span>
-                        🚗 Environ 3 min du domaine
-                    </span>
-
-                    <span>
-                        💶 Environ 600 € / 2 nuits
-                    </span>
-
-                </div>
-
-
-                <span
-                    class="lodging-link"
-                    style="opacity:.65;"
-                >
-                    Lien Airbnb à venir
-                </span>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     CONSEIL
-========================================================= -->
-
-<div class="note">
-
-    <strong>
-        Petit conseil 🍋
-    </strong>
-
-    <br><br>
-
-    Les logements les plus proches du domaine risquent
-    d’être réservés rapidement.
-
-    <br>
-
-    Si vous souhaitez dormir sur place ou à proximité,
-    nous vous conseillons de réserver dès que possible.
-
-    <br><br>
-
-    Les tarifs indiqués sont donnés à titre indicatif
-    et peuvent évoluer selon les dates et les disponibilités.
-
-</div>
-
-
-
-<!-- =========================================================
-     DOMAINE
-========================================================= -->
-
-<div
-    style="
-        text-align:center;
-        padding:0 22px 100px;
-    "
->
-
-    <a
-
-        href="https://www.google.com/maps/search/?api=1&query=543+chemin+de+la+Varenne+42110+Salt-en-Donzy"
-
-        target="_blank"
-
-        rel="noopener noreferrer"
-
-        class="btn btn-yellow"
-
-    >
-
-        Voir le Domaine sur Google Maps
-
-    </a>
-
-</div>
 
 
 </main>
@@ -855,7 +692,9 @@
             Nous contacter
         </div>
 
+
         <div class="footer-contacts">
+
 
             <a href="tel:+33675970154">
 
@@ -888,6 +727,7 @@
 
             </a>
 
+
         </div>
 
     </div>
@@ -895,7 +735,411 @@
 </footer>
 
 
-<script src="./script.js"></script>
+
+<!-- =========================================================
+     JAVASCRIPT RSVP
+========================================================= -->
+
+<script>
+
+
+/* =========================================================
+   ÉLÉMENTS
+========================================================= */
+
+const form =
+    document.getElementById("rsvpForm");
+
+const questionsPresence =
+    document.getElementById("questionsPresence");
+
+const success =
+    document.getElementById("rsvpSuccess");
+
+const iframe =
+    document.getElementById("hidden_iframe");
+
+const submitButton =
+    document.getElementById("rsvpSubmit");
+
+const allergyDetails =
+    document.getElementById("allergyDetails");
+
+const allergyText =
+    document.getElementById("allergyText");
+
+
+let envoiEnCours = false;
+
+
+
+/* =========================================================
+   PRÉSENCE : OUI / NON
+========================================================= */
+
+function mettreAJourPresence() {
+
+
+    const choix =
+        document.querySelector(
+            'input[name="presence"]:checked'
+        );
+
+
+    if (!choix) {
+
+        return;
+
+    }
+
+
+
+    /* =====================================================
+       SI LA PERSONNE RÉPOND NON
+    ====================================================== */
+
+    if (choix.value === "Non") {
+
+
+        /*
+            On cache complètement
+            les questions 3 + 4 + 5.
+        */
+
+        questionsPresence.style.setProperty(
+            "display",
+            "none",
+            "important"
+        );
+
+
+        /*
+            On désactive les champs cachés.
+
+            Ils ne bloqueront donc pas
+            l'envoi du formulaire.
+        */
+
+        questionsPresence
+            .querySelectorAll(
+                "input, select, textarea"
+            )
+            .forEach(function(champ) {
+
+                champ.disabled = true;
+
+                champ.required = false;
+
+            });
+
+
+    }
+
+
+
+    /* =====================================================
+       SI LA PERSONNE RÉPOND OUI
+    ====================================================== */
+
+    else {
+
+
+        /*
+            On réaffiche les questions.
+        */
+
+        questionsPresence
+            .style
+            .removeProperty(
+                "display"
+            );
+
+
+        /*
+            On réactive les champs.
+        */
+
+        questionsPresence
+            .querySelectorAll(
+                "input, select, textarea"
+            )
+            .forEach(function(champ) {
+
+                champ.disabled = false;
+
+            });
+
+
+
+        /*
+            Les informations principales
+            deviennent obligatoires.
+        */
+
+        document
+            .getElementById(
+                "guestNumber"
+            )
+            .required = true;
+
+
+        document
+            .getElementById(
+                "guestNames"
+            )
+            .required = true;
+
+
+        document
+            .getElementById(
+                "allergyNo"
+            )
+            .required = true;
+
+
+
+        /*
+            Le détail des allergies
+            reste désactivé sauf si Oui
+            est sélectionné.
+        */
+
+        const allergieOui =
+            document.querySelector(
+                'input[name="allergies"][value="Oui"]:checked'
+            );
+
+
+        if (!allergieOui) {
+
+            allergyText.disabled =
+                true;
+
+            allergyText.required =
+                false;
+
+        }
+
+
+    }
+
+}
+
+
+
+/* =========================================================
+   DÉTECTION OUI / NON
+========================================================= */
+
+document
+    .querySelectorAll(
+        'input[name="presence"]'
+    )
+    .forEach(function(bouton) {
+
+
+        bouton.addEventListener(
+            "change",
+            mettreAJourPresence
+        );
+
+
+    });
+
+
+
+/* =========================================================
+   ALLERGIES
+========================================================= */
+
+document
+    .querySelectorAll(
+        'input[name="allergies"]'
+    )
+    .forEach(function(bouton) {
+
+
+        bouton.addEventListener(
+            "change",
+            function() {
+
+
+                if (this.value === "Oui") {
+
+
+                    allergyDetails.style.display =
+                        "block";
+
+
+                    allergyText.disabled =
+                        false;
+
+
+                    allergyText.required =
+                        true;
+
+
+                }
+
+
+                else {
+
+
+                    allergyDetails.style.display =
+                        "none";
+
+
+                    allergyText.value =
+                        "";
+
+
+                    allergyText.disabled =
+                        true;
+
+
+                    allergyText.required =
+                        false;
+
+
+                }
+
+
+            }
+        );
+
+
+    });
+
+
+
+/* =========================================================
+   ÉTAT INITIAL ALLERGIES
+========================================================= */
+
+allergyDetails.style.display =
+    "none";
+
+allergyText.disabled =
+    true;
+
+
+
+/* =========================================================
+   ENVOI DU FORMULAIRE
+========================================================= */
+
+form.addEventListener(
+    "submit",
+    function() {
+
+
+        envoiEnCours =
+            true;
+
+
+        submitButton.disabled =
+            true;
+
+
+        submitButton.textContent =
+            "Envoi en cours...";
+
+
+    }
+);
+
+
+
+/* =========================================================
+   CONFIRMATION APRÈS ENVOI
+========================================================= */
+
+iframe.addEventListener(
+    "load",
+    function() {
+
+
+        /*
+            L'iframe se charge une première fois
+            au chargement de la page.
+
+            On ne fait donc rien tant que
+            le formulaire n'a pas été envoyé.
+        */
+
+        if (!envoiEnCours) {
+
+            return;
+
+        }
+
+
+        envoiEnCours =
+            false;
+
+
+
+        /*
+            On mémorise la position
+            de la zone RSVP.
+        */
+
+        const position =
+            document
+                .querySelector(
+                    ".rsvp-form-section"
+                )
+                .offsetTop;
+
+
+
+        /*
+            On fait disparaître
+            complètement le formulaire.
+        */
+
+        form.style.setProperty(
+            "display",
+            "none",
+            "important"
+        );
+
+
+
+        /*
+            On affiche le message Merci
+            à la place.
+        */
+
+        success.style.setProperty(
+            "display",
+            "block",
+            "important"
+        );
+
+
+
+        /*
+            On remonte automatiquement
+            au message de confirmation.
+        */
+
+        window.scrollTo({
+
+            top:
+                position - 90,
+
+            behavior:
+                "smooth"
+
+        });
+
+
+    }
+);
+
+
+</script>
 
 
 </body>
