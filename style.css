@@ -3143,3 +3143,434 @@ nav {
 
 
 }
+
+/* =========================================================
+   PAGE PHOTOS — WEDSHOOTS
+========================================================= */
+
+.photos-hero {
+    padding-bottom: 60px;
+}
+
+
+/* =========================================================
+   CARTE WEDSHOOTS
+========================================================= */
+
+.wedshoots-section {
+    padding: 0 8vw 110px;
+}
+
+.wedshoots-card {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 65px 55px;
+    background: var(--green);
+    color: var(--cream);
+    text-align: center;
+}
+
+.wedshoots-small-title {
+    margin-bottom: 20px;
+    color: var(--yellow);
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.wedshoots-card h2 {
+    margin: 0;
+    font-size: clamp(36px, 5vw, 58px);
+    font-weight: 400;
+    line-height: 1.05;
+}
+
+.wedshoots-intro {
+    max-width: 610px;
+    margin: 28px auto 0;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* BOUTON */
+
+.wedshoots-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 52px;
+
+    margin-top: 35px;
+    padding: 0 30px;
+
+    background: var(--yellow);
+    color: var(--green);
+
+    border-radius: 999px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    transition:
+        transform .2s ease,
+        opacity .2s ease;
+}
+
+.wedshoots-button:hover {
+    transform: translateY(-2px);
+    opacity: .9;
+}
+
+.wedshoots-mobile-note {
+    margin: 15px auto 0;
+    font-size: 12px;
+    line-height: 1.5;
+    opacity: .75;
+}
+
+
+/* CODE ALBUM */
+
+.album-code-box {
+    max-width: 390px;
+    margin: 38px auto 0;
+    padding: 22px;
+
+    border:
+        1px solid
+        rgba(250, 249, 229, .35);
+}
+
+.album-code-box span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    opacity: .75;
+}
+
+.album-code-box strong {
+    display: block;
+
+    color: var(--yellow);
+
+    font-size: clamp(22px, 4vw, 30px);
+    font-weight: 400;
+
+    letter-spacing: 2px;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* QR CODE */
+
+.wedshoots-qr {
+    margin-top: 42px;
+}
+
+.qr-title {
+    margin-bottom: 15px;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.qr-box {
+    width: 180px;
+    height: 180px;
+
+    margin: 0 auto;
+
+    padding: 10px;
+
+    background: white;
+}
+
+.qr-box img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+.wedshoots-qr p {
+    margin: 13px 0 0;
+
+    font-size: 11px;
+    opacity: .65;
+}
+
+.wedshoots-message {
+    margin-top: 42px;
+
+    color: var(--yellow);
+
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   GALERIE
+========================================================= */
+
+.memories-section {
+    padding: 95px 6vw 120px;
+
+    background: var(--cream);
+}
+
+.memories-heading {
+    margin-bottom: 55px;
+
+    text-align: center;
+}
+
+.memories-heading h2 {
+    margin: 0;
+
+    color: var(--green);
+
+    font-size: clamp(40px, 6vw, 68px);
+    font-weight: 400;
+
+    line-height: 1;
+}
+
+
+/* GALERIE TYPE ALBUM */
+
+.memory-gallery {
+    width: 100%;
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(12, 1fr);
+
+    grid-auto-rows: 70px;
+
+    gap: 18px;
+}
+
+.memory-photo {
+    margin: 0;
+
+    overflow: hidden;
+
+    background: var(--khaki);
+}
+
+.memory-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform .4s ease;
+}
+
+.memory-photo:hover img {
+    transform: scale(1.025);
+}
+
+
+/* DISPOSITION ASYMÉTRIQUE */
+
+.memory-photo-1 {
+    grid-column: 1 / 5;
+    grid-row: 1 / 7;
+}
+
+.memory-photo-2 {
+    grid-column: 5 / 9;
+    grid-row: 1 / 5;
+}
+
+.memory-photo-3 {
+    grid-column: 9 / 13;
+    grid-row: 1 / 7;
+}
+
+.memory-photo-4 {
+    grid-column: 5 / 9;
+    grid-row: 5 / 10;
+}
+
+.memory-photo-5 {
+    grid-column: 1 / 5;
+    grid-row: 7 / 12;
+}
+
+
+/* =========================================================
+   PHOTOS — TABLETTE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .memory-gallery {
+        grid-auto-rows: 60px;
+    }
+
+}
+
+
+/* =========================================================
+   PHOTOS — MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .photos-hero {
+        padding-bottom: 45px;
+    }
+
+
+    .wedshoots-section {
+        padding:
+            0
+            20px
+            75px;
+    }
+
+
+    .wedshoots-card {
+        padding:
+            45px
+            20px;
+    }
+
+
+    .wedshoots-card h2 {
+        font-size: 37px;
+    }
+
+
+    .wedshoots-intro {
+        font-size: 15px;
+    }
+
+
+    .wedshoots-button {
+        width: 100%;
+
+        min-height: 54px;
+
+        padding:
+            0
+            18px;
+
+        font-size: 11px;
+    }
+
+
+    .album-code-box {
+        width: 100%;
+
+        margin-top: 30px;
+
+        padding: 18px 10px;
+    }
+
+
+    .qr-box {
+        width: 160px;
+        height: 160px;
+    }
+
+
+    .memories-section {
+        padding:
+            70px
+            16px
+            80px;
+    }
+
+
+    .memories-heading {
+        margin-bottom: 35px;
+    }
+
+
+    /*
+       Sur téléphone on abandonne la grille
+       complexe et on crée un album simple
+       en 2 colonnes.
+    */
+
+    .memory-gallery {
+        display: grid;
+
+        grid-template-columns:
+            1fr
+            1fr;
+
+        grid-auto-rows: auto;
+
+        gap: 8px;
+    }
+
+
+    .memory-photo-1,
+    .memory-photo-2,
+    .memory-photo-3,
+    .memory-photo-4,
+    .memory-photo-5 {
+
+        grid-column: auto;
+        grid-row: auto;
+
+        aspect-ratio: 3 / 4;
+
+    }
+
+
+    /*
+       La deuxième photo est horizontale,
+       donc elle prend toute la largeur.
+    */
+
+    .memory-photo-2 {
+
+        grid-column: 1 / -1;
+
+        aspect-ratio: 16 / 9;
+
+    }
+
+
+    /*
+       La dernière photo prend également
+       toute la largeur pour terminer l'album.
+    */
+
+    .memory-photo-5 {
+
+        grid-column: 1 / -1;
+
+        aspect-ratio: 4 / 5;
+
+        max-height: 520px;
+
+    }
+
+}
